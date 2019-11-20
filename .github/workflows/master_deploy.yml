@@ -26,7 +26,10 @@ jobs:
 
     - run: npm ci
 
-    - run: npm run build
+    - name: Build
+      run: |
+        npm run build
+        cp ./CNAME ./dist/CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
