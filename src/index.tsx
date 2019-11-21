@@ -77,9 +77,9 @@ export function App() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+              Cardano, the blockchain supporting the ada cryptocurrency (ADA), runs in a pure Proof-of-Stake setting. This means that anyone who owns ada can participate in its functioning and get rewards for validating blocks. For that however, you must run a node and be online at all times.
               <br />
-              Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
+              Because this last requirement is very demanding, Cardano allows you to delegate your ada (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you!
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -91,7 +91,7 @@ export function App() {
             <Typography>
             We named our pool in reference to Alekseï Grigorievitch Stakhanov (1906-1977) and the movement founded after him, The Stakhanovite Movement.
             <br />
-            This movement of workers took pride in working hard and efficiently in order to produce more than necessary to support the state. By delegating your ADA to the hard working and efficient Stakhanovite Stake Pool, you will set your stake for the best !
+            This movement of workers took pride in working hard and efficiently in order to produce more than necessary to support the state. By delegating your ada to the hard working and efficient Stakhanovite Stake Pool, you will set your stake for the best!
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -101,7 +101,7 @@ export function App() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-            We are independent individuals and our operation is run by the people, for the people. By delegating your ADA to us, you will also commit to the ideals of decentralization.
+            We are independent individuals and our operation is run by the people, for the people. By delegating your ada to us, you will also commit to the ideals of decentralization.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -121,11 +121,11 @@ export function App() {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-            Operating a stake pool has a fixed cost (eg. hardware costs). On top, a profit margin is also present as a means of payment for our efforts. The Stakhanovite Stake Pool will not charge you the running costs and will reward the pool operators via the profit margin only. That way, we only get paid… when you get paid ! 
+            Operating a stake pool has a fixed cost (eg. hardware costs). A profit margin is also present as a means of payment for our efforts. The Stakhanovite Stake Pool will not charge you any fixed costs and will reward the pool operators via the profit margin only. That way, we only get paid… when you get paid! 
             <br />
-            Importantly, the profit margin is calculated on the rewards only, and not the ADA you delegated to us.
+            Importantly, the profit margin is a percentage of the rewards ada only, not of the ada you delegated to us.
             <br />
-            We are transparent : from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
+            We are transparent: from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
