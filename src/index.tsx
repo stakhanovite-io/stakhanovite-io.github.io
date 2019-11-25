@@ -66,69 +66,76 @@ export function App() {
     setLogo(logo);
   };
   return (
-    <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+    <div>
       <Container>
-        <img src={logo} style={{marginLeft: "auto", marginRight: "auto", display: "block"}}/>
+        <Typography style={{padding: 20, textAlign: "center"}}>
+          A cardano only Stake pool for the community, by the community. Delegate some of your tokens to our testnet pool: <strong>edfaf14ac409926f952da7f9215bf94e9648a6547559677277b850605bb5d2d9</strong>
+        </Typography>
       </Container>
-      <div>
-        <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1', homepageLogo)}>
-          <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography>What is a Stake Pool ?</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography>
-              Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+        <Container>
+          <img src={logo} style={{marginLeft: "auto", marginRight: "auto", display: "block"}}/>
+        </Container>
+        <div>
+          <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1', homepageLogo)}>
+            <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+              <Typography>What is a Stake Pool ?</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+                Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+                <br />
+                Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2', poolOpsLogo)}>
+            <ExpansionPanelSummary aria-controls="panel2d-content" id="panel2d-header">
+              <Typography>What is The Stakhanovite Stake Pool (Ticker: TSP) ?</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+              We named our pool in reference to Alekseï Grigorievitch Stakhanov (1906-1977) and the movement founded after him, The Stakhanovite Movement.
               <br />
-              Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
-            </Typography>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2', poolOpsLogo)}>
-          <ExpansionPanelSummary aria-controls="panel2d-content" id="panel2d-header">
-            <Typography>What is The Stakhanovite Stake Pool (Ticker: TSP) ?</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography>
-            We named our pool in reference to Alekseï Grigorievitch Stakhanov (1906-1977) and the movement founded after him, The Stakhanovite Movement.
-            <br />
-            This movement of workers took pride in working hard and efficiently in order to produce more than necessary to support the state. By delegating your ADA to the hard working and efficient Stakhanovite Stake Pool, you will set your stake for the best !
-            </Typography>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3', operationStakhanoviteLogo)}>
-          <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
-            <Typography>Who is behind the Stakhanovite Stake Pool ?</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography>
-            We are independent individuals and our operation is run by the people, for the people. By delegating your ADA to us, you will also commit to the ideals of decentralization.
-            </Typography>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4', toTheMoonLogo)}>
-          <ExpansionPanelSummary aria-controls="panel4d-content" id="panel4d-header">
-            <Typography>How is the Stakhanovite Stake Pool operated ?</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography>
-            Our main node is based in France. For our node's safety, and to ensure near-perfect uptime, we operate behind geographically distributed relay-nodes. Our work ethics is simple: nothing should prevent the Stakhanovite Stake Pool from signing blocks on your behalf.
-            </Typography>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-        <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5', growTogetherLogo)}>
-          <ExpansionPanelSummary aria-controls="panel5d-content" id="panel5d-header">
-            <Typography>Who pays for running the Stakhanovite Stake Pool ?</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography>
-            Operating a stake pool has a fixed cost (eg. hardware costs). On top, a profit margin is also present as a means of payment for our efforts. The Stakhanovite Stake Pool will not charge you the running costs and will reward the pool operators via the profit margin only. That way, we only get paid… when you get paid ! 
-            <br />
-            Importantly, the profit margin is calculated on the rewards only, and not the ADA you delegated to us.
-            <br />
-            We are transparent : from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
-            </Typography>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
+              This movement of workers took pride in working hard and efficiently in order to produce more than necessary to support the state. By delegating your ADA to the hard working and efficient Stakhanovite Stake Pool, you will set your stake for the best !
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3', operationStakhanoviteLogo)}>
+            <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
+              <Typography>Who is behind the Stakhanovite Stake Pool ?</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+              We are independent individuals and our operation is run by the people, for the people. By delegating your ADA to us, you will also commit to the ideals of decentralization.
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4', toTheMoonLogo)}>
+            <ExpansionPanelSummary aria-controls="panel4d-content" id="panel4d-header">
+              <Typography>How is the Stakhanovite Stake Pool operated ?</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+              Our main node is based in France. For our node's safety, and to ensure near-perfect uptime, we operate behind geographically distributed relay-nodes. Our work ethics is simple: nothing should prevent the Stakhanovite Stake Pool from signing blocks on your behalf.
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5', growTogetherLogo)}>
+            <ExpansionPanelSummary aria-controls="panel5d-content" id="panel5d-header">
+              <Typography>Who pays for running the Stakhanovite Stake Pool ?</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography>
+              Operating a stake pool has a fixed cost (eg. hardware costs). On top, a profit margin is also present as a means of payment for our efforts. The Stakhanovite Stake Pool will not charge you the running costs and will reward the pool operators via the profit margin only. That way, we only get paid… when you get paid ! 
+              <br />
+              Importantly, the profit margin is calculated on the rewards only, and not the ADA you delegated to us.
+              <br />
+              We are transparent : from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </div>
       </div>
     </div>
   );
