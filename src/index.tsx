@@ -1,9 +1,11 @@
 
 import { mount, route } from 'navi';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, View } from 'react-navi';
-import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
+import { useTransition, animated } from 'react-spring'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Layout from './Layout';
 import homepageLogo from './../public/assets/homepage.png';
@@ -11,71 +13,162 @@ import growTogetherLogo from './../public/assets/grow-together.png';
 import poolOpsLogo from './../public/assets/pool-ops.png';
 import operationStakhanoviteLogo from './../public/assets/operation-stakhanovite.png';
 import toTheMoonLogo from './../public/assets/to-the-moon.png';
+import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
-import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const ExpansionPanel = withStyles({
-  root: {
-    border: '1px solid rgba(0, 0, 0, .125)',
-    boxShadow: 'none',
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-    '&$expanded': {
-      margin: 'auto',
-    },
-  },
-  expanded: {},
-})(MuiExpansionPanel);
+function Image({ png, webp }) {
+  return <img src={png} style={{width: "100%"}} />;
+  /*return (
+        <picture style={{display: "block"}}>
+          <source type="image/webp" srcSet={webp}></source>
+          <source type="image/png" srcSet={png}></source>
+          <img src={png} style={{marginLeft: "auto", marginRight: "auto", display: "block"}} />
+        </picture>
+  );*/
+}
 
-const ExpansionPanelSummary = withStyles({
-  root: {
-    backgroundColor: 'rgba(255, 0, 0, .03)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
-    marginBottom: -1,
-    minHeight: 56,
-    '&$expanded': {
-      minHeight: 56,
-    },
-  },
-  content: {
-    '&$expanded': {
-      margin: '12px 0',
-    },
-  },
-  expanded: {},
-})(MuiExpansionPanelSummary);
+function Item({ png, webp, legend, showLegend}) {
+  return (
+    <div style={{paddingLeft: 100, paddingRight: 100}}>
+      <Image png={png} webp={webp} />
+      <Typography {...( !showLegend ? { style: {visibility: "hidden"}} : {style: {textAlign: "center"}} ) }>
+        {legend}
+      </Typography>
+    </div>
+  );
+}
 
-const ExpansionPanelDetails = withStyles(theme => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiExpansionPanelDetails);
+function register() {
+  window.open('https://tinyletter.com/Stakhanovite', 'popupwindow', 'scrollbars=yes,width=800,height=600');
+  return true
+}
+
+function Newsletter() {
+  const [checked, check] = React.useState(false);
+  return (
+    <Container style={{marginTop: 64}}>
+      <Typography>To get our latest news and important updates - please subscribe to our newsletter. We will keep it short and simple!</Typography>
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: 20, paddingLeft: 10}}>
+        <div style={{display: "flex", flex: 3}}>
+          <Checkbox checked={checked} onChange={() => check(!checked)} />
+          <Typography variant="body1" component="span">I would like to receive the Stakhanovite newsletter, and I understand I can opt out anytime by clicking the unsubscribe link at the bottom of our emails.</Typography> 
+        </div>
+        <form style={{flex: 2, alignItems: "center", display: "flex", justifyContent: "center"}}
+              action="https://tinyletter.com/Stakhanovite" method="post" target="popupwindow" onSubmit={register}>
+          <input type="hidden" value="1" name="embed"/>
+          <TextField id="tlemail" name="email" label="Enter your email here" variant="filled" disabled={!checked} />
+          <Button style={{marginLeft: 10}} variant="contained" color="primary" disabled={!checked} type="submit">
+            subscribe
+          </Button>
+        </form>
+      </div>
+    </Container>
+  );
+}
+
+function Items({onClick, children, show, setDetails}}) {
+  const transitions = useTransition(show, null, {
+    from: { minWidth: 0, minHeight: 0 },
+    enter: { maxWidth: "33%" },
+    leave: { maxWidth: "0%" }
+  })
+  return (
+    <>
+    {transitions.map(({ item, key, props }) =>
+      item && <animated.div key={key} style={props} onClick={onClick}>{children}</animated.div>
+    )}
+    </>);
+}
+
+const useOutsideClick = (ref, callback) => {
+  const handleClick = e => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      callback();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
+};
 
 export function App() {
-  const [expanded, setExpanded] = React.useState('panel1');
-  const [logo, setLogo] = React.useState(homepageLogo);
+  const [showLegends, setLegends] = React.useState(true);
+  const [showWWD, setWWD] = React.useState(true);
+  const [showWWA, setWWA] = React.useState(true);
+  const [showWJU, setWJU] = React.useState(true);
+  const [showDetails, setDetails] = React.useState(false);
 
-  const handleChange = (panel, logo) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-    setLogo(logo);
-  };
+  function resetNavigation() {
+    setWWD(true);
+    setWWA(true);
+    setWJU(true);
+    setDetails(false);
+    setLegends(true);
+  }
+
+  const ref = useRef();
+
+  useOutsideClick(ref, resetNavigation);
+
+  function setShowDetails() {
+    setTimeout(() => setDetails(true), 500);
+  }
+
   return (
     <div>
       <Container>
-        <Typography style={{padding: 20, textAlign: "center"}}>
-          A cardano only Stake pool for the community, by the community. Delegate some of your tokens to our testnet pool: <strong>edfaf14ac409926f952da7f9215bf94e9648a6547559677277b850605bb5d2d9</strong>
+        <Typography style={{textAlign: "center", marginBottom: 20}}>
+          We currently operate on the Cardano Incentivized Testnet under the pool ID:
+          <br />
+          <strong>edfaf14ac409926f952da7f9215bf94e9648a6547559677277b850605bb5d2d9</strong>
         </Typography>
       </Container>
-      <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-        <Container>
-          <img src={logo} style={{marginLeft: "auto", marginRight: "auto", display: "block"}}/>
-        </Container>
+      <div ref={ref} style={{display: "flex", alignItems: "center", marginBottom: 40}}>
+        <Items onClick={() => {setLegends(false); setWWA(false); setWJU(false); setShowDetails()}} setDetails={setDetails} show={showWWD}><Item showLegend={showLegends} png={homepageLogo} legend="What we do" /></Items>
+        <Items onClick={() => {setLegends(false); setWWD(false); setWJU(false); setShowDetails()}} setDetails={setDetails} show={showWWA}><Item showLegend={showLegends} png={poolOpsLogo} legend="Who we are" /></Items>
+        <Items onClick={() => {setLegends(false); setWWD(false); setWWA(false); setShowDetails()}} setDetails={setDetails} show={showWJU}><Item showLegend={showLegends} png={toTheMoonLogo} legend="Why join us" /></Items>
+        {showDetails && showWWD &&
+          <div>
+            <Typography variant="h5">What is a Stake Pool ?</Typography>
+            <Typography>
+              Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+              <br />
+              Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
+            </Typography>
+          </div>}
+          {showDetails && showWWA &&
+          <div>
+            <Typography variant="h5">What is a Stake Pool ?</Typography>
+            <Typography>
+              Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+              <br />
+              Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
+            </Typography>
+          </div>}
+          {showDetails && showWJU &&
+          <div>
+            <Typography variant="h5">What is a Stake Pool ?</Typography>
+            <Typography>
+              Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
+              <br />
+              Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
+            </Typography>
+          </div>}
+      </div>
+      <div style={{maxWidth: 960, borderTop: "1px solid rgba(0, 0, 0, 0.12)", marginLeft: "auto", marginRight: "auto"}} />
+      <Newsletter />
+    </div>
+  );
+}
+
+/*
+
         <div>
           <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1', homepageLogo)}>
             <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
@@ -136,35 +229,28 @@ export function App() {
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </div>
-      </div>
-    </div>
-  );
-}
 
-export function Faq() {
-    return (<FAQ></FAQ>);
-}
+*/
 
 const routes =
   mount({
-    '/': route({view: <App />,}),
-    '/faq': route({view: <Faq />,})
+    '/': route({view: <App />,})
   })
 
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#a6bdb3",
+      default: "#FFFFFF"
     },
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#a6bdb3',
+      main: 'rgba(166, 189, 179, 0.65)',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
-    /*secondary: {
-      main: '#2f4751',
-    },*/
+    secondary: {
+      main: 'rgba(47, 71, 81, 1)',
+    },
     text: {
       primary: '#2f4751',
     },
