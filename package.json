@@ -18,6 +18,7 @@
     "react-busy-indicator": "1.0.0",
     "react-dom": "^16.8.0",
     "react-navi": "^0.13.6",
+    "use-clipboard-copy": "^0.1.1",
     "xstate": "4.6.7"
   },
   "devDependencies": {

@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import { useClipboard } from 'use-clipboard-copy';
 
 const ExpansionPanel = withStyles({
   root: {
@@ -60,7 +61,8 @@ const ExpansionPanelDetails = withStyles(theme => ({
 export function App() {
   const [expanded, setExpanded] = React.useState('panel1');
   const [logo, setLogo] = React.useState(homepageLogo);
-
+  
+  const clipboard = useClipboard();
   const handleChange = (panel, logo) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
     setLogo(logo);
@@ -69,7 +71,9 @@ export function App() {
     <div>
       <Container>
         <Typography style={{padding: 20, textAlign: "center"}}>
-          A cardano only Stake pool for the community, by the community. Delegate some of your tokens to our testnet pool: <strong>edfaf14ac409926f952da7f9215bf94e9648a6547559677277b850605bb5d2d9</strong>
+          A cardano only Stake pool for the community, by the community.  We are STKH !
+          <br />
+          Delegate some of your tokens to our pool: <strong ref={clipboard.target}>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
         </Typography>
       </Container>
       <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
