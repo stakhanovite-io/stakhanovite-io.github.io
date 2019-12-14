@@ -1,9 +1,11 @@
 
 import { mount, route } from 'navi';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, View } from 'react-navi';
-import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
+import { useTransition, animated } from 'react-spring'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Layout from './Layout';
 import homepageLogo from './../public/assets/homepage.png';
@@ -11,75 +13,172 @@ import growTogetherLogo from './../public/assets/grow-together.png';
 import poolOpsLogo from './../public/assets/pool-ops.png';
 import operationStakhanoviteLogo from './../public/assets/operation-stakhanovite.png';
 import toTheMoonLogo from './../public/assets/to-the-moon.png';
+import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
-import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import { useClipboard } from 'use-clipboard-copy';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const ExpansionPanel = withStyles({
-  root: {
-    border: '1px solid rgba(0, 0, 0, .125)',
-    boxShadow: 'none',
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-    '&$expanded': {
-      margin: 'auto',
-    },
-  },
-  expanded: {},
-})(MuiExpansionPanel);
+function Image({ png, webp }) {
+  return <img src={png} style={{width: "100%"}} />;
+  /*return (
+        <picture style={{display: "block"}}>
+          <source type="image/webp" srcSet={webp}></source>
+          <source type="image/png" srcSet={png}></source>
+          <img src={png} style={{marginLeft: "auto", marginRight: "auto", display: "block"}} />
+        </picture>
+  );*/
+}
 
-const ExpansionPanelSummary = withStyles({
-  root: {
-    backgroundColor: 'rgba(255, 0, 0, .03)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
-    marginBottom: -1,
-    minHeight: 56,
-    '&$expanded': {
-      minHeight: 56,
-    },
-  },
-  content: {
-    '&$expanded': {
-      margin: '12px 0',
-    },
-  },
-  expanded: {},
-})(MuiExpansionPanelSummary);
+function Item({ png, webp, legend, showLegend}) {
+  return (
+    <div style={{paddingLeft: 100, paddingRight: 100}}>
+      <Image png={png} webp={webp} />
+      <Typography {...( !showLegend ? { style: {visibility: "hidden"}} : {style: {textAlign: "center"}} ) }>
+        {legend}
+      </Typography>
+    </div>
+  );
+}
 
-const ExpansionPanelDetails = withStyles(theme => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiExpansionPanelDetails);
+function register() {
+  window.open('https://tinyletter.com/Stakhanovite', 'popupwindow', 'scrollbars=yes,width=800,height=600');
+  return true
+}
+
+function Newsletter() {
+  const [checked, check] = React.useState(false);
+  return (
+    <Container style={{marginTop: 64}}>
+      <Typography>To get our latest news and important updates - please subscribe to our newsletter. We will keep it short and simple!</Typography>
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: 20, paddingLeft: 10}}>
+        <div style={{display: "flex", flex: 3}}>
+          <Checkbox checked={checked} onChange={() => check(!checked)} />
+          <Typography variant="body1" component="span">I would like to receive the Stakhanovite newsletter, and I understand I can opt out anytime by clicking the unsubscribe link at the bottom of our emails.</Typography> 
+        </div>
+        <form style={{flex: 2, alignItems: "center", display: "flex", justifyContent: "center"}}
+              action="https://tinyletter.com/Stakhanovite" method="post" target="popupwindow" onSubmit={register}>
+          <input type="hidden" value="1" name="embed"/>
+          <TextField id="tlemail" name="email" label="Enter your email here" variant="filled" disabled={!checked} />
+          <Button style={{marginLeft: 10}} variant="contained" color="primary" disabled={!checked} type="submit">
+            subscribe
+          </Button>
+        </form>
+      </div>
+    </Container>
+  );
+}
+
+function Items({onClick, children, show, setDetails}}) {
+  const transitions = useTransition(show, null, {
+    from: { minWidth: 0, minHeight: 0 },
+    enter: { maxWidth: "33%" },
+    leave: { maxWidth: "0%" }
+  })
+  return (
+    <>
+    {transitions.map(({ item, key, props }) =>
+      item && <animated.div key={key} style={props} onClick={onClick}>{children}</animated.div>
+    )}
+    </>);
+}
+
+const useOutsideClick = (ref, callback) => {
+  const handleClick = e => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      callback();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
+};
 
 export function App() {
-  const [expanded, setExpanded] = React.useState('panel1');
-  const [logo, setLogo] = React.useState(homepageLogo);
-  
-  const clipboard = useClipboard();
-  const handleChange = (panel, logo) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-    setLogo(logo);
-  };
+  const [showLegends, setLegends] = React.useState(true);
+  const [showWWD, setWWD] = React.useState(true);
+  const [showWWA, setWWA] = React.useState(true);
+  const [showWJU, setWJU] = React.useState(true);
+  const [showDetails, setDetails] = React.useState(false);
+
+  function resetNavigation() {
+    setWWD(true);
+    setWWA(true);
+    setWJU(true);
+    setDetails(false);
+    setLegends(true);
+  }
+
+  const ref = useRef();
+
+  useOutsideClick(ref, resetNavigation);
+
+  function setShowDetails() {
+    setTimeout(() => setDetails(true), 500);
+  }
+
   return (
     <div>
       <Container>
         <Typography style={{padding: 20, textAlign: "center"}}>
           A cardano only Stake pool for the community, by the community.  We are STKH !
           <br />
-          Delegate some of your tokens to our pool: <strong ref={clipboard.target}>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
+          Delegate some of your tokens to our pool: <strong>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
         </Typography>
       </Container>
-      <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-        <Container>
-          <img src={logo} style={{marginLeft: "auto", marginRight: "auto", display: "block"}}/>
-        </Container>
+      <div ref={ref} style={{display: "flex", alignItems: "center", marginBottom: 40}}>
+        <Items onClick={() => {setLegends(false); setWWA(false); setWJU(false); setShowDetails()}} setDetails={setDetails} show={showWWD}><Item showLegend={showLegends} png={homepageLogo} legend="What we do" /></Items>
+        <Items onClick={() => {setLegends(false); setWWD(false); setWJU(false); setShowDetails()}} setDetails={setDetails} show={showWWA}><Item showLegend={showLegends} png={poolOpsLogo} legend="Who we are" /></Items>
+        <Items onClick={() => {setLegends(false); setWWD(false); setWWA(false); setShowDetails()}} setDetails={setDetails} show={showWJU}><Item showLegend={showLegends} png={toTheMoonLogo} legend="Why join us" /></Items>
+        {showDetails && showWWD &&
+          <div>
+            <Typography variant="h5">What is a Stake Pool ?</Typography>
+            <Typography>
+            Cardano, the blockchain supporting the ada cryptocurrency (ADA), runs in a proof-of-stake (PoS) setting. Anyone who owns ada can participate in its functioning. For that however, you must be online at all times…
+            <br />
+            Because this last requirement is very demanding and not practical for everyday users, Cardano allows you to delegate your ada (or stake) to a stake pool. The stake pool will be online for you and perform all the necessary validation work on your behalf.
+            <br />
+            That is exactly why the Stakhanovite Stake Pool is here for you!
+            </Typography>
+          </div>}
+          {showDetails && showWWA &&
+          <div>
+            <Typography variant="h5">Who we are</Typography>
+            <Typography>
+              We are independent community members. Our operation is run for the community, by the community.
+              <br />
+              Hear it one member of our team!
+              <br />
+              @psychomb: "French translator of various Cardano-related content such as 'Why Cardano?', the bi-monthly Cardano Foundation newsletter or the Yoroi Wallet, I have been a Cardano Ambassador since day one. Getting a stake pool up -and-running was a natural thing to do in order to further support the Cardano Community."
+            </Typography>
+          </div>}
+          {showDetails && showWJU &&
+          <div>
+            <Typography variant="h5">Why join us</Typography>
+            <Typography>
+              For our fees, of course!
+              <br />
+              For the incentivized testnet, The Stakhanovite Stake Pool will not charge you any fixed costs. We, pool operators, will be rewarded via a small profit margin of 5%.
+              <br />
+              This profit margin is calculated on the rewards you get thanks to our efforts. Doing so means that we will get paid only when you get paid!
+              <br />
+              For example, if you rewards per epoch is 10 ADA, we get paid 0.5 ADA and the remaining 9.5 ADA is all yours. Importantly, it is the protocol that pays you, not us. Your rewards will be deposited to your wallets automatically at the end of each staking epoch.
+              <br />
+              We are transparent. From costs to performance, you will know everything and you will always be in a position to make the best choice for you, and your ada!
+            </Typography>
+          </div>}
+      </div>
+      <div style={{maxWidth: 960, borderTop: "1px solid rgba(0, 0, 0, 0.12)", marginLeft: "auto", marginRight: "auto"}} />
+      <Newsletter />
+    </div>
+  );
+}
+
+/*
+
         <div>
           <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1', homepageLogo)}>
             <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
@@ -101,74 +200,44 @@ export function App() {
               <Typography>
               We named our pool in reference to Alekseï Grigorievitch Stakhanov (1906-1977) and the movement founded after him, The Stakhanovite Movement.
               <br />
-              This movement of workers took pride in working hard and efficiently in order to produce more than necessary to support the state. By delegating your ADA to the hard working and efficient Stakhanovite Stake Pool, you will set your stake for the best !
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3', operationStakhanoviteLogo)}>
-            <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
-              <Typography>Who is behind the Stakhanovite Stake Pool ?</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-              We are independent individuals and our operation is run by the people, for the people. By delegating your ADA to us, you will also commit to the ideals of decentralization.
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4', toTheMoonLogo)}>
-            <ExpansionPanelSummary aria-controls="panel4d-content" id="panel4d-header">
-              <Typography>How is the Stakhanovite Stake Pool operated ?</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-              Our main node is based in France. For our node's safety, and to ensure near-perfect uptime, we operate behind geographically distributed relay-nodes. Our work ethics is simple: nothing should prevent the Stakhanovite Stake Pool from signing blocks on your behalf.
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5', growTogetherLogo)}>
-            <ExpansionPanelSummary aria-controls="panel5d-content" id="panel5d-header">
-              <Typography>Who pays for running the Stakhanovite Stake Pool ?</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-              Operating a stake pool has a fixed cost (eg. hardware costs). On top, a profit margin is also present as a means of payment for our efforts. The Stakhanovite Stake Pool will not charge you the running costs and will reward the pool operators via the profit margin only. That way, we only get paid… when you get paid ! 
+              Hear it one member of our team!
               <br />
-              Importantly, the profit margin is calculated on the rewards only, and not the ADA you delegated to us.
+              @psychomb: "French translator of various Cardano-related content such as 'Why Cardano?', the bi-monthly Cardano Foundation newsletter or the Yoroi Wallet, I have been a Cardano Ambassador since day one. Getting a stake pool up -and-running was a natural thing to do in order to further support the Cardano Community."
+            </Typography>
+          </div>}
+          {showDetails && showWJU &&
+          <div>
+            <Typography variant="h5">Why join us</Typography>
+            <Typography>
+              For our fees, of course!
               <br />
               We are transparent : from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
               </Typography>
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </div>
-      </div>
-    </div>
-  );
-}
 
-export function Faq() {
-    return (<FAQ></FAQ>);
-}
+*/
 
 const routes =
   mount({
-    '/': route({view: <App />,}),
-    '/faq': route({view: <Faq />,})
+    '/': route({view: <App />,})
   })
 
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#a6bdb3",
+      default: "#FFFFFF"
     },
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#a6bdb3',
+      main: 'rgba(166, 189, 179, 0.65)',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
-    /*secondary: {
-      main: '#2f4751',
-    },*/
+    secondary: {
+      main: 'rgba(47, 71, 81, 1)',
+    },
     text: {
       primary: '#2f4751',
     },

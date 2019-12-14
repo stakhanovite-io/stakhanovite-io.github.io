@@ -1,4 +1,3 @@
-//import BusyIndicator from 'react-busy-indicator@1.0.0'
 import React from 'react'
 import { NotFoundBoundary } from 'react-navi'
 import { Footer, Menu } from './Components';

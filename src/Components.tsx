@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import GithubIcon from '@material-ui/icons/Github';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -76,28 +77,36 @@ export function Copyright() {
 export function Menu() {
     const classes = useStyles();
     return (
-    <AppBar position="static" color="primary" elevation={0} className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-          <Typography variant="h4" color="textPrimary" style={{flexGrow: 1}}>
-          STAKHANOVITE
-          </Typography>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            href="https://twitter.com/StakhanoviteIO"
-            color="inherit"
-          >
-            <TwitterIcon />
-          </IconButton>
-          <nav>
-            <Link variant="button" color="textPrimary" href="/" className={classes.link}>
-              About
-            </Link>
-            <Link variant="button" color="textPrimary" href="mailto:contact@stakhanovite.io" className={classes.link}>
-              Support
-            </Link>
-          </nav>
+    <AppBar position="static" color="primary" elevation={0} className={classes.appBar} style={{padding: 5}}>
+        <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
+          <div style={{display: "flex", flexDirection: "column"}}>
+            <Typography variant="h5" color="textPrimary" style={{flexGrow: 1}}>
+            STAKHANOVITE STAKE POOL
+            </Typography>
+            <Typography variant="subtitle1" color="textPrimary" style={{flexGrow: 1}}>
+            A Cardano Stake Pool for the community, by the community
+            </Typography>
+          </div>
+
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <IconButton
+                href="https://github.com/stakhanovite-io"
+                color="inherit"
+              >
+              <GithubIcon />
+            </IconButton>
+            <IconButton
+              href="https://twitter.com/StakhanoviteIO"
+              color="inherit"
+            >
+              <TwitterIcon />
+            </IconButton>
+            <nav>
+              <Link variant="button" color="textPrimary" href="mailto:contact@stakhanovite.io" className={classes.link}>
+                CONTACT
+              </Link>
+            </nav>
+          </div>
         </Toolbar>
       </AppBar>
     );
