@@ -9,7 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import GithubIcon from '@material-ui/icons/Github';
+//import GithubIcon from '@material-ui/icons/Github';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -89,12 +89,6 @@ export function Menu() {
           </div>
 
           <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-            <IconButton
-                href="https://github.com/stakhanovite-io"
-                color="inherit"
-              >
-              <GithubIcon />
-            </IconButton>
             <IconButton
               href="https://twitter.com/StakhanoviteIO"
               color="inherit"
