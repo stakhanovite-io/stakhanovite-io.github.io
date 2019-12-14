@@ -123,7 +123,7 @@ export function App() {
         <Typography style={{padding: 20, textAlign: "center"}}>
           A cardano only Stake pool for the community, by the community.  We are STKH !
           <br />
-          Delegate some of your tokens to our pool: <strong>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
+          Delegate your ada to our pool: <strong>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
         </Typography>
       </Container>
       <div ref={ref} style={{display: "flex", alignItems: "center", marginBottom: 40}}>
@@ -147,9 +147,9 @@ export function App() {
             <Typography>
               We are independent community members. Our operation is run for the community, by the community.
               <br />
-              Hear it one member of our team!
+              Hear it from one member of our team!
               <br />
-              @psychomb: "French translator of various Cardano-related content such as 'Why Cardano?', the bi-monthly Cardano Foundation newsletter or the Yoroi Wallet, I have been a Cardano Ambassador since day one. Getting a stake pool up -and-running was a natural thing to do in order to further support the Cardano Community."
+              @psychomb: "French translator of various Cardano-related content such as 'Why Cardano?', the bi-monthly Cardano Foundation newsletter or the Yoroi Wallet, I have been a Cardano Ambassador since day one. Getting a stake pool up-and-running was a natural thing to do in order to further support the Cardano Community."
             </Typography>
           </div>}
           {showDetails && showWJU &&
