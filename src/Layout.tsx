@@ -1,5 +1,5 @@
-import React from 'react'
-import { NotFoundBoundary } from 'react-navi'
+import React from 'react';
+import { NotFoundBoundary } from 'react-navi';
 import { Footer, Menu } from './Components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 

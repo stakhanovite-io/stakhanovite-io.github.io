@@ -1,8 +1,5 @@
-
-import { mount, route } from 'navi';
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, View } from 'react-navi';
 import { useTransition, animated } from 'react-spring'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -88,7 +85,7 @@ const useOutsideClick = (ref, callback) => {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.addEventListener("click", handleClick);
 
     return () => {
@@ -112,7 +109,7 @@ export function App() {
     setLegends(true);
   }
 
-  const ref = useRef();
+  const ref = React.useRef();
 
   useOutsideClick(ref, resetNavigation);
 
@@ -219,11 +216,6 @@ export function App() {
 
 */
 
-const routes =
-  mount({
-    '/': route({view: <App />,})
-  })
-
 const theme = createMuiTheme({
   palette: {
     background: {
@@ -253,12 +245,10 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render(
-    <Router routes={routes}>
-      <ThemeProvider theme={theme}>
-        <Layout>
-          <View />  
-        </Layout>
-      </ThemeProvider>
-    </Router>,
+  <ThemeProvider theme={theme}>
+    <Layout>
+      <App />  
+    </Layout>
+  </ThemeProvider>,
     document.getElementById("root")
 );
