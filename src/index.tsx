@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import Checkbox from '@material-ui/core/Checkbox';
 
 function Image({ png, webp }) {
-  return <img src={png} style={{width: "100%"}} />;
+  return <img alt="logo" src={png} style={{width: "100%"}} />;
   /*return (
         <picture style={{display: "block"}}>
           <source type="image/webp" srcSet={webp}></source>
@@ -48,7 +48,7 @@ function Newsletter() {
       <Typography>To get our latest news and important updates - please subscribe to our newsletter. We will keep it short and simple!</Typography>
       <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: 20, paddingLeft: 10}}>
         <div style={{display: "flex", flex: 3}}>
-          <Checkbox checked={checked} onChange={() => check(!checked)} />
+          <Checkbox inputProps={{ 'aria-label': 'Agree to register to the newsletter' }} checked={checked} onChange={() => check(!checked)} />
           <Typography variant="body1" component="span">I would like to receive the Stakhanovite newsletter, and I understand I can opt out anytime by clicking the unsubscribe link at the bottom of our emails.</Typography> 
         </div>
         <form style={{flex: 2, alignItems: "center", display: "flex", justifyContent: "center"}}
@@ -173,48 +173,6 @@ export function App() {
     </div>
   );
 }
-
-/*
-
-        <div>
-          <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1', homepageLogo)}>
-            <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
-              <Typography>What is a Stake Pool ?</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                Cardano, the blockchain supporting the ADA cryptocurrency, runs in a pure Proof-of-Stake setting. This means that anyone who owns ADA can participate in its functioning, but for that you must be online at all times.
-                <br />
-                Because this last requirement is very demanding, Cardano allows you to delegate your ADA (or stake) to a Stake Pool. The Stake Pool will be online for you and perform all the necessary validation work on your behalf. This is exactly where the Stakhanovite Stake Pool will help you.
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2', poolOpsLogo)}>
-            <ExpansionPanelSummary aria-controls="panel2d-content" id="panel2d-header">
-              <Typography>What is The Stakhanovite Stake Pool (Ticker: TSP) ?</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-              We named our pool in reference to Alekseï Grigorievitch Stakhanov (1906-1977) and the movement founded after him, The Stakhanovite Movement.
-              <br />
-              Hear it one member of our team!
-              <br />
-              @psychomb: "French translator of various Cardano-related content such as 'Why Cardano?', the bi-monthly Cardano Foundation newsletter or the Yoroi Wallet, I have been a Cardano Ambassador since day one. Getting a stake pool up -and-running was a natural thing to do in order to further support the Cardano Community."
-            </Typography>
-          </div>}
-          {showDetails && showWJU &&
-          <div>
-            <Typography variant="h5">Why join us</Typography>
-            <Typography>
-              For our fees, of course!
-              <br />
-              We are transparent : from costs to performance, you know everything and you always will be in a position to make the best choice - for you and for your ADA. 
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-        </div>
-
-*/
 
 const theme = createMuiTheme({
   palette: {

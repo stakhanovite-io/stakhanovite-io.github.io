@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
@@ -92,6 +92,7 @@ export function Menu() {
             <IconButton
               href="https://twitter.com/StakhanoviteIO"
               color="inherit"
+              title="Twitter account"
             >
               <TwitterIcon />
             </IconButton>
