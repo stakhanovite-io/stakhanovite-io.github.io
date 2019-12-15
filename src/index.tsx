@@ -13,6 +13,9 @@ import toTheMoonLogo from './../public/assets/to-the-moon.png';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Checkbox from '@material-ui/core/Checkbox';
+import { useClipboard } from 'use-clipboard-copy';
+import IconButton from '@material-ui/core/IconButton';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 
 function Image({ png, webp }) {
   return <img alt="logo" src={png} style={{width: "100%"}} />;
@@ -100,6 +103,7 @@ export function App() {
   const [showWWA, setWWA] = React.useState(true);
   const [showWJU, setWJU] = React.useState(true);
   const [showDetails, setDetails] = React.useState(false);
+  const clipboard = useClipboard();
 
   function resetNavigation() {
     setWWD(true);
@@ -121,9 +125,16 @@ export function App() {
     <div>
       <Container>
         <Typography style={{padding: 20, textAlign: "center"}}>
-          A cardano only Stake pool for the community, by the community.  We are STKH !
+          A cardano only Stake pool for the community, by the community.  We are <strong>STKH</strong> !
           <br />
           Delegate your ada to our pool: <strong>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>
+          <IconButton
+              color="inherit"
+              title="Copy pool address"
+              onClick={() => clipboard.copy('3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9')}
+            >
+              <FileCopyIcon />
+            </IconButton>
         </Typography>
       </Container>
       <div ref={ref} style={{display: "flex", alignItems: "center", marginBottom: 40}}>
