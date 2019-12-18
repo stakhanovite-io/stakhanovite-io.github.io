@@ -1,0 +1,62 @@
+# Blog
+
+* https://github.com/jaywcjlove/parcel-plugin-markdown-string
+* https://github.com/gongpeione/parcel-plugin-markdown
+* https://parceljs.org/module_resolution.html
+
+# PWA
+
+https://web.dev/periodic-background-sync/
+https://web.dev/lighthouse-pwa/
+https://web.dev/offline-start-url/
+https://web.dev/discover-installable/
+https://web.dev/add-manifest/
+https://web.dev/reliable/
+
+# Accessibility
+
+https://web.dev/accessible/
+https://web.dev/lighthouse-accessibility/
+
+# Preload
+
+https://github.com/parcel-bundler/parcel/issues/3757
+https://web.dev/preload-responsive-images/
+
+# WebPackage
+
+https://web.dev/web-bundles/
+
+# Share
+
+# i18n
+
+* https://blog.eleven-labs.com/fr/react-i18next/
+
+# Cardano
+
+* https://swr.now.sh/
+* https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/listStakePools
+* https://github.com/FormidableLabs/victory
+
+# images
+
+* https://github.com/parcel-bundler/parcel/issues/3736
+* https://github.com/parcel-bundler/parcel/issues/3738
+
+# Props Houdini Paint api
+https://web.dev/css-props-and-vals/
+
+# Responsive
+
+* https://github.com/garth/react-hooks-responsive
+
+# Perf
+
+* https://web.dev/fast/
+* https://responsivebreakpoints.com/
+* https://web.dev/lighthouse-performance/
+* https://web.dev/link-prefetch/
+
+
+https://www.freecodecamp.org/news/how-to-create-a-responsive-fixed-data-table-with-react-hooks-8eae2fff9a52/

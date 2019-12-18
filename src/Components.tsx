@@ -1,15 +1,18 @@
 import * as React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import TextField from '@material-ui/core/TextField';
 import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import TwitterIcon from '@material-ui/icons/Twitter';
-//import GithubIcon from '@material-ui/icons/Github';
+import { Trans } from "react-i18next";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -61,6 +64,34 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
+function register() {
+  window.open('https://tinyletter.com/Stakhanovite', 'popupwindow', 'scrollbars=yes,width=800,height=600');
+  return true
+}
+
+export function Newsletter() {
+  const [checked, check] = React.useState(false);
+  return (
+    <Container style={{marginTop: 64}}>
+      <Typography><Trans i18nKey="newsletter"></Trans></Typography>
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: 20, paddingLeft: 10}}>
+        <div style={{display: "flex", flex: 3}}>
+          <Checkbox inputProps={{ 'aria-label': 'Agree to register to the newsletter' }} checked={checked} onChange={() => check(!checked)} />
+          <Typography variant="body1" component="span"><Trans i18nKey="newsletterAck"></Trans></Typography>
+        </div>
+        <form style={{flex: 2, alignItems: "center", display: "flex", justifyContent: "center"}}
+              action="https://tinyletter.com/Stakhanovite" method="post" target="popupwindow" onSubmit={register}>
+          <input type="hidden" value="1" name="embed"/>
+          <TextField id="tlemail" name="email" label="Enter your email here" variant="filled" disabled={!checked} />
+          <Button style={{marginLeft: 10}} variant="contained" color="primary" disabled={!checked} type="submit">
+            <Trans i18nKey="subscribe"></Trans>
+          </Button>
+        </form>
+      </div>
+    </Container>
+  );
+}
+
 export function Copyright() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
@@ -81,10 +112,10 @@ export function Menu() {
         <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
           <div style={{display: "flex", flexDirection: "column"}}>
             <Typography variant="h5" color="textPrimary" style={{flexGrow: 1}}>
-            STAKHANOVITE STAKE POOL
+            <Trans i18nKey="title"></Trans>
             </Typography>
             <Typography variant="subtitle1" color="textPrimary" style={{flexGrow: 1}}>
-            A Cardano Stake Pool for the community, by the community
+            <Trans i18nKey="subtitle"></Trans>
             </Typography>
           </div>
 
