@@ -13,7 +13,7 @@ i18n
         translations: {
           title: "STAKHANOVITE STAKE POOL",
           subtitle: "A Cardano Stake Pool for the community, by the community",
-          intro: "A cardano only Stake pool for the community, by the community.  We are <strong>STKH</strong> !<br />Delegate your ada to our pool: <strong>3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</strong>",
+          intro: "A cardano only Stake pool for the community, by the community.  We are <strong>STKH</strong> !<br />Delegate your ada to our pool: ",
           "what-content": "Cardano, the blockchain supporting the ada cryptocurrency (ADA), runs in a proof-of-stake (PoS) setting. Anyone who owns ada can participate in its functioning. For that however, you must be online at all times…<br />Because this last requirement is very demanding and not practical for everyday users, Cardano allows you to delegate your ada (or stake) to a stake pool. The stake pool will be online for you and perform all the necessary validation work on your behalf.<br />That is exactly why the Stakhanovite Stake Pool is here for you!",
           "what-title": "What is a Stake Pool ?",
           "who-title": "Who we are",

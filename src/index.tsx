@@ -72,6 +72,7 @@ export function App() {
       <Container>
         <Typography style={{padding: 20, textAlign: "center"}}>
           <Trans i18nKey="intro"></Trans>
+          <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9/">3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</a>
           <IconButton
               color="inherit"
               title="Copy pool address"
