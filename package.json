@@ -26,6 +26,6 @@
   "devDependencies": {
     "marked": "^0.8.0",
     "parcel-bundler": "1.12.4",
-    "typescript": "3.7.3"
+    "typescript": "3.8.3"
   }
 }
