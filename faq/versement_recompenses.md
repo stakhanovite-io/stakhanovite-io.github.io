@@ -1,0 +1,3 @@
+# Dois-je faire confiance aux opérateurs du groupe d'enjeu pour qu'ils m'envoient mes récompenses ?
+
+Non. Le protocole se charge de redistribuer les récompenses en proportion de votre enjeu délégué. Si votre enjeu représente 30% de l'enjeu total du groupe, alors il vous sera distribué 30% des récompenses obtenues par le groupe d'enjeu. Toutefois, nous parlons ici de 30% des récompenses totales **après prélèvement des frais de participation au groupe**.

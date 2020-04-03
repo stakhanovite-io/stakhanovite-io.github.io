@@ -1,18 +1,23 @@
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
-import TextField from '@material-ui/core/TextField';
+import Menu from '@material-ui/core/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Trans } from "react-i18next";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { OurOperation } from './Pages/OurOperation';
+import { Stakhanovite } from './Pages/Stakhanovite';
+import { What } from './Pages/What';
+import { Who } from './Pages/Who';
+import { WhyUs } from './Pages/WhyUs';
+import { Faq } from './Faq';
+import joinUsLogo from './../public/assets/Join_us.png';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -29,10 +34,20 @@ const useStyles = makeStyles(theme => ({
     },
     appBar: {
       marginBottom: 20,
-      borderBottom: `1px solid ${theme.palette.divider}`,
+    },
+    menu: {
+      backgroundColor: 'white'
     },
     toolbar: {
-      flexWrap: 'wrap'
+      flexWrap: 'wrap',
+      marginLeft: 60,
+      marginRight: 60,
+      marginTop: 5,
+      marginBottom: 5,
+      ['@media (max-width:780px)']: {
+        marginLeft: 0,
+        marginRight: 0,
+      }
     },
     toolbarTitle: {
       flexGrow: 1,
@@ -52,11 +67,24 @@ const useStyles = makeStyles(theme => ({
       alignItems: 'baseline',
       marginBottom: theme.spacing(2),
     },
+    nav: {
+      '& a': {
+        fontWeight: 700
+      }
+    },
+    navSmall: {
+      display: 'flex',
+      flexDirection: 'column',
+      '& a': {
+        fontWeight: 700
+      }
+    },
     footer: {
       borderTop: `1px solid ${theme.palette.divider}`,
       marginTop: theme.spacing(8),
       paddingTop: theme.spacing(3),
       paddingBottom: theme.spacing(3),
+      backgroundColor: "rgba(25,29,23,0.60)",
       [theme.breakpoints.up('sm')]: {
         paddingTop: theme.spacing(6),
         paddingBottom: theme.spacing(6),
@@ -64,116 +92,111 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-function register() {
-  window.open('https://tinyletter.com/Stakhanovite', 'popupwindow', 'scrollbars=yes,width=800,height=600');
-  return true
-}
-
-export function Newsletter() {
-  const [checked, check] = React.useState(false);
-  return (
-    <Container style={{marginTop: 64}}>
-      <Typography><Trans i18nKey="newsletter"></Trans></Typography>
-      <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: 20, paddingLeft: 10}}>
-        <div style={{display: "flex", flex: 3}}>
-          <Checkbox inputProps={{ 'aria-label': 'Agree to register to the newsletter' }} checked={checked} onChange={() => check(!checked)} />
-          <Typography variant="body1" component="span"><Trans i18nKey="newsletterAck"></Trans></Typography>
-        </div>
-        <form style={{flex: 2, alignItems: "center", display: "flex", justifyContent: "center"}}
-              action="https://tinyletter.com/Stakhanovite" method="post" target="popupwindow" onSubmit={register}>
-          <input type="hidden" value="1" name="embed"/>
-          <TextField id="tlemail" name="email" label="Enter your email here" variant="filled" disabled={!checked} />
-          <Button style={{marginLeft: 10}} variant="contained" color="primary" disabled={!checked} type="submit">
-            <Trans i18nKey="subscribe"></Trans>
-          </Button>
-        </form>
-      </div>
-    </Container>
-  );
+export function Separator() {
+  return <div style={{borderTop: "1px solid rgba(0, 0, 0, 0.12)", marginLeft: "auto", marginRight: "auto"}} />;
 }
 
 export function Copyright() {
     return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
+      <Typography variant="h5" color="textSecondary">
+        {'© '}
         <Link color="inherit" href="https://stakhanovite.io/">
-          Stakhanovite
+          Stakhanovite.io
         </Link>{' '}
         {new Date().getFullYear()}
-        {'.'}
       </Typography>
     );
   }
 
-export function Menu() {
-    const classes = useStyles();
-    return (
-    <AppBar position="static" color="primary" elevation={0} className={classes.appBar} style={{padding: 5}}>
-        <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
-          <div style={{display: "flex", flexDirection: "column"}}>
-            <Typography variant="h5" color="textPrimary" style={{flexGrow: 1}}>
-            <Trans i18nKey="title"></Trans>
-            </Typography>
-            <Typography variant="subtitle1" color="textPrimary" style={{flexGrow: 1}}>
-            <Trans i18nKey="subtitle"></Trans>
-            </Typography>
-          </div>
+const items = {
+  'Stakhanovite': <Stakhanovite />,
+  'What': <What />,
+  'Who': <Who />,
+  'Why Us': <WhyUs />,
+  'Our Operation': <OurOperation />,
+  'FAQ': <Faq />
+}
 
-          <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-            <IconButton
-              href="https://twitter.com/StakhanoviteIO"
-              color="inherit"
-              title="Twitter account"
-            >
-              <TwitterIcon />
-            </IconButton>
-            <nav>
-              <Link variant="button" color="textPrimary" href="mailto:contact@stakhanovite.io" className={classes.link}>
-                CONTACT
-              </Link>
-            </nav>
-          </div>
+function Nav({ color, setContent }) {
+  const classes = useStyles();
+  const matches = useMediaQuery('(min-width: 1000px)');
+  return (
+  <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+    <nav className={matches ? classes.nav : classes.navSmall}>
+      {Object.keys(items).map((key) =>
+      <Link key={key} variant="button" color={color} href="#" onClick={() => setContent(items[key])} className={classes.link}>
+        {key}
+      </Link>
+      )}
+      <Link variant="button" color={color} href="https://stakhanovite.substack.com/" className={classes.link}>
+        NEWSLETTER
+      </Link>
+    </nav>
+    {matches &&
+      <IconButton
+        href="https://twitter.com/StakhanoviteIO"
+        title="Twitter account"
+      >
+        <TwitterIcon />
+      </IconButton>
+    }
+  </div>);
+}
+
+function SimpleMenu({ setContent }) {
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <MenuIcon />
+      </IconButton>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        {Object.keys(items).map((key) =>
+        <MenuItem key={key} onClick={() => {handleClose(); setContent(items[key]);}}>{key}</MenuItem>
+        )}
+      </Menu>
+    </div>
+  );
+}
+
+export function ToolbarMenu({ setContent }) {
+    const classes = useStyles();
+    const matches = useMediaQuery('(min-width: 1000px)');
+    return (
+      <AppBar position="static" color="primary" elevation={0} className={classes.appBar} style={{padding: 5}}>
+        <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
+          <img alt="logo" src={joinUsLogo} style={{width: 75}} />
+          {matches
+            ? <Nav color={"textPrimary"} setContent={setContent} />
+            : <SimpleMenu setContent={setContent} />
+          }
         </Toolbar>
       </AppBar>
     );
 }
 
-const footers = [
-    {
-      title: 'Company',
-      description: ['Team', 'Contact us'],
-    },
-    {
-      title: 'Legal',
-      description: ['Privacy policy', 'Terms of use'],
-    },
-  ];
-
-export function Footer() {
+export function Footer({ setContent }) {
     const classes = useStyles();
     return (
-    <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Grid container spacing={4} justify="space-evenly">
-          {footers.map(footer => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                {footer.title}
-              </Typography>
-              <ul>
-                {footer.description.map(item => (
-                  <li key={item}>
-                    <Link href="#" variant="subtitle1" color="textSecondary">
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
-          ))}
-        </Grid>
-        <Box mt={5}>
-          <Copyright />
-        </Box>
+      <Container component="footer" maxWidth={false} className={classes.footer}>
+       <Copyright />
+       <Nav color={"textSecondary"} setContent={setContent} />
       </Container>
     );
 }
