@@ -1,1 +1,0 @@
-"parcel-plugin-asciidoc": "file:./parcel-plugin-asciidoc",
