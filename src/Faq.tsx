@@ -55,6 +55,9 @@ function snakeToCamel(str) {
                     .replace('_', ' '));
     }
 
+function dropFirstTwoChar(str2) {
+    return str2.substring(2)
+}
 
 export function Faq() {
     const classes = useStyles();
@@ -75,7 +78,7 @@ export function Faq() {
         className={classes.tabs}
       >
         {keys.map((key, index) => (
-            <Tab label={snakeToCamel(key)} {...a11yProps(index)} key={index} />
+            <Tab label={dropFirstTwoChar(snakeToCamel(key))} {...a11yProps(index)} key={index} />
         ))}
       </Tabs>
       {keys.map((key, index) => (
