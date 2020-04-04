@@ -92,10 +92,6 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-export function Separator() {
-  return <div style={{borderTop: "1px solid rgba(0, 0, 0, 0.12)", marginLeft: "auto", marginRight: "auto"}} />;
-}
-
 export function Copyright() {
     return (
       <Typography variant="h5" color="textSecondary">

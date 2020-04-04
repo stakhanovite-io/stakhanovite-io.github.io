@@ -1,9 +1,9 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Faq } from './Faq';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { Footer, ToolbarMenu } from './Components';
 import { Stakhanovite } from './Pages/Stakhanovite';
-import Layout from './Layout';
 import "./i18n.js"
 
 const theme = createMuiTheme({
@@ -43,9 +43,16 @@ const theme = createMuiTheme({
 function Main() {
   const [content, setContent] = React.useState(<Stakhanovite />);
   return (
-    <Layout setContent={setContent}>
-      {content}
-    </Layout>
+    <div className="Layout" >
+      <CssBaseline />
+      <header className="Layout-header">
+        <ToolbarMenu setContent={setContent}></ToolbarMenu>
+      </header>
+      <main>
+        {content}
+        <Footer setContent={setContent}></Footer>
+      </main>
+    </div>
   );
 }
 
