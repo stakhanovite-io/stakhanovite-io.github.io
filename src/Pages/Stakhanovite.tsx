@@ -17,7 +17,7 @@ export function Stakhanovite() {
             <h1>
             WE ARE STKH!
             </h1>
-            <div>
+            <div style={{overflowWrap: "break-word"}}>
                 <span style={{color: "#e83e8c"}}>Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9/">3a6c4c5af3454634a5de5899554d219878efd609c73b5443b2f5b1a677f9a2a9</a></span>
                 <IconButton
                     style={{width: "80px"}}
