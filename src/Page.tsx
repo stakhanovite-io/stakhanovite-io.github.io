@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
       '& h1': {
         color: 'rgba(36,54,64,1.00)',
         textTransform: "uppercase",
-        fontSize: "3.5rem",
+        fontSize: "3rem",
         fontWeight: 700,
         lineHeight: 1.3,
       },
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     },
     hero: {
       color: "rgba(36,54,64,1.00)",
-      fontSize: "3.5rem",
+      fontSize: "3rem",
       fontWeight: 700,
       lineHeight: 1.3,
       textTransform: "uppercase",
