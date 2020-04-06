@@ -27,6 +27,18 @@ i18n
       },
       fr: {
         translations: {
+          title: "STAKHANOVITE STAKE POOL",
+          subtitle: "Un groupe d'enjeu Cardano pour la communauté, par la communauté.",
+          intro: "Un groupe d'enjeu uniquement dédié à Cardano - Pour la communauté, par la communauté.  Nous sommes <strong>STKH</strong>!<br />Déléguez vos ADA à notre groupe d'enjeu: ",
+          "what-content": "Cardano, la blockchain supportant la cryptomonnaie ada (ADA), est basée sur la preuve d'enjeu (PoS). Toute personne possédant des ada peut participer à son fonctionnement. Cependant, vous devez pour cela être connectés en permanence...<br />Parce que ce dernier point est très contraingant pour les utilisateurs lambda, Cardano vous permet de déléguer vos ada (ou enjeu) à un groupe d'enjeu. Le groupe ('Stake Pool') sera connecté pour vous et effectuera tout le travail de validation nécessaire en votre nom.<br />C'est ce que le Stakhanovite Stake Pool vous offre comme service !",
+          "what-title": "Nous faisons...",
+          "who-title": "Nous sommes...",
+          "who-content": "STKH est géré pour la communauté, par la communauté, et dont nous sommes des membres indépendants.  <br />Ecoutez ce qu'un membre de notre équipe !<br /> @psychomb : \"Traducteur en français de divers contenus liés à Cardano tels que 'Pourquoi Cardano ?', la lettre d'information bimestrielle de la Fondation Cardano ou du portefeuille léger de Yoroi, je suis ambassadeur Cardano depuis le lancement du programme. Il était naturel pour moi de créer un groupe d'enjeu afin de soutenir un peu plus la communauté Cardano.\"",
+          "why-title": "Pourquoi nous ?!",
+          "why-content": "Pour nos faibles coûts, bien sûr ! <br />Pour le testnet, le Stakhanovite Stake Pool ne vous facturera aucun frais fixe. Nous, les opérateurs du pool, serons récompensés par une marge bénéficiaire de 5 % seulement.<br />Cette marge bénéficiaire est calculée sur les récompenses que vous obtenez grâce à nos efforts. Cela signifie que nous ne serons payés que lorsque vous le serez ! Par exemple, si votre récompense par époque est de 10 ADA, nous serons payés 0,5 ADA et les 9,5 ADA restants seront à vous. Il est important de noter que c'est le protocole qui vous paie, pas nous. Vos récompenses seront automatiquement déposées dans vos portefeuilles à la fin de chaque époque. Des coûts jusqu'aux performances, vous saurez tout et vous serez toujours en mesure de faire le meilleur choix pour vous et vos ADA",
+          subscribe: "Inscrivez-vous",
+          newsletter: "Pour recevoir nos dernières nouvelles et être informés nos mises à jour importantes, veuillez vous inscrire à notre bulletin d'information. Nous nous efforcerons de faire court et simple !",
+          newsletterAck: "Je souhaite recevoir la lettre d'information Stakhanovite, et je comprends que je peux me désabonner à tout moment en cliquant sur le lien de désabonnement au bas des e-mails."
         }
       }
     },
