@@ -12,6 +12,6 @@ Non. Le protocole se charge de redistribuer les récompenses en proportion de vo
 
 # Je ne reçois aucune récompenses...
 
-Il faut vérifier que le groupe d'enjeu auquel vous déléguer fonctionne correctement. Si vous avez des doutes, vous pouvez **contacter le groupe d'enjeu par e-mail si l'option est disponible**.
+Il faut vérifier que le groupe d'enjeu auquel vous déléguez fonctionne correctement. Si vous avez des doutes, vous pouvez **contacter le groupe d'enjeu par e-mail si l'option est disponible**.
 
 **Vous pouvez toujours re-déléguer vos ada sur un autre groupe d'enjeu quand vous le souhaitez !**
