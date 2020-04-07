@@ -2,7 +2,7 @@ Que vous soyez un vétéran des cryptomonnaies ou un débutant, il est toujours 
 
 **Dans le monde des cryptomonnaies, la seule preuve de propriété est la clé privée**
 
-# Quelles sont les implications de ce principe ?
+## Quelles sont les implications de ce principe ?
 
 Cela a deux implications importantes :
 
@@ -14,7 +14,7 @@ Vous mettrez donc tout en oeuvre pour garder en sécurité votre ou vos clés pr
 
 **Toutefois, n'oubliez pas que l'un des plus grands dangers qui guette vos clés privées n'est autre que vous-même. Ne vous précipitez jamais lorsque vous faites une opération.**
 
-# Points relatif à Cardano
+## Points relatif à Cardano
 
 Il n’existe aucun portefeuille Daedalus développé pour les smartphones. Seul le logiciel pour windows / mac / linux est disponible ici: [Daedalus](https://daedaluswallet.io).
 
