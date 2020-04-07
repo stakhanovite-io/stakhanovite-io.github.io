@@ -2,7 +2,7 @@
 
 N'importe qui possédant des ada peut participer à la création du registre Cardano, en proportion de la quantité d'ada détenue. Plus vous possédez d'ada, plus vous serez appelé à signer des blocs.
 
-Il est important qu'une majorité de détenteurs d'ada honnêtes participe à ce processus, de manière à garantir au mieux la sécurité du registre.
+Il est important qu'une majorité honnête de détenteurs d'ada participe à ce processus, de manière à garantir au mieux la sécurité du registre.
 
 Pour inciter à participer, chaque bloc signé donne droit à une récompense en ada. Toutefois, la quantité d'ada à détenir pour être appelé à signer **régulièrement** des blocs est importante.
 
