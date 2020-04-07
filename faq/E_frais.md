@@ -1,4 +1,4 @@
-# Comprendre la structure des frais affichés par un groupe d'enjeu ?
+## Comprendre la structure des frais affichés par un groupe d'enjeu ?
 
 La structure de frais appliqués par un groupe d'enjeu se compose de plusieurs éléments. Il est important de bien les apprécier pour ne pas être surpris au moment de recevoir les récompenses.
 
