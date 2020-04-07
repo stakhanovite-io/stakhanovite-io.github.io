@@ -1,4 +1,4 @@
-# Why is the FAQ in french only?
+## Why is the FAQ in french only?
 
 The Cardano project is already well documented in english and you can find many docs - technical and blog posts - on internet.
 
