@@ -1,8 +1,8 @@
-# Yoroi
+## Yoroi
 
 **Yoroi** (développé par Emurgo) : Ce portefeuille est une extension de navigateur (Chrome, Firefox ou Brave), et il est aussi disponible pour smartphones (iOS et Android). Son interface est très soignée, mais il ne propose pas encore de classement des groupes d'enjeu comme le fait Daedalus.
 
-# Daedalus
+## Daedalus
 
 **Daedalus** (développé par I.O.H.K.) : L'onglet de délégation de Daedalus vous présentera tous les groupes d'enjeu ouverts à la délégation. **Ces groupes d'enjeu seront classés du plus intéressant (position 1) au moins intéressant (position n).**
 
@@ -10,7 +10,7 @@ Pour établir ce classement, **Daedalus prends en compte plusieurs paramètres d
 
 A première vue, il peut vous sembler que Daedalus propose des choix discutables. Cependant, **Daedalus propose** un classement non-myopique, c'est à dire **un choix pertinent pour vous à long-terme.**
 
-# Choix alternatifs
+## Choix alternatifs
 
 Si la performance et les frais de participation d'un groupe d'enjeu sont deux aspects essentiels au choix du groupe d'enjeu, ces critères peuvent devenir secondaire dans certains cas précis.
 
@@ -18,7 +18,7 @@ Par exemple, si vous trouvez cette FAQ informative, vous pourriez décider de d�
 
 Un deuxième exemple serait celui d'**un groupe d'enjeu à but humanitaire ou social.** Un tel groupe pourrait avoir des frais élevés pour la bonne raison qu'il **reverserait ses bénéfices à une bonne oeuvre**. Ainsi, vous soutenez une cause qui vous est chère, de manière totalement indolore.
 
-# Quelle stratégie adopter ?
+## Quelle stratégie adopter ?
 
 Evitez de laisser votre plateforme d'échange favorite déléguer vos ada à votre place. Il serait tentant de les laisser faire, surtout qu'ils vous proposeront certainement des frais nuls ou presque.
 
