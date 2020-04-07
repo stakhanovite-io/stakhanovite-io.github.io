@@ -18,3 +18,8 @@ Pour éviter de devoir attendre des semaines ou des mois l'éventualité de sign
 
 Pour en savoir plus : [Article de blog en PDF - FR](https://github.com/psychomb/Cardano-fr-translations/blob/master/Groupes_denjeu_au_sein_de_Cardano.pdf)
 
+## Mes ada délégués sont-ils bloqués ?
+
+Non. Vous êtes libres de dépenser les ada délégués comme vous le souhaitez. **Vos ada ne sont jamais bloqués.** En revanche, ne vous attendez pas à recevoir de récompenses si tel était le cas !
+
+**Notez que le processus de délégation ne touche pas à la clé privée, preuve de propriété de vos ada. Méfiez vous de toute personne qui vous demanderait un transfert d'ada pour la délégation !**
