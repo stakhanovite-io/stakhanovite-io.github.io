@@ -1,4 +1,4 @@
-# Participer à la sécurité de Cardano
+## Participer à la sécurité de Cardano
 
 N'importe qui possédant des ada peut participer à la création du registre Cardano, en proportion de la quantité d'ada détenue. Plus vous possédez d'ada, plus vous serez appelé à signer des blocs.
 
@@ -6,7 +6,7 @@ N'importe qui possédant des ada peut participer à la création du registre Car
 
 Pour inciter à participer, chaque bloc signé donne droit à une récompense en ada. Toutefois, la quantité d'ada à détenir pour être appelé à signer **régulièrement** des blocs est importante.
 
-# Déléguez, participez !
+## Déléguez, participez !
 
 **Si vous ne possédez pas plusieurs millions d'ada, l'attente pour signer un bloc pourrait être très longue.** De plus l'ordinateur sur lequel tourne le logiciel validateur devra être allumé et connecté en permanence au réseau, de manière à ne pas rater l'occasion si elle se présente...
 
