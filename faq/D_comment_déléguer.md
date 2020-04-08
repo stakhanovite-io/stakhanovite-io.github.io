@@ -24,5 +24,4 @@ Un deuxième exemple serait celui d'**un groupe d'enjeu à but humanitaire ou so
 
 **"Ne pas mettre tous ses oeufs dans le même panier"** : Vous pouvez parfaitement créer plusieurs portefeuilles au sein de Daedalus ou Yoroi, et déléguer chacun d'eux indépendemment. Ainsi, votre portefeuille principal sera délégué au groupe d'enjeu A et votre second portefeuille au groupe d'enjeu B pour soutenir une action humanitaire, etc...
 
-
-**Décentralisons Cardano.** Evitez de laisser votre plateforme d'échange favorite déléguer vos ada à votre place. Il serait tentant de les laisser faire, surtout qu'ils vous proposeront sans doute des frais nuls ou presque. Seule la quantité d'ada à échanger devrait rester sur les plateformes d'échanges. **Dans le cas contraire, ces acteurs auront un poids démesuré dans l'écosystème Cardano sans être réellement propriétaires d'ada !**
+**Décentralisons Cardano** : Evitez de laisser votre plateforme d'échange favorite déléguer vos ada à votre place. Il serait tentant de les laisser faire, surtout qu'ils vous proposeront sans doute des frais nuls ou presque. Seule la quantité d'ada à échanger devrait rester sur les plateformes d'échanges. **Dans le cas contraire, ces acteurs auront un poids démesuré dans l'écosystème Cardano sans être réellement propriétaires d'ada ! Prenez le contrôle !**
