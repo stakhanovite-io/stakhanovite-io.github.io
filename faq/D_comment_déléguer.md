@@ -26,6 +26,6 @@ Un deuxième exemple serait celui d'**un groupe d'enjeu à but humanitaire ou so
 
 **Décentralisons Cardano** : Evitez de laisser votre plateforme d'échange favorite déléguer vos ada à votre place. Il serait tentant de les laisser faire, surtout qu'ils vous proposeront sans doute des frais nuls ou presque. Seule la quantité d'ada à échanger devrait rester sur les plateformes d'échanges. **Dans le cas contraire, ces acteurs auront un poids démesuré dans l'écosystème Cardano sans être réellement propriétaires d'ada ! Prenez le contrôle !**
 
-## Puis-je fermer mon portefeuille après confirmation de la delegation
+## Puis-je fermer mon portefeuille après confirmation de la délégation ?
 
-Oui. Une fois la transaction de délégation validée, vous pouvez fermer le logiciel qui vous sert de portefeuille. C'est tout l'intérêt de la délégation : laisser travailler un groupe d'enjeu à votre place.
+Oui. Une fois la transaction de délégation validée, vous pouvez fermer votre portefeuille. C'est tout l'intérêt de la délégation : laisser travailler un groupe d'enjeu à votre place !
