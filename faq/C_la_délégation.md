@@ -20,6 +20,8 @@ Pour en savoir plus : [Article de blog en PDF - FR](https://github.com/psychomb/
 
 ## Mes ada délégués sont-ils bloqués ?
 
-Non. Vous êtes libres de dépenser les ada délégués comme vous le souhaitez. **Vos ada ne sont jamais bloqués.** En revanche, ne vous attendez pas à recevoir de récompenses si tel était le cas !
+**Vos ada ne sont jamais bloqués**. Vous êtes libres de les dépenser comme vous le souhaitez pendant qu'ils sont délégués. En revanche, ne vous attendez pas à recevoir de récompenses pour des ada que vous auriez dépensés !
 
-**Notez que le processus de délégation ne touche pas à la clé privée, preuve de propriété de vos ada. Méfiez vous de toute personne qui vous demanderait un transfert d'ada pour la délégation !**
+**Vos ada ne sont soumis à aucune mesure punitive** dans le cas ou le groupe d'enjeu où vous déléguez ne ferait pas son travail. **Le pire qui puisse vous arriver est de ne pas obtenir de récompenses**. Dans ce cas, il vous suffit de changer de groupe d'enjeu.
+
+**Le processus de délégation ne requiert aucun transfert d'ada entre addresses.** Ne répondez à aucune personne qui vous demanderait un transfert d'ada pour la délégation. Il s'agit d'une tentative de vol !
