@@ -14,7 +14,7 @@ A première vue, il peut vous sembler que Daedalus propose des choix discutables
 
 ## Quel groupe d'enjeu choisir ?
 
-Si la performance et les frais de participation d'un groupe d'enjeu sont deux aspects essentiels au choix du groupe d'enjeu, ces critères peuvent devenir secondaire dans certains cas précis.
+Si la performance et les frais de participation d'un groupe d'enjeu sont deux aspects essentiels au choix du groupe d'enjeu, ces critères peuvent devenir secondaires dans certains cas précis.
 
 Par exemple, si vous trouvez cette FAQ informative, vous pourriez décider de déléguer vos ada à STKH plutôt qu'un autre groupe d'enjeu équivalent, ou moins cher. Ce faisant, vous prenez la **décision de soutenir un écosystème pour ce qu'il vous offre comme service.**
 
