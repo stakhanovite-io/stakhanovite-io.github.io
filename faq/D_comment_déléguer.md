@@ -1,6 +1,8 @@
+### L'acte de déléguer se fait par l'intermédiaire de votre portefeuille en signant une transaction particulière. Cela ne requiert aucun transfert d'ada entre addresses. Toute sollicitation de transfert d'ada pour la délégation est une tentative de vol.
+
 ## Yoroi
 
-**Yoroi** (développé par Emurgo) : Ce portefeuille est une extension de navigateur (Chrome, Firefox ou Brave), et il est aussi disponible pour smartphones (iOS et Android). Son interface est très soignée, mais il ne propose pas encore de classement des groupes d'enjeu comme le fait Daedalus.
+**Yoroi** (développé par Emurgo) : Ce portefeuille est une extension de navigateur (Chrome, Firefox ou Brave), et il est aussi disponible pour smartphones (iOS et Android). Son interface est très soignée et vous permet de suivre vos récompenses dans le temps. Yoroi ne propose pas encore de classement des groupes d'enjeu comme le fait Daedalus.
 
 ## Daedalus
 
