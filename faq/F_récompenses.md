@@ -1,6 +1,6 @@
 ## Quand arrivent mes récompenses ?
 
-Le protocole de preuve d'enjeu sur lequel repose Cardano découpe le temps en époques. Une époque dure 5 jours (un jour sur le testnet ITN). Avant de recevoir vos récompenses, vous devez attendre que votre délégation soit effective. **Cette étape prend une époque entière, en plus de celle durant laquelle vous avez délégué.** Vous ne recevrez donc vos premières récompenses qu'à la fin de l'époque **n + 2**.
+Le protocole de preuve d'enjeu sur lequel repose Cardano découpe le temps en époques. Une époque dure 5 jours (un jour sur le testnet ITN). Avant de recevoir vos récompenses, vous devez attendre que votre délégation soit effective. **Cette étape prend une époque entière, en plus de celle durant laquelle vous avez délégué.** Vous ne recevrez donc vos premières récompenses qu'à la fin de l'époque (n + 2).
 
 **Les récompenses sont ajoutées au solde du compte délégué et sont automatiquement déléguées au même groupe d'enjeu.**
 
