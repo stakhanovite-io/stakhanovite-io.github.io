@@ -1,6 +1,6 @@
 ## J'ai délégué mes ada qui ont généré des récompenses lors du testnet incitatif. Comment puis-je récupérer ces récompenses ?
 
-Lors du testnet incitatif, il vous a été demandé de créer un nouveau portefeuille (15 mots de secours) et d'y transferer vos fonds avant de pouvoir déléguer. Ce wallet est associé à une phrase de secours de 15 mots. **C'est grâce à cette phrase de secours de 15 mots que vous pourrez récupérer vos récompenses sur le mainnet.** Ces récompenses ne seront accessibles que sur le mainnet.
+Lors du testnet incitatif, il vous a été demandé de créer un nouveau portefeuille et d'y transferer vos fonds avant de pouvoir déléguer. **Ce nouveau wallet est associé à une phrase de secours de 15 mots.** C'est grâce à cette phrase de secours de 15 mots que vous pourrez récupérer vos récompenses sur le réseau principal (mainnet).
 
 ## Pourrais-je récupérer les ada "photographiés" (issus de l'instantané) et délégués après le 29 novembre 2019 ?
 
