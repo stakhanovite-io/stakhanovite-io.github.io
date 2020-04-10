@@ -6,17 +6,17 @@ La structure de frais appliqués par un groupe d'enjeu se compose de plusieurs �
 
 Les frais fixes sont la quantité d'Ada que les opérateurs du groupe prélèveront à la fin de chaque époque **quoiqu'il arrive**.
 
-Si les récompenses totales du groupe d'enjeu sont inférieures au montant de ces frais fixes, **aucun délégateur n'obtiendra de récompenses.**
+  - Si les récompenses totales du groupe d'enjeu sont inférieures au montant de ces frais fixes, **aucun délégateur n'obtiendra de récompenses.**
 
-Les frais fixes peuvent être nuls.
+  - Les frais fixes peuvent être nuls.
 
 >### Marge bénéficiaire (Margin ratio)
 
 La marge bénéficiaire définit le pourcentage des récompenses totales que les opérateurs se versent **après prélèvement des frais fixes** et **avant versement aux délégateurs**. 
 
-Un groupe d'enjeu avec une marge de 100% sera considéré comme privé, à moins que vous souhaitiez tout reverser aux opérateurs du groupe d'enjeu !
+  - Un groupe d'enjeu avec une marge de 100% sera considéré comme privé, à moins que vous souhaitiez tout reverser aux opérateurs du groupe d'enjeu !
 
-Enfin, **le montant global de cette marge peut être affectée par le dernier paramètre : la récompense maximale.**
+  - **Le montant global de cette marge peut être affectée par le dernier paramètre : la récompense maximale.**
 
 >### La récompense maximale (Max rewards)
 
