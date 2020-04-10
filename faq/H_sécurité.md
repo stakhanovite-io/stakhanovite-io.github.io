@@ -16,10 +16,9 @@ Vous mettrez donc tout en oeuvre pour garder en sécurité votre ou vos clés pr
 
 ## Points relatif à Cardano
 
-Il n’existe aucun portefeuille Daedalus développé pour les smartphones. Seul le logiciel pour windows / mac / linux est disponible ici: [Daedalus](https://daedaluswallet.io).
+Il n’existe aucun portefeuille Daedalus développé pour les smartphones. Seul le logiciel pour windows / mac / linux est disponible [ici](https://daedaluswallet.io).
 
-Si vous souhaitez utiliser un portefeuille ADA pour smartphones, ou un client léger veuillez télécharger Yoroi sur le Playstore Google ou l’Appstore pour iOS. Il est développé par Emurgo. Faites extrêmement attention aux fausses applications pour smartphones. [Yoroi](https://yoroi-wallet.com/#/)
-
+Si vous souhaitez utiliser un client léger veuillez télécharger [Yoroi](https://yoroi-wallet.com/#/). Il existe aussi sur le Playstore Google ou l’Appstore pour iOS. Il est développé par Emurgo. Faites extrêmement attention aux fausses applications pour smartphones et vérifiez que la source est bien **EMURGO**.
 
 Le projet Cardano et ses organisations ne transmettront jamais d'annonces officielles aux utilisateurs individuellement par messages directs. Les mises à jour seront affichées sur les sites web officiels et médias sociaux.
 
