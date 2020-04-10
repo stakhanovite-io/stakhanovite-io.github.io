@@ -32,11 +32,9 @@ Soyez extrèmement vigilants et **ne répondez pas aux messages personnels vous 
 
 Tout est affaire de goûts !
 
-- **Daedalus est un client "full node"**, c'est à dire que ce logiciel télécharge la blockchain Cardano en entier et vérifie indépendemment toutes les transactions qui ont eu lieu. Vous n'avez besoin de faire confiance à personne.
+- **Daedalus est un client "full node"**, c'est à dire que ce logiciel télécharge la blockchain Cardano en entier et vérifie indépendemment toutes les transactions qui ont eu lieu. Vous n'avez besoin de faire confiance à personne. En tant qu'utilisateur normal, vous ne créez aucun blocs mais participez à la dissémination des transactions et des blocs lorsque votre logiciel est ouvert. Certains aiment, d'autres n'en n'auront que faire.
 
-En tant qu'utilisateur normal, vous ne créez aucun blocs mais participez à la dissémination des transactions et des blocs lorsque votre logiciel est ouvert. Certains aiment, d'autres n'en n'auront que faire.
-
-*A noter : à terme, Daedalus offrira la possibilité d'intéragir directement avec des applications spécifiques, mais ce travail est encore en cours.*
+  *A noter : à terme, Daedalus offrira la possibilité d'intéragir directement avec des applications spécifiques, mais ce travail est encore en cours.*
 
 - **Yoroi est un client léger**. En utilisant Yoroi, vous ne téléchargez pas la blockchain et faites confiance à Emurgo pour vous servir d'intermédiaire entre vous et la blockchain. Cela est pratique car très rapide d'utilisation. La sécurité est également au rendez-vous et l'interface est très soignée et claire. De plus, Yoroi est disponible en plusieurs langues, dont le Français, **traduit d'ailleurs en grande partie par STKH !**
 
