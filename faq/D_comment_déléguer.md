@@ -1,12 +1,14 @@
-### L'acte de déléguer se fait par l'intermédiaire de votre portefeuille en signant une transaction particulière. Cela ne requiert aucun transfert d'ada entre addresses. Toute sollicitation de transfert d'ada pour la délégation est une tentative de vol.
+#### L'acte de déléguer se fait par l'intermédiaire de votre portefeuille en signant une transaction particulière. Cela ne requiert aucun transfert d'ada entre addresses. Toute sollicitation de transfert d'ada pour la délégation est une tentative de vol.
+
+#### La délégation n'est disponible aujourd'hui que sur le réseau "Incentivized Testnet" aussi appelé "Shelley ITN". Seuls les ADA présents dans des portefeuilles Daedalus "mainnet" ou Yoroi "mainnet" à la date du 29 Novembre 2019 sont éligibles pour délégation dans le réseau "Shelley ITN".
 
 ## Yoroi
 
-**Yoroi** (développé par Emurgo) : Ce portefeuille est une extension de navigateur (Chrome, Firefox ou Brave), et il est aussi disponible pour smartphones (iOS et Android). Son interface est très soignée et vous permet de suivre vos récompenses dans le temps. Yoroi ne propose pas encore de classement des groupes d'enjeu comme le fait Daedalus.
+[**Yoroi**](https://yoroi-wallet.com/#/) (développé par Emurgo) : Ce portefeuille est une extension de navigateur (Chrome, Firefox ou Brave), et il est aussi disponible pour smartphones (iOS et Android). Son interface est très soignée et vous permet de suivre vos récompenses dans le temps. Yoroi ne propose pas encore de classement des groupes d'enjeu comme le fait Daedalus. **Utilisez une des versions "testnet" proposée si vous souhaitez participez au testnet "Shelley ITN".**
 
 ## Daedalus
 
-**Daedalus** (développé par I.O.H.K.) : L'onglet de délégation de Daedalus vous présentera tous les groupes d'enjeu ouverts à la délégation. **Ces groupes d'enjeu seront classés du plus intéressant (position 1) au moins intéressant (position n).**
+[**Daedalus ITN**](https://staking.cardano.org/en/delegation/) (développé par I.O.H.K.) : L'onglet de délégation de Daedalus ITN vous présentera tous les groupes d'enjeu ouverts à la délégation. **Ces groupes d'enjeu seront classés du plus intéressant (position 1) au moins intéressant (position n).**
 
 Pour établir ce classement, **Daedalus prends en compte plusieurs paramètres dont la performance du groupe d'enjeu dans le temps, ses frais de participation ainsi que sa saturation** (voir. FAQ - Frais, Saturation).
 
