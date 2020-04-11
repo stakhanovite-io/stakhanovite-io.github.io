@@ -1,6 +1,6 @@
-#### L'acte de déléguer se fait par l'intermédiaire de votre portefeuille en signant une transaction particulière. Cela ne requiert aucun transfert d'ada entre addresses. Toute sollicitation de transfert d'ada pour la délégation est une tentative de vol.
+L'acte de déléguer se fait par l'intermédiaire de votre portefeuille en signant une transaction particulière. **Cela ne requiert aucun transfert d'ada entre adresses. Toute sollicitation de transfert d'ada pour la délégation est une tentative de vol.**
 
-#### La délégation n'est disponible aujourd'hui que sur le réseau "Incentivized Testnet" (Testnet Incitatif), aussi appelé "Shelley ITN". Seuls les ada présents dans des portefeuilles Daedalus "mainnet" ou Yoroi "mainnet" à la date du 29 Novembre 2019 sont éligibles pour délégation sur le réseau "Shelley ITN".
+**La délégation n'est disponible aujourd'hui que sur le réseau "Incentivized Testnet" (Testnet Incitatif), aussi appelé "Shelley ITN".** Seuls les ada présents dans des portefeuilles Daedalus ou Yoroi "mainnet" à la date du **29 Novembre 2019** sont éligibles pour délégation sur le réseau "Shelley ITN".
 
 ## Yoroi
 
