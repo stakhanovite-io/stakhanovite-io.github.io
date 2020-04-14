@@ -7,7 +7,7 @@ export function What() {
     <Page title="What do we offer?" subtitle="A Cardano staking service" logo={logo}>
         <div>
             <h3>
-            We sign block for you!
+            We sign blocks for you!
             </h3>
             <div>
                 Cardano, the blockchain supporting the ada cryptocurrency (ADA), runs in a <strong>proof-of-stake (PoS)</strong> setting. Anyone who owns ada can participate in its functioning. For that however, you must be online at all times…
