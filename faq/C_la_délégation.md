@@ -24,4 +24,4 @@ Pour en savoir plus : [Article de blog en PDF - FR](https://github.com/psychomb/
 
 ## Puis-je perdre des ada pendant la délégation ?
 
-**Votre montant initial d'ada n'est soumis à aucune mesure punitive**, même si le groupe d'enjeu où vous déléguez ne fait pas son travail. **Le pire** qui puisse vous arriver **est de ne pas obtenir de récompenses**. Dans ce cas, il vous suffit de changer de groupe d'enjeu !
+**Votre montant initial d'ada n'est soumis à aucune mesure punitive**, même si le groupe d'enjeu auquel vous déléguez ne fait pas son travail. Dans tous les cas, **le pire** qui puisse vous arriver **est de ne pas obtenir de récompenses**. Il vous suffirait alors de changer de groupe d'enjeu, tout simplement !
