@@ -1,6 +1,6 @@
 Que vous soyez un vétéran ou un débutant dans les cryptomonnaies, il est toujours bon de se rappeler quelques règles élémentaires de sécurité.
 
-**Dans le monde des cryptomonnaies, la seule preuve de propriété est la clé privée**
+Dans le monde des cryptomonnaies, **la seule preuve de propriété est la clé privée.** Cette clé privée se présente très souvent sous la forme d'une **suite de mots secrets (12, 15 ou plus) aussi appelée phrase mnémonique. Cette suite de mots est votre portefeuille !**
 
 ## Quelles sont les implications de ce principe ?
 
