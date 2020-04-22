@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Footer, ToolbarMenu } from './Components';
-import { Stakhanovite } from './Pages/Stakhanovite';
+import { items } from './Navigation';
+import { Router, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import "./i18n.js"
 
 const theme = createMuiTheme({
@@ -40,18 +42,24 @@ const theme = createMuiTheme({
   },
 });
 
+const history = createBrowserHistory();
+
 function Main() {
-  const [content, setContent] = React.useState(<Stakhanovite />);
   return (
     <div className="Layout" >
       <CssBaseline />
-      <header className="Layout-header">
-        <ToolbarMenu setContent={setContent}></ToolbarMenu>
-      </header>
-      <main>
-        {content}
-        <Footer setContent={setContent}></Footer>
-      </main>
+      <Router history={history}>
+        <header className="Layout-header">
+          <ToolbarMenu />
+        </header>
+        <main>
+          {Object.keys(items).map((key) => {
+            const item = items[key];
+            return <Route key={key} exact path={key} component={item.element} />;
+          })}
+          <Footer />
+        </main>
+      </Router>
     </div>
   );
 }

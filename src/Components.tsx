@@ -11,12 +11,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { OurOperation } from './Pages/OurOperation';
-import { Stakhanovite } from './Pages/Stakhanovite';
-import { What } from './Pages/What';
-import { Who } from './Pages/Who';
-import { WhyUs } from './Pages/WhyUs';
-import { Faq } from './Faq';
+import { Link as RLink } from "react-router-dom";
+import { items } from './Navigation';
 import joinUsLogo from './../public/assets/Join_us.png';
 
 const useStyles = makeStyles(theme => ({
@@ -104,24 +100,15 @@ export function Copyright() {
     );
   }
 
-const items = {
-  'Stakhanovite': <Stakhanovite />,
-  'What': <What />,
-  'Who': <Who />,
-  'Why Us': <WhyUs />,
-  'Our Operation': <OurOperation />,
-  'FAQ': <Faq />
-}
-
-function Nav({ color, setContent }) {
+function Nav({ color }) {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width: 1000px)');
   return (
   <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
     <nav className={matches ? classes.nav : classes.navSmall}>
       {Object.keys(items).map((key) =>
-      <Link key={key} variant="button" color={color} href="#" onClick={() => setContent(items[key])} className={classes.link}>
-        {key}
+      <Link component={RLink} to={key} key={key} variant="button" color={color} href="#" className={classes.link}>
+        {items[key].title}
       </Link>
       )}
       <Link variant="button" color={color} href="https://stakhanovite.substack.com/" className={classes.link}>
@@ -139,8 +126,7 @@ function Nav({ color, setContent }) {
   </div>);
 }
 
-function SimpleMenu({ setContent }) {
-  const classes = useStyles();
+function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
@@ -164,14 +150,14 @@ function SimpleMenu({ setContent }) {
         onClose={handleClose}
       >
         {Object.keys(items).map((key) =>
-        <MenuItem key={key} onClick={() => {handleClose(); setContent(items[key]);}}>{key}</MenuItem>
+        <MenuItem key={items[key]} onClick={() => {handleClose();}}>{key}</MenuItem>
         )}
       </Menu>
     </div>
   );
 }
 
-export function ToolbarMenu({ setContent }) {
+export function ToolbarMenu() {
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 1000px)');
     return (
@@ -179,20 +165,20 @@ export function ToolbarMenu({ setContent }) {
         <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
           <img alt="logo" src={joinUsLogo} style={{width: 75}} />
           {matches
-            ? <Nav color={"textPrimary"} setContent={setContent} />
-            : <SimpleMenu setContent={setContent} />
+            ? <Nav color={"textPrimary"} />
+            : <SimpleMenu />
           }
         </Toolbar>
       </AppBar>
     );
 }
 
-export function Footer({ setContent }) {
+export function Footer() {
     const classes = useStyles();
     return (
       <Container component="footer" maxWidth={false} className={classes.footer}>
        <Copyright />
-       <Nav color={"textSecondary"} setContent={setContent} />
+       <Nav color={"textSecondary"} />
       </Container>
     );
 }
