@@ -150,7 +150,7 @@ function SimpleMenu() {
         onClose={handleClose}
       >
         {Object.keys(items).map((key) =>
-        <MenuItem key={items[key]} onClick={() => {handleClose();}}>{key}</MenuItem>
+        <MenuItem component={RLink} to={key} key={key} onClick={handleClose}>{items[key].title}</MenuItem>
         )}
       </Menu>
     </div>
