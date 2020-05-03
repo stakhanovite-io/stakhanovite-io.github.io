@@ -33,4 +33,4 @@ Un deuxième exemple serait celui d'**un groupe d'enjeu à but humanitaire ou so
 
 ## Puis-je fermer mon portefeuille après confirmation de la délégation ?
 
-Oui. Une fois la transaction de délégation validée, vous pouvez fermer votre portefeuille. C'est tout l'intérêt de la délégation : laisser travailler un groupe d'enjeu à votre place !
+Oui. Une fois la transaction de délégation validée et acceptée par le réseau, vous pouvez fermer votre portefeuille. C'est tout l'intérêt de la délégation : laisser travailler un groupe d'enjeu à votre place !
