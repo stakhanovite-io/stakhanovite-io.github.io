@@ -16,7 +16,7 @@ Pour éviter de devoir attendre des semaines ou des mois l'éventualité de sign
 
 **Le groupe d'enjeu prélèvera une commission pour ce service** (cf. FAQ-Frais).
 
-Pour en savoir plus : [Article de blog en PDF - FR](https://github.com/psychomb/Cardano-fr-translations/blob/master/Groupes_denjeu_au_sein_de_Cardano.pdf)
+Pour en savoir plus : [Article de blog - FR](https://forum.cardano.org/t/groupes-denjeu-au-sein-de-cardano/32579)
 
 ## Mes ada délégués sont-ils bloqués ?
 
