@@ -15,7 +15,7 @@
     "i18next-browser-languagedetector": "4.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-i18next": "11.3.5",
+    "react-i18next": "11.6.0",
     "react-router-dom": "5.1.2",
     "use-clipboard-copy": "0.1.1"
   },
