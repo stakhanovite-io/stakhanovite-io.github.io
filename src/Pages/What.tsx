@@ -16,7 +16,7 @@ export function What() {
                 Because this last requirement is very demanding and not practical for everyday users, Cardano allows you to delegate your ada (or stake) to a stake pool. 
                 <br />
                 <br />
-                The stake pool <strong>will be online for you</strong> and perform all the necessary validation work on your behalf.
+                The stake pool <strong>will be online for you</strong> and perform block validation on your behalf.
                 <br />
                 <br />
                 <strong>That is exactly why the Stakhanovite Stake Pool is here for you!</strong>
