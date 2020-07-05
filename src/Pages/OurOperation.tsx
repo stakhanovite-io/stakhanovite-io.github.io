@@ -7,10 +7,10 @@ export function OurOperation() {
     <Page title="Network" subtitle="A solid infrastructure" logo={logo}>
         <div>
             <h3>
-            OUR NODE IS LOCATED IN FRANCE.
+            OUR CORE NODE IS LOCATED IN FRANCE.
             </h3>
             <div>
-                For our node's safety, and to ensure near-perfect uptime, we will operate behind geographically distributed relay-nodes.
+                For our node's safety, and to ensure near-perfect uptime, we operate behind geographically distributed relay-nodes. We will have as many relays as required to reach maximum uptime and place all our allocated blocks on-chain. 
                 <br />
                 <br />
                 <strong>Our work ethics is simple: nothing should prevent the Stakhanovite Stake Pool from signing blocks on your behalf.</strong>
