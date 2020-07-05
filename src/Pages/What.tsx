@@ -19,7 +19,7 @@ export function What() {
                 The stake pool <strong>will be online for you</strong> and perform block validation on your behalf.
                 <br />
                 <br />
-                <strong>That is exactly why the Stakhanovite Stake Pool is here for you!</strong>
+                <strong>That is exactly what the Stakhanovite Stake Pool does for you!</strong>
             </div>
         </div>
     </Page>);
