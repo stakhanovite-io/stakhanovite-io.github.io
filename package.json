@@ -20,7 +20,9 @@
     "use-clipboard-copy": "0.1.1"
   },
   "devDependencies": {
+    "marked": "^1.1.0",
     "parcel-bundler": "1.12.4",
+    "parcel-plugin-static-files-copy": "2.4.3",
     "typescript": "3.8.3"
   }
 }
