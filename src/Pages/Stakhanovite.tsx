@@ -12,11 +12,11 @@ export function Stakhanovite() {
     <Page title="STAKHANOVITE STAKE POOL" subtitle="A Cardano stake pool. For the community - By the community" logo={logo}>
         <div>
             <h3>
-            USING <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> WALLETS, JOIN OUR POOL ON THE CARDANO MAINNET (Soon TM).
+            Using <Link color="secondary" href="https://daedaluswallet.io/">Daedalus</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">Yoroi</Link> wallets, join our pool on the Cardano mainnet!
             </h3>
-            <h1>
-            WE ARE STKH!
-            </h1>
+            <h2>
+            We are STKH! And we charge the minimum required fixed costs (340 ada per epoch) and a margin of <strong>1.935%</strong> only on the rewards we make!
+            </h2>
         </div>
     </Page>);
 }
