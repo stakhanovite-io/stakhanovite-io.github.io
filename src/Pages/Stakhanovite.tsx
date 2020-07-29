@@ -12,10 +12,10 @@ export function Stakhanovite() {
     <Page title="STAKHANOVITE STAKE POOL" subtitle="A Cardano stake pool. For the community - By the community" logo={logo}>
         <div>
             <h3>
-            USING <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> WALLETS, JOIN OUR POOL ON THE CARDANO MAINNET (Soon TM).
+            USING <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> WALLETS, JOIN OUR POOL ON THE CARDANO MAINNET FOR A FEE OF ONLY 1.935%.
             </h3>
             <h1>
-            WE ARE STKH!
+            WE ARE STKH!  
             </h1>
         </div>
     </Page>);
