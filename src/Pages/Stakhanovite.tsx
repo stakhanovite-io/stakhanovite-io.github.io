@@ -17,6 +17,11 @@ export function Stakhanovite() {
             <h1>
             WE ARE STKH!
             </h1>
+            <h2>
+            POOL NAME: Stakhanovite #1    
+            TICKER: STKH1
+            POOL ID: b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768      
+            </h2>
         </div>
     </Page>);
 }
