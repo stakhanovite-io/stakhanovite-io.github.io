@@ -15,12 +15,13 @@ export function Stakhanovite() {
             USING <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> WALLETS, JOIN OUR POOL ON THE CARDANO MAINNET FOR A FEE OF ONLY 1.935%.
             </h3>
             <h1>
-            WE ARE STKH!  
+            WE ARE STKH, a minimum fixed cost and 1.9% margin fee Staking Pool.
+            NAME: Stakhanovite #1    
+            TICKER: STKH1
             </h1>
             <h2>
-            POOL NAME: Stakhanovite #1    
-            TICKER: STKH1
-            POOL ID: b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768      
+            POOL ID:
+            b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768      
             </h2>
         </div>
     </Page>);
