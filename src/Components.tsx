@@ -14,6 +14,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Link as RLink } from "react-router-dom";
 import { items } from './Navigation';
 import joinUsLogo from './../public/assets/Join_us.png';
+import delegators from "../public/assets/*/delegators/*.json";
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -103,27 +104,42 @@ export function Copyright() {
 function Nav({ color }) {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width: 1000px)');
+  const stkh1 = delegators.stkh1;
+  const keys = Object.keys(stkh1);
+  const lastEpoch = keys.map(a => parseInt(a)).sort().reverse()[0];
+  const lastEpochData = stkh1[lastEpoch.toString()];
+  //lastEpochData.length
+  const totalStake = lastEpochData.reduce((a, b) => a + parseFloat(b.amount), 0);
+
+  const stake = parseInt(totalStake) / (Math.pow(10, 6));
   return (
-  <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-    <nav className={matches ? classes.nav : classes.navSmall}>
-      {Object.keys(items).map((key) =>
-      <Link component={RLink} to={key} key={key} variant="button" color={color} href="#" className={classes.link}>
-        {items[key].title}
-      </Link>
-      )}
-      <Link variant="button" color={color} href="https://stakhanovite.substack.com/" className={classes.link}>
-        NEWSLETTER
-      </Link>
-    </nav>
-    {matches &&
-      <IconButton
-        href="https://twitter.com/StakhanoviteIO"
-        title="Twitter account"
-      >
-        <TwitterIcon />
-      </IconButton>
-    }
-  </div>);
+    <div>
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+        <nav className={matches ? classes.nav : classes.navSmall}>
+          {Object.keys(items).map((key) =>
+          <Link component={RLink} to={key} key={key} variant="button" color={color} href="#" className={classes.link}>
+            {items[key].title}
+          </Link>
+          )}
+          <Link variant="button" color={color} href="https://stakhanovite.substack.com/" className={classes.link}>
+            NEWSLETTER
+          </Link>
+        </nav>
+        {matches &&
+          <IconButton
+            href="https://twitter.com/StakhanoviteIO"
+            title="Twitter account"
+          >
+            <TwitterIcon />
+          </IconButton>
+        }
+      </div>
+      <div>
+      STAKE {stake} M
+      EPOCH {lastEpoch}
+      DELEGATORS {lastEpochData.length}
+      </div>
+    </div>);
 }
 
 function SimpleMenu() {

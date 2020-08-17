@@ -8,6 +8,7 @@ import logo from '../../public/assets/to_moon.png';
 
 export function Stakhanovite() {
     const clipboard = useClipboard();
+
     return (
     <Page title="STAKHANOVITE STAKE POOL" subtitle="A Cardano stake pool. For the community - By the community" logo={logo}>
         <div>
