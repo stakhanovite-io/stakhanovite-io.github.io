@@ -1,21 +1,15 @@
 import * as React from 'react';
-import { MyResponsiveBar } from '../Components';
+import { MyResponsiveBar, MyResponsiveTreeMap } from '../Components';
 import { Container } from '@material-ui/core';
+import { ThemeProvider } from '@nivo/core'
 
-const data = [
-    {
-      "epoch": "210",
-      "amount": 123,
-    },
-    {
-        "epoch": "211",
-        "amount": 132,
-      },
-      {
-          "epoch": "212",
-          "amount": 100,
-        },
-  ];
+const theme = {
+  tooltip: {
+    tableCell: {
+      background: 'red',
+    }
+  }
+}
 
 export function Stats() {
     return (
@@ -24,7 +18,10 @@ export function Stats() {
         STATS
         </h3>
         <div style={{width: 800, height: 300}}>
-            <MyResponsiveBar data={data} />
+                <MyResponsiveBar />
+        </div>
+        <div style={{width: 800, height: 300}}>
+                <MyResponsiveTreeMap  />
         </div>
     </Container>);
 }

@@ -16,14 +16,13 @@ import { items } from './Navigation';
 import joinUsLogo from './../public/assets/Join_us.png';
 import delegators from "../public/assets/*/delegators/*.json";
 import { ResponsiveBar } from '@nivo/bar'
+import { ResponsiveTreeMap } from '@nivo/treemap'
 
 export const MyResponsiveBar = ({ data /* see data tab */ }) => {
   const stkh1 = delegators.stkh1;
-  console.log(stkh1)
   const agg = Object.keys(stkh1).map(function(key) {
     return {epoch: key, amount: Math.floor(stkh1[key].reduce((a, b) => a + parseFloat(b.amount) / 1000000, 0))}
   }, {});
-  console.log(agg)
   return (
   <ResponsiveBar
       data={agg}
@@ -91,6 +90,35 @@ export const MyResponsiveBar = ({ data /* see data tab */ }) => {
       animate={true}
       motionStiffness={90}
       motionDamping={15}
+  />
+)}
+
+export const MyResponsiveTreeMap = () => {
+  const stkh1 = delegators.stkh1;
+  const keys = Object.keys(stkh1);
+  const lastEpoch = keys.map(a => parseInt(a)).sort().reverse()[0];
+  return (
+
+  <ResponsiveTreeMap
+      root={{
+         name: "text",
+        color: "hsl(196, 70%, 50%)",
+        children: stkh1[lastEpoch.toString()]
+      }}
+      identity="address"
+      value="amount"
+      innerPadding={3}
+      outerPadding={3}
+      margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+      label="amount"
+      labelFormat=".0s"
+      labelSkipSize={12}
+      labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.2 ] ] }}
+      colors={{ scheme: 'nivo' }}
+      borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.3 ] ] }}
+      animate={true}
+      motionStiffness={90}
+      motionDamping={11}
   />
 )}
 
