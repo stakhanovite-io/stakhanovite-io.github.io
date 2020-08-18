@@ -15,6 +15,84 @@ import { Link as RLink } from "react-router-dom";
 import { items } from './Navigation';
 import joinUsLogo from './../public/assets/Join_us.png';
 import delegators from "../public/assets/*/delegators/*.json";
+import { ResponsiveBar } from '@nivo/bar'
+
+export const MyResponsiveBar = ({ data /* see data tab */ }) => {
+  const stkh1 = delegators.stkh1;
+  console.log(stkh1)
+  const agg = Object.keys(stkh1).map(function(key) {
+    return {epoch: key, amount: Math.floor(stkh1[key].reduce((a, b) => a + parseFloat(b.amount) / 1000000, 0))}
+  }, {});
+  console.log(agg)
+  return (
+  <ResponsiveBar
+      data={agg}
+      keys={[ 'amount' ]}
+      indexBy="epoch"
+      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      padding={0.3}
+      colors={{ scheme: 'accent' }}
+      defs={[
+          {
+              id: 'lines',
+              type: 'patternLines',
+              background: 'inherit',
+              rotation: -45,
+              lineWidth: 6,
+              spacing: 10
+          }
+      ]}
+      borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+      axisTop={null}
+      axisRight={null}
+      axisBottom={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: 'epoch',
+          legendPosition: 'middle',
+          legendOffset: 32
+      }}
+      axisLeft={{
+          tickSize: 10,
+          tickPadding: 10,
+          tickRotation: 0,
+          legend: 'Millions',
+          legendPosition: 'middle',
+          legendOffset: -40
+      }}
+      labelSkipWidth={12}
+      labelSkipHeight={12}
+      labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+      legends={[
+          {
+              dataFrom: 'keys',
+              anchor: 'bottom-right',
+              direction: 'column',
+              justify: false,
+              translateX: 120,
+              translateY: 0,
+              itemsSpacing: 2,
+              itemWidth: 100,
+              itemHeight: 20,
+              itemDirection: 'left-to-right',
+              itemOpacity: 0.85,
+              symbolSize: 20,
+              effects: [
+                  {
+                      on: 'hover',
+                      style: {
+                          itemOpacity: 1
+                      }
+                  }
+              ]
+          }
+      ]}
+      animate={true}
+      motionStiffness={90}
+      motionDamping={15}
+  />
+)}
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -108,7 +186,6 @@ function Nav({ color }) {
   const keys = Object.keys(stkh1);
   const lastEpoch = keys.map(a => parseInt(a)).sort().reverse()[0];
   const lastEpochData = stkh1[lastEpoch.toString()];
-  //lastEpochData.length
   const totalStake = lastEpochData.reduce((a, b) => a + parseFloat(b.amount), 0);
 
   const stake = parseInt(totalStake) / (Math.pow(10, 6));
