@@ -1,4 +1,4 @@
-## Helping to keep Cardano safe ##
+## To keep Cardano safe ##
 
 Anyone with ada can participate in writing the Cardano ledger, in proportion to the quantity of ada held. The more ada you have, the more blocks you will be asked to sign.
 
