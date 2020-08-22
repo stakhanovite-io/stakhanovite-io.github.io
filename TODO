@@ -1,0 +1,24 @@
+Lotterie
+Stats, website
+
+Copie clé node, qrcode
+https://la-vache-libre.org/qrencode-creez-des-qr-codes-depuis-votre-terminal-sous-gnulinux/
+https://www.boursorama.com/patrimoine/actualites/investir-dans-les-pme-la-reduction-d-impot-madelin-ir-pme-est-portee-de-18-a-25-fac456e34db25a92c4a66c0a67e7cb96
+Fiscalité don
+
+
+Chan dédié pour alertes génériques
+* changement de fee d'un pool, .
+
+Chan dédié pour clients STKH
+
+Intéraction directes pour clients
+
+https://gist.github.com/ilap/8001dc5883d09088ee752bcf0f91be06
+
+Bot pour admin
+http://127.0.0.1:12798/metrics
+curl -H "Accept: application/json" http://localhost:12788/ | jq '.cardano.node.Forge.metrics.remainingKESPeriods.int.val'
+
+https://renocardano.github.io/Staking4Research/
+https://www.slotpool.space/
