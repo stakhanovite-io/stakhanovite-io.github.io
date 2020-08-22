@@ -5,7 +5,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import postsmd from "../faq/**/*.md";
+import postsmd from "../faq/**/**/*.md";
+import i18n from  "./i18n.js"
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -63,8 +64,10 @@ export function Faq() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
   
-    const keys = Object.keys(postsmd);
-    const values = Object.values(postsmd);
+    const lang = i18n.languages.find((key) => key in postsmd);
+    const faq = postsmd[lang];
+    const keys = Object.keys(faq);
+    const values = Object.values(faq);
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
