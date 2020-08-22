@@ -1,0 +1,16 @@
+<h2 id="understanding-stake-pool-fees">Understanding Stake Pool fees</h2><p>The fee structure of a stake pool consists of several elements. It is important to know them, so that you are not surprised when you receive the rewards.</p><blockquote>
+<h3 id="fixed-fee">Fixed fee</h3>
+</blockquote><p>The fixed fee is the amount of ada the operator of the pool will take at the end of each epoch <strong>out of the total rewards</strong> of the pool and this, <strong>regardless of what happens</strong>. </p><ul>
+<li><p>If the total rewards of the stake pool are less than the fixed fee (or fixed cost), <strong>delegates will not receive any rewards.</strong></p>
+</li>
+<li><p><strong>The minimum fixed fee</strong> that a pool is allowed to charge is <strong>340 ADA</strong> per period. </p>
+</li>
+</ul><blockquote>
+<h3 id="margin-or-variable-fee">Margin (or variable fee)</h3>
+</blockquote><p>The margin defines the percentage of the total rewards that operators taker <strong>after deduction of the fixed fee</strong> and <strong>before payment to the delegates</strong>. </p><ul>
+<li>A stake group with a 100% margin will be considered private, unless you wish to give everything to the operators!</li>
+</ul><blockquote>
+<p><strong>Example :</strong></p>
+</blockquote><p>You delegate to a stake pool that has the following fees</p><blockquote>
+<p><strong>Fixed = 340 ADA // Margin = 1.9%</strong></p>
+</blockquote><p>Let&#39;s imagine that at the end of an epoch, the stake pool has received <strong>50,000 ADA.</strong></p><p>The operator charges 340 ADA first. It then calculates 1.9% of the remaining 49660 ADA, i.e. ~944 ADA. There are now 48716 ADAs left to share for the delegates. If your delegated stake represents <strong>5% of the group&#39;s total stake</strong> (i.e. approximately 10 million ADA for a group that has reached saturation ...), you will be rewarded for <strong>5% of these ~48716 ADA, i.e. ~2435 ADA.</strong></p>
