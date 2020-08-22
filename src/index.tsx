@@ -6,7 +6,7 @@ import { Footer, ToolbarMenu } from './Components';
 import { items } from './Navigation';
 import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import "./i18n.js"
+import i18n from  "./i18n.js"
 
 const theme = createMuiTheme({
   palette: {
