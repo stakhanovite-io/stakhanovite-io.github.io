@@ -6,6 +6,21 @@ https://la-vache-libre.org/qrencode-creez-des-qr-codes-depuis-votre-terminal-sou
 https://www.boursorama.com/patrimoine/actualites/investir-dans-les-pme-la-reduction-d-impot-madelin-ir-pme-est-portee-de-18-a-25-fac456e34db25a92c4a66c0a67e7cb96
 Fiscalité don
 
+# GraphQL
+* delegators per epoch
+* blocks, blocks details
+* rewards
+
+Trustlines
+
+KOPEK
+LADA Liquid ADA - stakhanovite vehicle for liquidity
+RADA Reward ADA - https://fr.wikipedia.org/wiki/Rada
+PRADA - propagande ada
+https://fr.wikipedia.org/wiki/Syst%C3%A8me_Gada
+https://www.catawiki.fr/l/28192199-billets-de-loterie-urss-7-papier
+https://fr.dreamstime.com/photographie-%C3%A9ditorial-collage-des-billets-loterie-d-%C3%A9tat-urss-image97769892
+https://fr.wikipedia.org/wiki/Emprunt_russe
 
 Chan dédié pour alertes génériques
 * changement de fee d'un pool, .
@@ -22,3 +37,5 @@ curl -H "Accept: application/json" http://localhost:12788/ | jq '.cardano.node.F
 
 https://renocardano.github.io/Staking4Research/
 https://www.slotpool.space/
+https://www.stateless.money/kusama
+https://zkvalidator.com/
