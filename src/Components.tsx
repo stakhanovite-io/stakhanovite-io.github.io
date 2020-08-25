@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import TelegramIcon from '@material-ui/icons/Telegram';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Link as RLink } from "react-router-dom";
 import { items } from './Navigation';
@@ -116,12 +117,20 @@ function Nav({ color }) {
       </Link>
     </nav>
     {matches &&
+      <div>
+      <IconButton
+        href="https://t.me/StakhanoviteIO"
+        title="Telegram"
+      >
+        <TelegramIcon />
+      </IconButton>
       <IconButton
         href="https://twitter.com/StakhanoviteIO"
         title="Twitter account"
       >
         <TwitterIcon />
       </IconButton>
+      </div>
     }
   </div>);
 }
