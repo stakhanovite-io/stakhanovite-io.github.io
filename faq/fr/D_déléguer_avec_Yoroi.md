@@ -4,7 +4,7 @@
 
 Rendez-vous sur www.yoroi-wallet.com et choisissez la version de Yoroi qui vous convient.
 
-![](./yoroi1.png ':size=20%')
+![](./yoroi1.png size=20%)
 
 Dans l'exemple qui suit, nous avons choisi la version Google Chrome. Cela nous renvoie donc vers le Chrome Web Store afin d'ajouter l'extension Yoroi à notre navigateur.
 
