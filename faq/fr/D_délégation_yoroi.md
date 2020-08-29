@@ -1,6 +1,6 @@
 ## Comment déléguer avec Yoroi - Le guide
 
-#### Installation de Yoroi.
+### Installation de Yoroi.
 
 Rendez-vous sur www.yoroi-wallet.com et choisissez la version de Yoroi qui vous convient.
 
@@ -17,6 +17,8 @@ Une fois l'installation effectuée, l'icône de Yoroi devrait apparaitre en haut
 Acceptez les termes et conditions, et choisissez ensuite l'interface que vous souhaitez. Simple ou Avancée. Une fois ces étapes passées, vous allez pouvoir maintenant créer votre wallet.
 
 <img src="./yoroi4.png" title="Create" style="zoom:105%;" />
+
+### Créer un wallet
 
 
 Notez qu'à partir de la version 3.2.2 de Yoroi, tout nouveau wallet que vous créez est compatible avec la délégation. On parle de "Wallet Shelley".
@@ -40,7 +42,7 @@ Enfin vous arrivez sur la page d'accueil de votre wallet. Elle apparaitra désor
 
 <img src="./yoroi7.png" title="Shelley Wallet" style="zoom:105%;" />
 
-#### Récupérer ses ADA d'un ancien wallet ou les récompenses du testnet Shelley ITN
+### Récupérer ses ADA d'un ancien wallet ou les récompenses du testnet Shelley ITN
 
 Vous avez crée un wallet compatible Shelley mais il est vide. Si vous disposiez d'ADA avant le passage à Shelley ou si vous avez participé au Shelley ITN, il est temps de récupérer tout ça !
 
@@ -49,13 +51,13 @@ Cliquez sur l'icône en forme de "portefeuille à flèches" en bas à gauche de 
 
 <img src="./yoroi8.png" title="Recovery" style="zoom:105%;" />
 
-**Option 1 : Vos ADA étaient sur un wallet Yoroi ou Daedalus classiques, choisissez l'option Byron-Era et sélectionnez le type de wallet que vous voulez récupérer**
+**Option 1 :** Vos ADA étaient sur un wallet Yoroi ou Daedalus classiques, choisissez l'option Byron-Era et sélectionnez le type de wallet que vous voulez récupérer
 
-**Option 2 : Les ADA que vous souhaitez récupérer sont les récompenses d'une délégation pendant le testnet Shelley ITN, choisissez l'option Shelley-Era  et sélectionnez le type de wallet que vous voulez récupérer**
+**Option 2 :** Les ADA que vous souhaitez récupérer sont les récompenses d'une délégation pendant le testnet Shelley ITN, choisissez l'option Shelley-Era  et sélectionnez le type de wallet que vous voulez récupérer
 
-***Remarque importante : récupérer les récompenses du testnet ITN vers un wallet Shelley n'est possible que si ce dernier contient au moins 1 ADA pour payer les frais de cette transaction. Cela peut être des ADA nouvellement achetés sur un échange, ou des ADA récupérés d'un wallet Byron-Era (etape 1 ci-dessus).***
+**Remarque importante :** Récupérer les récompenses du testnet ITN vers un wallet Shelley n'est possible que si ce dernier contient au moins 1 ADA pour payer les frais de cette transaction. Cela peut être des ADA nouvellement achetés sur un échange, ou des ADA récupérés d'un wallet Byron-Era (Option 1 ci-dessus).
 
-#### Déléguer sur un Stake Pool (par exemple... STKH !)
+### Déléguer sur un Stake Pool (par exemple... STKH !)
 
 Sur la page centrale de votre wallet, choisisser le wallet que vous souhaitez mettre en délégation (si vous en avez crée plusieurs ... )
 
