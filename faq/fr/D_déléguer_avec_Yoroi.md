@@ -49,11 +49,11 @@ Cliquez sur l'icône en forme de "portefeuille à flèches" en bas à gauche de 
 
 <img src="./yoroi8.png" title="Recovery" style="zoom:105%;" />
 
-1) **Vos ADA étaient sur un wallet Yoroi ou Daedalus classiques, choisissez l'option Byron-Era et sélectionnez le type de wallet que vous voulez récupérer**
+**Option 1 : Vos ADA étaient sur un wallet Yoroi ou Daedalus classiques, choisissez l'option Byron-Era et sélectionnez le type de wallet que vous voulez récupérer**
 
-2) **Les ADA que vous souhaitez récupérer sont les récompenses d'une délégation pendant le testnet Shelley ITN, choisissez l'option Shelley-Era  et sélectionnez le type de wallet que vous voulez récupérer**
+**Option 2 : Les ADA que vous souhaitez récupérer sont les récompenses d'une délégation pendant le testnet Shelley ITN, choisissez l'option Shelley-Era  et sélectionnez le type de wallet que vous voulez récupérer**
 
-    Remarque importante : récupérer les récompenses du testnet ITN vers un wallet Shelley n'est possible que si ce dernier contient au moins 1 ADA pour payer les frais de cette transaction. Cela peut être des ADA nouvellement achetés sur un échange, ou des ADA récupérés d'un wallet Byron-Era (etape 1 ci-dessus).
+***Remarque importante : récupérer les récompenses du testnet ITN vers un wallet Shelley n'est possible que si ce dernier contient au moins 1 ADA pour payer les frais de cette transaction. Cela peut être des ADA nouvellement achetés sur un échange, ou des ADA récupérés d'un wallet Byron-Era (etape 1 ci-dessus).***
 
 #### Déléguer sur un Stake Pool (par exemple... STKH !)
 
