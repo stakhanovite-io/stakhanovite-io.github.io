@@ -18,13 +18,6 @@ Acceptez les termes et conditions, et choisissez ensuite l'interface que vous so
 
 <img src="./yoroi4.png" title="Create" style="zoom:105%;" />
 
-Dans l'exemple qui suit, nous avons choisi la version Google Chrome. Cela nous renvoie donc vers le Chrome Web Store afin d'ajouter l'extension Yoroi à notre navigateur.
-
-
-Une fois l'installation effectuée, l'icône de Yoroi devrait apparaitre en haut à droite de la fenêtre de votre navigateur. Cliquez dessus, et cela vous ouvrira l'application comme suit. Choississez votre langue. ***Notez que Stakhanovite a traduit Yoroi en Français.***
-
-
-Acceptez les termes et conditions, et choisissez ensuite l'interface que vous souhaitez. Simple ou Avancée. Une fois ces étapes passées, vous allez pouvoir maintenant créer votre wallet.
 
 Notez qu'à partir de la version 3.2.2 de Yoroi, tout nouveau wallet que vous créez est compatible avec la délégation. On parle de "Wallet Shelley".
 
