@@ -32,7 +32,6 @@ Entrez un nom pour votre Wallet, ainsi qu'un mot de passe de dépense. Ce dernie
 
 <img src="./yoroi6.png" title="Name - Password" style="zoom:105%;" />
 
-Entrez un nom pour votre Wallet, ainsi qu'un mot de passe de dépense. Ce dernier vous sera demandé pour toute opération future.
 
 Les étapes qui suivent vont vous donner accès à la phrase de secours, aussi appelée phrase mnémonique. **Notez bien dans l'ordre et sur un papier tous les mots qui vous seront donnés. Gardez ce document manuscrit bien en sécurité**. Si vous perdez ces mots, vous pourriez perdre tous vos ADA et sans recours possible.
 
