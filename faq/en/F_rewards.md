@@ -1,6 +1,6 @@
 ## When are the rewards paid out? ##
 
-<img src="./rewards_schedule.png"  title="rewards schedule" style="zoom:100%;" />
+<img src="./rewards_schedule.png"  title="rewards schedule" style="zoom:80%;" />
 
 Cardano's time is divided into 5-day epochs. If you delegate during epoch *n*, you will receive the rewards related to that epoch at the end of the epoch  *n+3*  (beginning of the *n+4* epoch). **In practical terms, this means that the delay will be at minimum 15 days and at maximum 20 days** after your first delegation, depending on when you delegate during the epoch *n* (beginning or end). See figure above.
 
