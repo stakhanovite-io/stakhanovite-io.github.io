@@ -1,8 +1,10 @@
 ## When are the rewards paid out? ##
 
-Cardano's time is divided into 5-day epochs. If you delegate during epoch *n*, you will receive the rewards related to that epoch at the end of the epoch  *n+3*  (beginning of the *n+4* epoch). **In practical terms, this means that the delay will be at minimum 15 days and at maximum 20 days** after your first delegation, depending on when you delegate during the epoch *n* (beginning or end).
+<img src="./rewards_schedule.png"  title="rewards schedule" style="zoom:100%;" />
 
-After this initial delay, you will receive your rewards every 5 days (if the pool is working properly!).
+Cardano's time is divided into 5-day epochs. If you delegate during epoch *n*, you will receive the rewards related to that epoch at the end of the epoch  *n+3*  (beginning of the *n+4* epoch). **In practical terms, this means that the delay will be at minimum 15 days and at maximum 20 days** after your first delegation, depending on when you delegate during the epoch *n* (beginning or end). See figure above.
+
+After this initial delay, you will receive your rewards every 5 days since a snapshot is taken at the end of each epoch.
 
 ## Should I trust the pool to pay the rewards? ##
 
@@ -12,6 +14,6 @@ No. The protocol will automatically redistribute the rewards in proportion to yo
 
 ## I'm not getting any rewards... ##
 
-First of all, you have to check if the stake pool you are delegating to is working properly. It may be that the total stake of the pool is still too low for the pool to produce blocks on a regular basis. If you have any doubts, you can **contact the stake pool by e-mail if the option is available**. This is an important criterion: can you easily communicate with the pool operators?
+First of all, you have to check the rewards schedule to verify when your rewards are due. Second, check if the stake pool you are delegating to is working properly. It may be that the total stake of the pool is still too low for the pool to produce blocks on a regular basis. If you have any doubts, you can **contact the stake pool by e-mail if the option is available**. This is an important criterion: can you easily communicate with the pool operators?
 
 **Don't forget: you can always re-delegate your ada to another stake pool whenever you want!**
