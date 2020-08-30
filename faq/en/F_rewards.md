@@ -14,6 +14,9 @@ No. The protocol will automatically redistribute the rewards in proportion to yo
 
 ## I'm not getting any rewards... ##
 
+
 First of all, you have to check the rewards schedule to verify when your rewards are due. Second, check if the stake pool you are delegating to is working properly. It may be that the total stake of the pool is still too low for the pool to produce blocks on a regular basis. If you have any doubts, you can **contact the stake pool by e-mail if the option is available**. This is an important criterion: can you easily communicate with the pool operators?
 
 **Don't forget: you can always re-delegate your ada to another stake pool whenever you want!**
+
+
