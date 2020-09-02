@@ -16,13 +16,13 @@ export function WhyUs() {
                 The profit margin is calculated on the rewards you get thanks to our efforts.
                 <br />
                 <br />
-                <strong>For example, if your rewards are 10 ADA at the end of an epoch, we get paid 0.19 ADA and the remaining 9.81 ADA are all yours.</strong>
+                For example, if your rewards are 10 ADA at the end of an epoch (after fixed costs), we get paid 0.19 ADA and the remaining 9.81 ADA are all yours.
                 <br />
                 <br />
-                <strong>We are transparent.</strong> From costs to performance, you will know everything and you will always be in a position to make the best choice for you, and your ada!
+                <strong>We are transparent.</strong> From costs to performance reports, you will know everything thanks to our newsletter and Telegran channel. We will always make sure that you are in the best position to make the right choice for you, and your ada!
                 <br />
                 <br />
-                <strong>We are efficient.</strong> During the Incentivized Testnet (Shelley ITN), the Stakhanovite Stake Pool created <strong>more than 5000 blocks and distributed above 4 millions ADA to our delegators</strong>, among the top 40 stake pools out there!
+                <strong>We are efficient.</strong> During the Incentivized Testnet (Shelley ITN), the Stakhanovite Stake Pool created <strong>almost 5000 blocks and distributed more than 4 millions ADA rewards to our delegators</strong>. That places us among the top 40 stake pools of the Shelley ITN!
             </div>
         </div>
         <div>
@@ -33,7 +33,7 @@ export function WhyUs() {
                 Following the Ouroboros protocol, pool operators can make a pledge to their own pool. This will signal to all potential delegators that the owners and operators have indeed skin in the game. 
                 <br />
                 <br />
-                That is why, in addition of our initial pledge of 400 000 ADA, <strong>a good fraction of our rewards will be added to our pool's pledge regularly.</strong>
+                That is why, in addition of our initial pledge of 425 000 ADA, <strong>a fraction of our rewards will be added to our pool's pledge regularly.</strong>
                 <br />
                 <br />
                 <strong>That way, we will grow together!</strong>

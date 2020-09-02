@@ -12,15 +12,14 @@ export function Stakhanovite() {
     <Page title="STAKHANOVITE STAKE POOL" subtitle="A Cardano stake pool. For the community - By the community" logo={logo}>
         <div>
             <h1>
-            WE ARE STKH, a minimum fixed cost and 1.9% margin fee Staking Pool.
+            WE ARE STKH - Minimum fixed cost and 1.9% margin fee.
             </h1>
             <h2>
-            NAME:
+            Name:
             Stakhanovite #1
             </h2>
             <h2>
-            TICKER:
-            STKH1
+            Ticker: STKH1
             </h2>
             <div>
                 <h2 style={{display: "inline"}}>Pool ID: <a href="https://pooltool.io/pool/b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768/blocks">b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768</a></h2>
@@ -34,7 +33,7 @@ export function Stakhanovite() {
                 </IconButton>
             </div>
             <h3>
-            JOIN OUR POOL ON THE CARDANO MAINNET USING <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> OR <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> WALLETS.
+            Join our pool on the Cardano Mainnet using <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> or <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> wallets.
             </h3>
         </div>
     </Page>);

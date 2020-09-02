@@ -19,7 +19,7 @@ export function What() {
                 The stake pool <strong>will be online for you</strong> and perform blocks validation on your behalf.
                 <br />
                 <br />
-                <strong>That is exactly what the Stakhanovite Stake Pool does for you: sign blocks 24/7/365.</strong>
+                That is exactly what the Stakhanovite Stake Pool does for you: <strong>We sign blocks 24/7/365.</strong>
             </div>
         </div>
     </Page>);
