@@ -1,4 +1,4 @@
-Website for [https://www.stakhanovite.io](https://stakhanovite.io)
+Website for [stakhanovite.io](https://www.stakhanovite.io)
 
 # Build
 
