@@ -6,6 +6,10 @@ Cardano's time is divided into 5-day epochs. If you delegate during epoch *n*, y
 
 After this initial delay, you will receive your rewards every 5 days since a snapshot is taken at the end of each epoch.
 
+## Do I have to re-delegate my rewards at the end of each epoch?
+
+No. The delegation concerns the entire wallet and all the ada it contains, whether they come from the classic UTXOs or the rewards in the "account" part. In the same way, if you send ada to your wallet after a purchase on an exchange platform, they will be automatically delegated at the next end-of-epoch snapshot.
+
 ## Should I trust the pool to pay the rewards? ##
 
 No. The protocol will automatically redistribute the rewards in proportion to your delegated stake. If your stake represents 30% of the group's total stake, then 30% of the rewards obtained by the stake pool will be distributed to you **after deduction of the stake pool fee** (fixed and margin).
