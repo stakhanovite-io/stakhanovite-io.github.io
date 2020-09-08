@@ -20,7 +20,7 @@ export function Who() {
                 <em>"French translator of various Cardano content such as 'Why Cardano?', I.O.H.K. Blog posts, the bi-monthly Cardano Foundation newsletter or the light wallet <Link color="secondary" href="https://yoroi-wallet.com/">Yoroi</Link>, I have been a <Link color="secondary" href="https://www.cardano.org/ambassadors/">Cardano Ambassador</Link> since day one. Setting up a stake pool was a natural thing to do in order to further support the Cardano Community. I have been very lucky (or persuasive enough!) to onboard more people into this adventure. I look forward to see STKH flourish!"</em> - <strong>@psychomb</strong>
                 <br />
                 <br />
-                <em>"I am a blockchain dev. Enough said already"</em> - <strong>@Aleksei</strong>
+                <em>"I am blockchain dev. I hack the ERC20, the ERC21, the Covid 19, the borsch, the cucumber. With hands. Enough said already"</em> - <strong>@Aleksei</strong>
             </div>
         </div>
     </Page>);
