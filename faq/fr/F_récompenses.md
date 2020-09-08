@@ -6,6 +6,10 @@ Le temps chez Cardano est divisé en époques de 5 jours. Si vous déléguez à 
 
 Après ce délai initial, vous recevrez vos récompenses tous les 5 jours puisqu'un "snapshot" de votre délégation continue d'être pris à la fin de chaque époque.
 
+## Dois-je re-déléguer mes récompenses à la fin de chaque époque ?
+
+Non. La délégation concerne le portefeuille (wallet) entier et  tous les ada qu'il contient, qu'ils proviennent des UTXO classiques ou des récompenses dans la partie "compte". De la même manière, si vous envoyez des ada vers votre wallet après un achat sur une plateforme d'échange, ces derniers seront délégués automatiquement dès le prochain "snapshot" de fin d'époque.
+
 ## Dois-je faire confiance au pool pour le paiement des récompenses ?
 
 Non. Le protocole se charge de redistribuer les récompenses en proportion de votre enjeu délégué. Si votre enjeu représente 30% de l'enjeu total du groupe, alors il vous sera distribué 30% des récompenses obtenues par le groupe d'enjeu **après prélèvement des frais de participation au groupe** (fixe et marge).
