@@ -1,6 +1,6 @@
 ## Quand sont payées les récompenses ?
 
-<img src="./rewards_schedule.png"  title="rewards schedule" style="zoom:100%;" />
+<img src="./rewards_schedule.png"  title="rewards schedule" style="zoom:80%;" />
 
 Le temps chez Cardano est divisé en époques de 5 jours. Si vous déléguez à l'époque *n*, vous recevrez les récompenses liées à cette époque à la fin de l'époque *n+3* (début de l'époque *n+4*). **En terme pratiques, cela veut dire que le délai sera au minimum de 15 jours et au maximum de 20 jours**, tout dépend de la date à laquelle vous déléguez dans l'époque *n* (début ou fin). Voir figure ci-dessus.
 
