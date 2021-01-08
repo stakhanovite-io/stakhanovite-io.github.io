@@ -30,13 +30,12 @@ export function WhyUs() {
             DO WE HAVE SKIN IN THE GAME?
             </h3>
             <div>
-                Following the Ouroboros protocol, pool operators can make a pledge to their own pool. This will signal to all potential delegators that the owners and operators have indeed skin in the game. 
+                Following the Ouroboros protocol, pool operators can make a pledge to their own pool. This signals to all potential delegators that the owners and operators have indeed skin in the game. 
                 <br />
                 <br />
-                That is why, in addition of our initial pledge of 425 000 ADA, <strong>a fraction of our rewards will be added to our pool's pledge regularly.</strong>
+                We pledge 300 000 ada to our pool ! In that respect, we are all-in !
                 <br />
                 <br />
-                <strong>That way, we will grow together!</strong>
             </div>
         </div>
     </Page>);
