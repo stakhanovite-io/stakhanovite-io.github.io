@@ -44,7 +44,7 @@ export function Stakhanovite() {
                 </IconButton>
             </div>
             <h3>
-            Join our pool on the Cardano Mainnet using <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> or <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> wallets.
+            Join our pools on the Cardano Mainnet using <Link color="secondary" href="https://daedaluswallet.io/">DAEDALUS</Link> or <Link color="secondary" href="https://yoroi-wallet.com/">YOROI</Link> wallets.
             </h3>
         </div>
     </Page>);
