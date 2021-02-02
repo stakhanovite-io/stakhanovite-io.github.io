@@ -24,7 +24,7 @@ export function Stakhanovite() {
             <div>
                 <h2 style={{display: "inline"}}>STKH1: <a href="https://pooltool.io/pool/b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768/blocks">b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768</a></h2>
                 <IconButton
-                    style={{width: "80px"}}
+                    style={{width: "45px"}}
                     color="inherit"
                     title="Copy pool address"
                     onClick={() => clipboard.copy('b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768')}
