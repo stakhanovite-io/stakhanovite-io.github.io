@@ -1,0 +1,29 @@
+name: Checks
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/30 * * * *' # Every 30 minutes
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        pools: [pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Run tests
+        run: yarn && yarn test
+        working-directory: ./e2e
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          POOL_ID: ${{ matrix.pools }}
+          BLOCKFROST_PROJECT_ID: ${{ secrets.BLOCKFROST_PROJECT_ID }}

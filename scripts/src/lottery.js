@@ -10,9 +10,13 @@ import AbortController from 'abort-controller'
 global.fetch = fetch
 global.AbortController = AbortController
 
-/*
+const epoch = process.argv[2];
+const path = `./public/assets/${pool}/delegators/${epoch}.json`;
 
 var fs = require('fs');
+
+
+// 1 vote pour chaque delegators > 500
 
 function readFiles(dirname, onFileContent, onError) {
   fs.readdir(dirname, function(err, filenames) {
@@ -31,9 +35,6 @@ function readFiles(dirname, onFileContent, onError) {
     });
   });
 }
-
-
-
 
 
 const chainHash = '8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce' // (hex encoded)
