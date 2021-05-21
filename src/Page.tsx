@@ -7,7 +7,7 @@ const useStyles = makeStyles(_theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    maxWidth: "60%",
+    maxWidth: "80%",
   },
 }));
 

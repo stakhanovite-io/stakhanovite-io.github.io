@@ -8,6 +8,9 @@ import Container from '@material-ui/core/Container';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
+import SettingsIcon from '@material-ui/icons/Settings';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import { Page } from '../Page';
 import home from '../../assets/home.png';
 import team from '../../assets/team.png';
@@ -21,10 +24,18 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   section: {
-    marginTop: 180
+    marginTop: 100
   },
   sectionContent: {
     marginTop: 50,
+  },
+  sectionTeam: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  sectionTeamLogo: {
+    margin: 30,
   },
   subSection: {
     marginTop: 50,
@@ -32,39 +43,80 @@ const useStyles = makeStyles(theme => ({
   subSectionContent: {
   },
   offers: {
-    display: "flex",
-    flexDirection: "row",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    textAlign: 'center',
     marginTop: 50
   },
   offer: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    width: 250,
+    background: '#BDBDBD',
+    borderRadius: '10px',
+    paddingBottom: 66,
+  },
+  offerLogo: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 80,
+    width: 64,
+    height: 64,
+    background: 'linear-gradient(0.4turn, rgba(189, 189, 189, 0.1), rgba(79, 79, 79, 1))',
+    color: 'rgba(79, 79, 79, 1)',
+    borderRadius: '50px',
+  },
+  offerText: {
+    color: '#333333',
+    '& p' : {
+      margin: 0,
+    }
   },
   pools: {
-    display: "flex",
-    flexDirection: "row",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   pool: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    background: 'rgba(33, 43, 54, 1)',
+    borderRadius: '10px',
+    padding: 15,
   },
   poolLogo: {
-    width: "80px"
+    width: '350px'
+  },
+  poolCopy: {
+    display: 'flex'
   }
 }));
 
-function Text({ id }: { id: string }): JSX.Element {
+function Text({ id, raw = false }: { id: string, raw?: boolean }): JSX.Element {
   const { t } = useTranslation();
-  return <span dangerouslySetInnerHTML={{__html:marked(t(id))}}></span>;
+  const text = raw ? t(id) : marked(t(id));
+  return <span dangerouslySetInnerHTML={{__html:text}}></span>;
 }
 
-
-function Offer({ title, details }: { title: string, details: string }): JSX.Element {
+function Offer({ title, details, children }: { title: string, details: string, children: NonNullable<React.ReactNode> }): JSX.Element {
   const classes = useStyles();
   return (
     <div className={classes.offer}>
-      <Typography><Text id={title} /></Typography>
-      <Typography><Text id={details} /></Typography>
+      <div className={classes.offerLogo}>
+        {children}
+      </div>
+      <Typography className={classes.offerText}>
+        <Box fontWeight="fontWeightBold">
+          <Text id={title} />
+        </Box>
+      </Typography>
+      <Typography className={classes.offerText}>
+        <Text id={details} />
+      </Typography>
     </div>
   );
 }
@@ -79,20 +131,17 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
       <Typography>{name}</Typography>
       <Typography><Text id="pool.margin" /></Typography>
       <Typography><Text id="pool.fixed" /></Typography>
-      <img alt="pool logo" src={logo} width="auto" height={350} />
+      <img className={classes.poolLogo} alt="pool logo" src={logo} />
       <Typography><Text id="pool.saturation" /></Typography>
-      <div>
+      <div className={classes.poolCopy}>
         <IconButton
-          className={classes.poolLogo}
           color="inherit"
           title={t('pool.copyAddress')}
           onClick={() => clipboard.copy({poolID})}
         >
           <FileCopyIcon />
         </IconButton>
-      </div>
-      <div>
-        <Typography><Text id="pool.copyId" /></Typography>
+        <Typography component="span" variant="body2"><Text id="pool.copyId" raw={true} /></Typography>
       </div>
     </div>
   );
@@ -131,14 +180,16 @@ export function Home(): JSX.Element {
       </Container>
 
       <Container className={classes.section}>
-        <img alt="team" src={team} width="auto" height={350} />
-        <div>
-          <Typography component="div">
-            <Text id="psychomb" />
-          </Typography>
-          <Typography component="div">
-            <Text id="alexey" />
-          </Typography>
+        <div className={classes.sectionTeam}>
+          <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={350} />
+          <div>
+            <Typography variant="body2">
+              <Text id="psychomb" />
+            </Typography>
+            <Typography variant="body2">
+              <Text id="alexey" />
+            </Typography>
+          </div>
         </div>
       </Container>
 
@@ -150,9 +201,15 @@ export function Home(): JSX.Element {
           <Text id="experience" />
         </Typography>
         <Container className={classes.offers}>
-          <Offer title="offer.secureTitle" details="offer.secure" />
-          <Offer title="offer.robustTitle" details="offer.robust" />
-          <Offer title="offer.fairTitle" details="offer.fair" />
+          <Offer title="offer.secureTitle" details="offer.secure">
+           <VpnKeyIcon />
+          </Offer>
+          <Offer title="offer.robustTitle" details="offer.robust">
+           <SettingsIcon />
+          </Offer>
+          <Offer title="offer.fairTitle" details="offer.fair">
+           <ThumbUpIcon />
+          </Offer>
         </Container>
         <Container className={classes.subSection}>
           <Typography variant="h3" color="textSecondary">

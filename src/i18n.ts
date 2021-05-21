@@ -32,7 +32,9 @@ i18n
           mail: `You are not of a social media fan?
 Don’t worry, **we got you!**
 Please send any question you may have to:
+
 **contact@stakhanovite.io**
+
 We will do our best to answer diligently, in english or in french!`,
           offer: {
             secureTitle: "Secure",
