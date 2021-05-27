@@ -10,13 +10,13 @@ export function WhyUs() {
             FOR OUR FEES AND RELIABILITY OF COURSE!
             </h3>
             <div>
-                The Stakhanovite Stake Pool charges the <strong>minimum authorized fixed costs of 340 ADA per epoch and 1.9% margin fees</strong>
+                The Stakhanovite Stake Pool charges the <strong>minimum authorized fixed costs of 340 ADA per epoch and 1.8% margin fees</strong>
                 <br />
                 <br />
                 The profit margin is calculated on the rewards you get thanks to our efforts.
                 <br />
                 <br />
-                For example, if your rewards are 10 ADA at the end of an epoch (after fixed costs), we get paid 0.19 ADA and the remaining 9.81 ADA are all yours.
+                For example, if your rewards are 10 ADA at the end of an epoch (after fixed costs), we get paid 0.18 ADA and the remaining 9.82 ADA are all yours.
                 <br />
                 <br />
                 <strong>We are transparent.</strong> From costs to performance reports, you will know everything thanks to our newsletter and Telegran channel. We will always make sure that you are in the best position to make the right choice for you, and your ada!
@@ -33,7 +33,7 @@ export function WhyUs() {
                 Following the Ouroboros protocol, pool operators can make a pledge to their own pool. This signals to all potential delegators that the owners and operators have indeed skin in the game. 
                 <br />
                 <br />
-                We pledge 300 000 ada to our pool ! In that respect, we are all-in !
+                We pledge 100 000 ada to our pool. In that respect, we are all-in !
                 <br />
                 <br />
             </div>
