@@ -25,7 +25,7 @@ i18n
           transparent: "From our costs to performance reports, you will know everything thanks to our monthly **newsletter** and our dedicated **Telegram channel**. Subscribe, and come say hi !",
           efficientTitle: "We are efficient",
           efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. **Try us out!**",
-          wallets: "Delegate using the most popular Cardano wallets - **Daedalus** or **Yoroi** - and look for **STKH1** or **STKH2** tickers!",
+          wallets: "Delegate using the most popular Cardano wallets - **Daedalus** or **Yoroi** - and look for **STKH1** ticker!",
           faq: "Please read our **FAQ** for more details.",
           contact: "Contact us",
           check: "Check the homebar, we are present on Twitter and Telegram!",

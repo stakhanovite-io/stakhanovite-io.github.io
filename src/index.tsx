@@ -6,6 +6,7 @@ import { createBrowserHistory } from "history";
 import { Router, Route } from "react-router-dom";
 import { Footer, ToolbarMenu } from './Components';
 import "./i18n";
+import { Delegator } from './Pages/Delegator';
 import { Faq } from './Pages/Faq';
 import { Home } from './Pages/Home';
 
@@ -81,8 +82,8 @@ const history = createBrowserHistory();
 
 export const items = {
   '/': {title: 'Home', element: Home},
-  '/faq': {title: 'FAQ', element: Faq}
-  //'/delegator': {title: 'Delegator Space', element: Delegator}
+  '/faq': {title: 'FAQ', element: Faq},
+  '/delegator': {title: 'Delegator Space', element: Delegator}
 }
 
 function Main(): JSX.Element {

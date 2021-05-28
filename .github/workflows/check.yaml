@@ -8,9 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        pools: [pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj]
     steps:
       - uses: actions/checkout@v2
 
@@ -25,5 +22,5 @@ jobs:
         continue-on-error: true
         timeout-minutes: 3
         env:
-          POOL_ID: ${{ matrix.pools }}
+          POOL_ID: "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
           BLOCKFROST_PROJECT_ID: ${{ secrets.BLOCKFROST_PROJECT_ID }}

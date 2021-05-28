@@ -15,7 +15,6 @@ import { Page } from '../Page';
 import home from '../../assets/home.png';
 import team from '../../assets/team.png';
 import stkh1 from '../../assets/stkh1.png';
-import stkh2 from '../../assets/stkh2.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -78,7 +77,7 @@ const useStyles = makeStyles(theme => ({
   pools: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
   pool: {
     display: 'flex',
@@ -109,12 +108,12 @@ function Offer({ title, details, children }: { title: string, details: string, c
       <div className={classes.offerLogo}>
         {children}
       </div>
-      <Typography className={classes.offerText}>
+      <Typography className={classes.offerText} component="span">
         <Box fontWeight="fontWeightBold">
           <Text id={title} />
         </Box>
       </Typography>
-      <Typography className={classes.offerText}>
+      <Typography className={classes.offerText} component="span">
         <Text id={details} />
       </Typography>
     </div>
@@ -125,14 +124,30 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
   const { t } = useTranslation();
   const classes = useStyles();
   const clipboard = useClipboard();
+  const [poolDetails, setPoolDetails] = React.useState();
+
+  React.useEffect(() => {
+    async function fetchDetails() {
+      setPoolDetails(await (await fetch(`cardano/data/pools/${name}.json`)).json());
+    }
+
+    fetchDetails();
+  }, []);
+
   return (
     <div className={classes.pool}>
       <Typography>{title}</Typography>
       <Typography>{name}</Typography>
-      <Typography><Text id="pool.margin" /></Typography>
-      <Typography><Text id="pool.fixed" /></Typography>
+      <Typography component="span"><Text id="pool.margin" /></Typography>
+      <Typography component="span"><Text id="pool.fixed" /></Typography>
       <img className={classes.poolLogo} alt="pool logo" src={logo} />
-      <Typography><Text id="pool.saturation" /></Typography>
+      {poolDetails != undefined &&
+      <>
+        <Typography component="span"><Text id="pool.saturation" /></Typography>
+        <div style={{width: '80%', height: 10, border: '1px solid #2C7568', borderRadius: 10}}>
+          <div style={{background: '#2C7568', height: '100%', width: `${poolDetails['live_saturation']*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
+        </div>
+      </>}
       <div className={classes.poolCopy}>
         <IconButton
           color="inherit"
@@ -149,18 +164,19 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
 
 export function Home(): JSX.Element {
   const { t } = useTranslation();
-  const classes = useStyles();  
+  const classes = useStyles();
+
   return (
     <Page>
       <Container className={classes.root}>
         <Container>
-          <Typography variant="h1" color="textSecondary">
+          <Typography variant="h1" color="textSecondary" component="span">
             <Text id="stakhanovite" />
           </Typography>
-          <Typography variant="h1">
+          <Typography variant="h1" component="span">
             <Text id="stakePools" />
           </Typography>
-          <Typography>
+          <Typography component="span">
             <Text id="reliable" />
           </Typography>
         </Container>
@@ -168,13 +184,13 @@ export function Home(): JSX.Element {
       </Container>
 
       <Container className={classes.section}>
-        <Typography variant="h2" align="right">
+        <Typography variant="h2" align="right" component="span">
           <Text id="who" />
         </Typography>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="first" />
         </Typography>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="together" />
         </Typography>
       </Container>
@@ -183,10 +199,10 @@ export function Home(): JSX.Element {
         <div className={classes.sectionTeam}>
           <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={350} />
           <div>
-            <Typography variant="body2">
+            <Typography variant="body2" component="span">
               <Text id="psychomb" />
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" component="span">
               <Text id="alexey" />
             </Typography>
           </div>
@@ -194,10 +210,10 @@ export function Home(): JSX.Element {
       </Container>
 
       <Container className={classes.section}>
-        <Typography variant="h2">
+        <Typography variant="h2" component="span">
           <Text id="experienceTitle" />
         </Typography>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="experience" />
         </Typography>
         <Container className={classes.offers}>
@@ -212,26 +228,26 @@ export function Home(): JSX.Element {
           </Offer>
         </Container>
         <Container className={classes.subSection}>
-          <Typography variant="h3" color="textSecondary">
+          <Typography variant="h3" color="textSecondary" component="span">
             <Text id="transparentTitle" />
           </Typography>
-          <Typography className={classes.subSectionContent}>
+          <Typography className={classes.subSectionContent} component="span">
             <Text id="transparent" />
           </Typography>
         </Container>
 
         <Container className={classes.subSection}>
-          <Typography variant="h3" color="textSecondary">
+          <Typography variant="h3" color="textSecondary" component="span">
             <Text id="efficientTitle" />
           </Typography>
-          <Typography className={classes.subSectionContent}>
+          <Typography className={classes.subSectionContent} component="span">
             <Text id="efficient" />
           </Typography>
         </Container>
       </Container>
 
       <Container className={classes.section}>
-        <Typography variant="h2" align="right">
+        <Typography variant="h2" align="right" component="span">
           <Text id="pools.title" />
         </Typography>
         <Container className={classes.pools}>
@@ -240,28 +256,23 @@ export function Home(): JSX.Element {
             name="STKH1"
             poolID="b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768"
             logo={stkh1} />
-          <Pool
-            title={t('pools.pool2')}
-            name="STKH2"
-            poolID="8797eda7072c08e2c6eff77bbdf7189f3bad127a6d7efd817e103831"
-            logo={stkh2} />
         </Container>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="wallets" />
         </Typography>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="faq" />
         </Typography>
       </Container>
 
       <Container className={classes.section}>
-        <Typography variant="h2">
+        <Typography variant="h2" component="span">
           <Text id="contact" />
         </Typography>
-        <Typography className={classes.sectionContent}>
+        <Typography className={classes.sectionContent} component="span">
           <Text id="check" />
         </Typography>
-        <Typography  className={classes.sectionContent}>
+        <Typography  className={classes.sectionContent} component="span">
           <Text id="mail" />
         </Typography>
       </Container>
