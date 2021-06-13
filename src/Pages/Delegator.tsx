@@ -1,6 +1,30 @@
 import * as React from 'react';
+import marked from 'marked';
 import { Line } from '@nivo/line'
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import { useTranslation } from 'react-i18next';
 import { Page } from '../Page';
+import notDelegator from '../../assets/not_delegator.png';
+
+const useStyles = makeStyles(theme => ({
+  selector: {
+    width: '60%',
+    paddingTop: 100
+  },
+  input: {
+    display: 'block',
+    width: '100%',
+  },
+  button: {
+    width: '100%',
+    padding: 0,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+}));
 
 const commonProperties = {
   width: 900,
@@ -9,29 +33,20 @@ const commonProperties = {
   animate: true,
 }
 
-
-function MyResponsiveLine (): JSX.Element {
+function MyResponsiveLine ({ data }): JSX.Element {
   return (
   <Line
   {...commonProperties}
   curve="monotoneX"
   data={[
       {
-          id: 'fake corp. A',
-          data: [
-              { x: 0, y: 7 },
-              { x: 1, y: 5 },
-              { x: 2, y: 11 },
-              { x: 3, y: 9 },
-              { x: 4, y: 13 },
-              { x: 7, y: 16 },
-              { x: 9, y: 12 },
-          ],
+          id: 'rewards',
+          data: data
       },
   ]}
   xScale={{
       type: 'linear',
-      min: 0,
+      min: 'auto',
       max: 'auto',
   }}
   axisLeft={{
@@ -46,10 +61,102 @@ function MyResponsiveLine (): JSX.Element {
 )
 }
 
+function DelegatorRewards({ address, rewards }): JSX.Element {
+  const { t } = useTranslation();
+  return (
+    <>
+      <Typography component="span" align="left">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
+      </Typography>
+      <Typography component="span">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:address`))}}></span>
+        {address}
+      </Typography>
+      <MyResponsiveLine data={rewards} />
+      <Typography>
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
+      </Typography>
+    </>
+  );
+}
+
+function AddressSelector({ onEnter }): JSX.Element {
+  const { t } = useTranslation();
+  const classes = useStyles();
+  const [address, setAddress] = React.useState('');
+  const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => setAddress(event.target.value);
+  return (
+    <div className={classes.selector}>
+      <Typography variant="h3">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:please`))}}></span>
+      </Typography>
+      <Typography variant="body1">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:store`))}}></span>
+      </Typography>
+      <TextField
+        className={classes.input}
+        fullWidth
+        label={t('delegator:input')}
+        variant="outlined"
+        value={address}
+        onChange={handleAddressChange}
+        />
+      <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(address)} disabled={!address}>
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:enter`))}}></span>
+      </Button>
+      <Typography variant="body1">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:disclaimer`))}}></span>
+      </Typography>
+    </div>
+  );
+}
+
+function UnknownDelegator({ onEnter }): JSX.Element {
+  const { t } = useTranslation();
+  const classes = useStyles();
+  return (
+    <div className={classes.selector}>
+      <img alt="not a delegator" src={notDelegator} width="auto" height={350} />
+      <Typography variant="h3">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:sorry`))}}></span>
+      </Typography>
+      <Typography variant="body1">
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:check`))}}></span>
+      </Typography>
+      <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(null)}>
+        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:retry`))}}></span>
+      </Button>
+    </div>
+  );
+}
+
 export function Delegator() {
+  const [address, setAddress] = React.useState<undefined | string>(
+    undefined
+    );
+  const [rewards, setRewards] = React.useState<undefined | []>(undefined);
+
+  React.useEffect(() => {
+    async function fetchRewards(): Promise<void> {
+      try {
+        setRewards(await (await fetch(`cardano/data/accounts/${address}/rewards.json`)).json());
+      } catch {
+        setRewards([]);
+      }
+    }
+
+    fetchRewards();
+  }, [address]);
+
   return (
     <Page>
-      <MyResponsiveLine />
+      {address
+        ? rewards
+          ? rewards?.length > 0
+           ? <DelegatorRewards address={address} rewards={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
+           : <UnknownDelegator onEnter={() => setAddress(null)} />
+          : <>LOADING</>
+        : <AddressSelector onEnter={ (address) => setAddress(address) } />}
     </Page>
   );
 }

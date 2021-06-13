@@ -1,4 +1,5 @@
 import 'cross-fetch/polyfill';
+import { createObjectCsvWriter } from 'csv-writer';
 import fs from 'fs';
 
 const baseUrl = 'https://cardano-mainnet.blockfrost.io/api/v0/';
@@ -37,6 +38,19 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
   await fs.promises.mkdir(path, {recursive: true});
   fs.promises.writeFile(`${path}/${name}.json`, JSON.stringify(json, null, 2));
 }
+
+const csvWriter = createObjectCsvWriter({
+  path: 'path/to/file.csv',
+  header: [
+      {id: 'epochBlock', title: 'EPOCH_PROD'},        
+      {id: 'epoch', title: 'EPOCH_PAY'},
+      {id: 'date', title: 'DATE_PAY'},
+      {id: 'rewards', title: 'ADA_REWARDS'},
+      {id: 'priceEUR', title: 'ADA_PRICE_EUR'},
+      {id: 'priceUSD', title: 'ADA_PRICE_USD'},
+      {id: 'priceYEN', title: 'ADA_PRICE_JPY'}
+  ]
+});
 
 (async function() {
   // Epoch details
@@ -81,6 +95,12 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
   const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
   await writeBlob(folder, ticker, stake);
 
+  const records = [
+    {name: 'Bob',  lang: 'French, English'},
+    {name: 'Mary', lang: 'English'}
+  ];
+
+  await csvWriter.writeRecords(records);
   }().catch(e => {
 	  console.error("Failed to start template" ,e)
 }));
