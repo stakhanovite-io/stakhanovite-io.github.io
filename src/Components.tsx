@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
 
 export function Copyright() {
     return (
-      <Typography variant="h5">
+      <Typography variant="h4">
         Copyright Stakhanovite.io
         {' '}
         {new Date().getFullYear()}
@@ -105,15 +105,15 @@ function Nav({ items }) {
               <TwitterIcon />
             </IconButton>
             <IconButton
-              href="https://twitter.com/StakhanoviteIO"
+              href="https://t.me/StakhanoviteIO"
               color="secondary"
               title="Telegram account">
               <TelegramIcon />
             </IconButton>
             <IconButton
-              href="contact@stakhanovite.io"
+              href="https://stakhanovite.substack.com/"
               color="secondary"
-              title="Email">
+              title="Newsletter">
               <EmailIcon />
             </IconButton>
           </>
@@ -168,7 +168,7 @@ export function Footer() {
     return (
       <Container component="footer" maxWidth={false} className={classes.footer}>
        <Copyright />
-       <Typography>made with love by our dedicated team</Typography>
+       <Typography variant="body2">made with love by our dedicated team</Typography>
       </Container>
     );
 }

@@ -41,18 +41,20 @@ const theme = createMuiTheme({
     h3: {
       fontSize: 36,
       lineHeight: "50px",
+      fontWeight: 'bold',
     },
     h4: {
-      fontSize: 36,
-      lineHeight: "50px",
-    },
-    body1: {
       fontSize: 28,
       lineHeight: "50px",
+      fontWeight: 'bold',
+    },
+    body1: {
+      fontSize: 26,
+      lineHeight: "45px",
     },
     body2: {
       fontSize: 18,
-      lineHeight: "50px",
+      lineHeight: "45px",
     },
   },
   overrides: {

@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "60vw",
+    width: "80vw",
   },
   heading: {
     marginTop: 84,
-    marginBottom: 184,
+    marginBottom: 40,
   },
   section: {
     display: "flex",
@@ -27,16 +27,17 @@ const useStyles = makeStyles(theme => ({
     padding: 20,
   },
   sectionTitle: {
-    margin: 20,
+    margin: 10,
   },
   sectionItems: {
     backgroundColor: '#212B36',
     borderRadius: "10px",
     padding: "20px 26px 20px 26px",
+    boxShadow: "8px 8px 16px #171D24"
   },
   sectionItem: {
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 12,
+    paddingBottom: 12,
   },
   sectionItemHeading: {
     flexDirection: "column",
@@ -45,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   sectionItemContent: {
-    boxShadow: "2px 5px 5px black",
+    boxShadow: "8px 8px 16px #171D24",
   },
 }));
 
@@ -68,7 +69,7 @@ function SectionItem({ category, id }: { category: string, id: string }): JSX.El
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body2">
+          <Typography variant="body1">
             <span dangerouslySetInnerHTML={{__html:marked(t(`faq:${category}.${id}`))}}></span>
           </Typography>
         </AccordionDetails>
@@ -92,10 +93,18 @@ export function Faq(): JSX.Element {
           </Container>
         </Container>
         <Container className={classes.section}>
+          <SectionTitle category="delegation" />
+          <Container className={classes.sectionItems}>
+            <SectionItem category="delegation" id="loose" />
+            <SectionItem category="delegation" id="locked" />
+            <SectionItem category="delegation" id="close" />
+            <SectionItem category="delegation" id="cost" />
+            <SectionItem category="delegation" id="fees" />
+          </Container>
+        </Container>
+        <Container className={classes.section}>
           <SectionTitle category="rewards" />
           <Container className={classes.sectionItems}>
-            <SectionItem category="rewards" id="locked" />
-            <SectionItem category="rewards" id="loose" />
             <SectionItem category="rewards" id="expect" />
             <SectionItem category="rewards" id="expectMuch" />
             <SectionItem category="rewards" id="location" />

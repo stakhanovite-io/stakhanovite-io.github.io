@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   section: {
-    marginTop: 100
+    marginTop: 20
   },
   sectionContent: {
-    marginTop: 50,
+    marginTop: 20,
   },
   sectionTeam: {
     display: 'flex',
@@ -34,10 +34,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   sectionTeamLogo: {
-    margin: 30,
+    margin: 20,
   },
   subSection: {
-    marginTop: 50,
+    marginTop: 20,
   },
   subSectionContent: {
   },
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     textAlign: 'center',
-    marginTop: 50
+    marginTop: 40
   },
   offer: {
     display: 'flex',
@@ -54,14 +54,14 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     width: 250,
     background: '#BDBDBD',
-    borderRadius: '10px',
-    paddingBottom: 66,
+    borderRadius: '20px',
+    paddingBottom: 30,
   },
   offerLogo: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 80,
+    marginTop: 50,
     width: 64,
     height: 64,
     background: 'linear-gradient(0.4turn, rgba(189, 189, 189, 0.1), rgba(79, 79, 79, 1))',
@@ -85,10 +85,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '10px',
-    padding: 15,
+    padding: 80,
   },
   poolLogo: {
-    width: '350px'
+    width: '250px'
   },
   poolCopy: {
     display: 'flex'
@@ -113,7 +113,7 @@ function Offer({ title, details, children }: { title: string, details: string, c
           <Text id={title} />
         </Box>
       </Typography>
-      <Typography className={classes.offerText} component="span">
+      <Typography className={classes.offerText} variant="body2" component="span">
         <Text id={details} />
       </Typography>
     </div>
@@ -136,15 +136,15 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
 
   return (
     <div className={classes.pool}>
-      <Typography>{title}</Typography>
-      <Typography>{name}</Typography>
-      <Typography component="span"><Text id="pool.margin" /></Typography>
-      <Typography component="span"><Text id="pool.fixed" /></Typography>
+      <Typography variant="h3">{title}</Typography>
+      <Typography variant="h3">{name}</Typography>
+      <Typography component="span" variant="h2" color="textSecondary"><Text id="pool.margin" /></Typography>
+      <Typography component="span" variant="body2"><Text id="pool.fixed" /></Typography>
       <img className={classes.poolLogo} alt="pool logo" src={logo} />
       {poolDetails != undefined &&
       <>
-        <Typography component="span"><Text id="pool.saturation" /></Typography>
-        <div style={{width: '80%', height: 10, border: '1px solid #2C7568', borderRadius: 10}}>
+        <Typography component="span" variant="h3"><Text id="pool.saturation" /></Typography>
+        <div style={{width: '90%', height: 16, border: '3px solid #2C7568', borderRadius: 10}}>
           <div style={{background: '#2C7568', height: '100%', width: `${poolDetails['live_saturation']*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
         </div>
       </>}
@@ -176,11 +176,11 @@ export function Home(): JSX.Element {
           <Typography variant="h1" component="span">
             <Text id="stakePools" />
           </Typography>
-          <Typography component="span">
+          <Typography variant="h3" component="span">
             <Text id="reliable" />
           </Typography>
         </Container>
-        <img alt="logo" src={home} width="auto" height={350} />
+        <img alt="logo" src={home} width="auto" height={500} />
       </Container>
 
       <Container className={classes.section}>
@@ -199,11 +199,17 @@ export function Home(): JSX.Element {
         <div className={classes.sectionTeam}>
           <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={350} />
           <div>
-            <Typography variant="body2" component="span">
+            <Typography variant="body1" component="span">
               <Text id="psychomb" />
             </Typography>
-            <Typography variant="body2" component="span">
+            <Typography variant="body1" align="right" color="textSecondary" component="span">
+              <Text id="psychomb_sig" />
+            </Typography>
+            <Typography variant="body1" component="span">
               <Text id="alexey" />
+            </Typography>
+            <Typography variant="body1" align="right" color="textSecondary" component="span">
+              <Text id="alexey_sig" />
             </Typography>
           </div>
         </div>
