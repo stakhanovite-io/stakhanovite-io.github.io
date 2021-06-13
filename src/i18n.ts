@@ -228,6 +228,23 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
             hardware: "**Oui. Ledger S, Ledger Nano X et Trezor T** prennent tous les trois en charge Cardano et peuvent être utilisés en combinason avec Daedalus ou Yoroi. Lisez attentivement les instructions relatives à votre type de portefeuille.",
           },
         }
+        delegator: {
+          /* adress selector */
+          please: 'Please enter *any used* receiving address from your wallet delegated to STKH',
+          store: 'We do not store any informations from you!',
+          input: 'address',
+          enter: 'Enter',
+          disclaimer: 'All data provided are for informations purposes only.',
+          /* unknown delegator */
+          sorry: 'Sorry, it seems you are not yet an STKH delegator!',
+          check: 'If you did delegate to us, please check that you submitted a **used** receiving address from your wallet. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is refreshed once per hour only.',
+          retry: 'retry',
+          /* rewards panel */
+          welcome: 'Welcome!',
+          address: 'My stake address:',
+          update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
+          powered: 'powered by'
+        }
       },
     },
     fallbackLng: "en",
