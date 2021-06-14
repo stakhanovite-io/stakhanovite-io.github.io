@@ -151,7 +151,7 @@ All data provided are for informations purposes only.`,
           first: `L'un des premiers pools enregistrés sur un testnet public, Stakhanovite est géré par des **fans de Cardano** !
 
 Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au point \"Amis et famille\", ou encore réseau de test des contrats intelligents \"Alonzo-Blue\" ... **Nous avons pris et prenons part à Cardano dans toutes ses étapes de développement depuis le premier jour.**`,
-          together: "Avec nos Stake Pools Cardano, nous gérons également des oracles sur Cardano et sa blockchain sœur Ergo.",
+          together: "Avec notre Stake Pool Cardano, nous gérons également un oracle sur Cardano.",
           psychomb: "*\" Traducteur français de divers contenus sur Cardano tels que 'Pourquoi Cardano ?', des articles du blog d'I.O.G., ou du portefeuille Yoroi, je suis Ambassadeur Cardano depuis le premier jour. La mise en place d'un pool était une chose naturelle à faire afin de soutenir davantage la communauté Cardano* \"",
           psychomb_sig: "***@psychomb***",
           alexey: "*\" Je suis développeur blockchain. Je pirate l'ERC20, l'ERC21, le Covid 19, le borsch, le concombre. A mains nues. Assez parlé !* \"",
