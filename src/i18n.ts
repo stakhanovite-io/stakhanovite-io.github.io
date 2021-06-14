@@ -262,23 +262,6 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
           update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
           powered: 'powered by'
         }
-        delegator: {
-          /* adress selector */
-          please: 'Please enter *any used* receiving address from your wallet delegated to STKH',
-          store: 'We do not store any informations from you!',
-          input: 'address',
-          enter: 'Enter',
-          disclaimer: 'All data provided are for informations purposes only.',
-          /* unknown delegator */
-          sorry: 'Sorry, it seems you are not yet an STKH delegator!',
-          check: 'If you did delegate to us, please check that you submitted a **used** receiving address from your wallet. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is refreshed once per hour only.',
-          retry: 'retry',
-          /* rewards panel */
-          welcome: 'Welcome!',
-          address: 'My stake address:',
-          update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
-          powered: 'powered by'
-        }
       },
     },
     fallbackLng: "en",
