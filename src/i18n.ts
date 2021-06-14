@@ -15,8 +15,10 @@ i18n
           stakePools: "Stake Pool",
           reliable: "Simple and **reliable** staking on Cardano",
           who: "Who are we?",
-          first: "One of the first stake pool ever registered on a publicly available  testnet, Stakhanovite is operated by **Cardano fans**!",
-          together: "Together with our Cardano Stake Pools, we also operate oracles on Cardano and its sister blockchain Ergo.",
+          first: `One of the first stake pool ever registered on a publicly available testnet, Stakhanovite is operated by **Cardano fans**!
+
+Shelley Testnets, Incentivized Shelley ITN, Friends & Family Testnets, Alonzo Blue Testnet ... **We are part of the Cardano experience since day one.**`,
+          together: "Together with our Cardano Stake Pool, we also operate an oracle on Cardano.",
           psychomb: "*\" French translator of various Cardano content such as 'Why Cardano?', IOG Blog posts, or the light wallet Yoroi, I have been a Cardano Ambassador  since day one. Setting up a stake pool was a natural thing to do in order to further support the Cardano Community.* \"",
           psychomb_sig: "***@psychomb***",
           alexey: "*\" I am a blockchain dev. I hack the ERC20, the ERC21, the Covid 19, the borsch, the cucumber. With bare hands. Enough said already!* \"",
@@ -26,7 +28,7 @@ i18n
           transparentTitle: "We are transparent",
           transparent: "From our costs to performance reports, you will know everything thanks to our monthly **newsletter** and our dedicated **Telegram channel**. Subscribe, and come say hi !",
           efficientTitle: "We are efficient",
-          efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. **Try us out!**",
+          efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. **Try us out and join the crew!**",
           wallets: "Delegate using the most popular Cardano wallets - [**Daedalus**](https://daedaluswallet.io) or [**Yoroi**](https://yoroi-wallet.com) - and look for the **STKH1** ticker!",
           faq: "Please read our **FAQ** for more details.",
           contact: "Contact us",
@@ -48,7 +50,7 @@ We will do our best to answer diligently, in english or in french!`,
           },
           pool: {
             margin: "1.8% margin",
-            fixed: "340 fixed (minimum authorized)",
+            fixed: "340 ada fixed (min. authorized)",
             saturation: "Saturation",
             copyAddress: "Copy pool address",
             copyId: "Copy Pool ID",
@@ -83,7 +85,7 @@ We will do our best to answer diligently, in english or in french!`,
 
 **To sum up, your first delegation will cost you less than 2.2 ada. Changing pool later on will only cost the transaction fee  of 0.2 ada.**`,
             feesTitle: "What are the Stakhanovite fees?",
-            fees: `We charge the **minimum fixed fee** allowed by the protocol, and a **margin of 1.8%.
+            fees: `We charge the **minimum fixed fee** allowed by the protocol, and a **margin of 1.8%**.
             
 In concrete terms, when you are eligible to receive 100 ada rewards, Stakhanovite will take 1.8 ada and the remaining 98.2 ada are yours.`,
           },
@@ -120,15 +122,19 @@ Please note that Daedalus automatically retrieves your rewards when you spend yo
         }
         delegator: {
           /* adress selector */
-          please: 'Please enter *any used* receiving address from your wallet delegated to STKH',
-          store: 'We do not store any informations from you!',
-          input: 'address',
+          please: 'Please enter the staking address of your wallet delegated to STKH',
+          store: 'We do not store any personal informations from you!',
+          input: 'staking address \"stake1...\"',
           enter: 'Enter',
-          disclaimer: 'All data provided are for informations purposes only.',
+          disclaimer: `In **Daedalus, you can find the staking address in the rewards section** of the delegation centre.
+          
+In **Yoroi, you can find it in the the rewards option of the receive panel**.
+
+All data provided are for informations purposes only.`,
           /* unknown delegator */
-          sorry: 'Sorry, it seems you are not yet an STKH delegator!',
-          check: 'If you did delegate to us, please check that you submitted a **used** receiving address from your wallet. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is refreshed once per hour only.',
-          retry: 'retry',
+          sorry: 'It seems you are not an STKH delegator.',
+          check: 'If you did delegate to us, please check that you submitted a valid staking address starting with ***\"stake1\"***. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is updated once per hour.',
+          retry: 'Retry',
           /* rewards panel */
           welcome: 'Welcome!',
           address: 'My stake address:',
@@ -140,9 +146,11 @@ Please note that Daedalus automatically retrieves your rewards when you spend yo
         home: {
           stakhanovite: "Stakhanovite",
           stakePools: "Stake Pool",
-          reliable: "Staking sur Cardano - Simple et **fiable**",
+          reliable: "Votre partenaire sur Cardano - Simple et **fiable**",
           who: "Qui sommes-nous ?",
-          first: "L'un des premiers pools enregistrés sur un testnet public, Stakhanovite est géré par des **fans de Cardano** !",
+          first: `L'un des premiers pools enregistrés sur un testnet public, Stakhanovite est géré par des **fans de Cardano** !
+
+Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au point \"Amis et famille\", ou encore réseau de test des contrats intelligents \"Alonzo-Blue\" ... **Nous avons pris et prenons part à Cardano dans toutes ses étapes de développement depuis le premier jour.**`,
           together: "Avec nos Stake Pools Cardano, nous gérons également des oracles sur Cardano et sa blockchain sœur Ergo.",
           psychomb: "*\" Traducteur français de divers contenus sur Cardano tels que 'Pourquoi Cardano ?', des articles du blog d'I.O.G., ou du portefeuille Yoroi, je suis Ambassadeur Cardano depuis le premier jour. La mise en place d'un pool était une chose naturelle à faire afin de soutenir davantage la communauté Cardano* \"",
           psychomb_sig: "***@psychomb***",
@@ -164,18 +172,18 @@ Veuillez envoyez toutes vos questions à :
 
 **contact@stakhanovite.io**
 
-Nous ferons de notre mieux pour répondre avec diligence, en français ou en anglais !`,
+Nous ferons de notre mieux pour répondre rapidement, en français ou en anglais !`,
           offer: {
             secureTitle: "Sécurisé",
             secure: "Serveurs renforcés",
             robustTitle: "Robuste",
-            robust: "Grande bande-passante",
+            robust: "Réseau Haut débit",
             fairTitle: "Juste",
             fair: "Peu de frais",
           },
           pool: {
-            margin: "1.8% de marge",
-            fixed: "340 frais fixes (minimum autorisé)",
+            margin: "Marge : 1.8%",
+            fixed: "340 ada de frais fixes (min. autorisé)",
             saturation: "Saturation",
             copyAddress: "Copier",
             copyId: "Copier l'ID du pool",
@@ -195,7 +203,7 @@ Nous ferons de notre mieux pour répondre avec diligence, en français ou en ang
             stakingTitle: "Qu'est-ce que le \"staking\" ?",
             staking: "Toute personne possédant des ada peut participer à l'écriture du registre de Cardano. C'est ce qu'on appelle le **staking** et il est important qu'une **majorité honnête** de détenteurs d'ada participe à ce processus. Pour inciter les détenteurs d'ada à le faire, chaque bloc signé donne des récompenses en ada. Pour cela, il faut faire fonctionner un nœud 24h/24 et 7j/7 et mettre en jeu une très grande quantité d'ada pour avoir une chance de signer des blocs **régulièrement**.",
             delegationTitle: "Qu'est-ce que la délégation ?",
-            delegation: "Si vous n'êtes ni un très gros détenteur d'ada, ni un expert en technologie, vous pouvez **déléguer vos ada à un \"stake\" pool en utilisant le portefeuille Cardano de votre choix**. Le \"stake pool\" s'occupe de faire fonctionner un nœud et les récompenses des blocs produits seront partagées proportionnellement au montant délégué par chaque contributeur du pool. Le \"stake pool\" facturera des frais pour ce service."
+            delegation: "Si vous n'êtes ni un très gros détenteur d'ada, ni un expert en technologie, vous pouvez **déléguer vos ada à un \"stake pool\" (pool) en utilisant le portefeuille Cardano de votre choix**. Le pool s'occupe de faire fonctionner un nœud validateur et les récompenses des blocs produits seront partagées proportionnellement au montant délégué par chaque contributeur. Le pool facture des frais pour ce service."
           },
           delegation: {
             title: "Délégation",
@@ -205,21 +213,21 @@ Nous ferons de notre mieux pour répondre avec diligence, en français ou en ang
             loose: "**Non.** Déléguer est une **procédure sûre**. Vous donnez simplement vos droits à un pool de signer des blocs pour vous. Si votre pool se comporte mal ou valide moins de blocs que prévu, le pire qui puisse arriver est de ne pas toucher de récompenses. Dans ce cas, **n'oubliez pas: vous pouvez changer de pool à tout moment !**",
             closeTitle: "Est-ce que je peux fermer mon wallet après avoir délégué ?",
             close: "**Oui.** Une fois que votre préférence de délégation a été enregistrée sur la blockchain, vous pouvez fermer votre portefeuille en toute sécurité. Revenez de temps en temps pour vérifier que votre pool fonctionne comme prévu !",
-            costTitle: "How much does it cost to delegate?",
-            cost: `Delegating requires to submit a transaction on-chain and this generally costs less than 0.2 ada. **Please note that registering a wallet for staking requires a deposit of 2 ada.** However, this deposit will be returned to you when you de-register your wallet.
+            costTitle: "Déléguer, cela coûte combien ?",
+            cost: `Pour déléguer, il faut soumettre une transaction sur la blockchain, ce qui coûte généralement moins de 0,2 ada. **Veuillez noter que l'enregistrement d'un portefeuille nécessite un dépôt de 2 ada**, mais ce dépôt vous sera rendu lorsque vous arrêterez le staking.
 
-**To sum up, your first delegation will cost you less than 2.2 ada. Changing pool later on will only cost the transaction fee  of 0.2 ada.**`,
+**Pour résumer, votre première délégation vous coûtera moins de 2,2 ada. Changer de pool par la suite ne vous coûtera que les frais de transaction de 0,2 ada.**`,
             feesTitle: "Quels sont les frais de Stakhanovite ?",
             fees: `Nous pratiquons les **frais fixes minimum** autorisés par le protocole, et une **marge de 1.8%.**
             
-Concrètement, lorsque vous êtes éligible pour 100 ada de récompenses, Stakhanovite prélèvera 1.8 ada et les 98.2 ada restant sont à vous.`,
+Concrètement, lorsque vous êtes éligibles pour 100 ada de récompenses, Stakhanovite prélèvera 1.8 ada et les 98.2 ada restant sont à vous.`,
           },
           rewards: {
             title: "Récompenses",
             expectTitle: "Quand vais-je recevoir mes récompenses ?",
             expect: `Après votre première délégation, il y a une période de latence de **3 époques complètes** avant de recevoir des récompenses. Cela signifie **entre 15 et 20 jours**, selon le moment où vous avez délégué dans l'époque. Après cela, les récompenses sont payées régulièrement à la fin de **chaque époque** (5 jours).
 
- La même période de décalage existe lorsque vous cessez de déléguer. Vous recevrez des récompenses pendant les trois époques suivantes.`,
+La même période de décalage existe lorsque vous cessez de déléguer. Vous recevrez des récompenses pendant les trois époques suivantes.`,
             expectMuchTitle: "Conbien de récompenses vais-je avoir ?",
             expectMuch: "Le protocole donne approximativement **~5% de rendement annuel** sur votre enjeu. Cela donne environ **0,068% par époque de 5 jours.**",
             locationTitle: "Où se trouvent mes récompenses ?",
@@ -247,20 +255,24 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
         },
         delegator: {
           /* adress selector */
-          please: 'Please enter *any used* receiving address from your wallet delegated to STKH',
-          store: 'We do not store any informations from you!',
-          input: 'address',
-          enter: 'Enter',
-          disclaimer: 'All data provided are for informations purposes only.',
+          please: 'Veuillez entrer l\'adresse de staking du portefeuille délégué chez STKH',
+          store: 'Nous ne conservons aucune de vos données personnelles.',
+          input: 'adresse de rewards au format \"stake1...\"',
+          enter: 'Entrer',
+          disclaimer: `Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation.
+          
+Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**.
+          
+Toutes les données fournies le sont uniquement à titre d'information.`,
           /* unknown delegator */
-          sorry: 'Sorry, it seems you are not yet an STKH delegator!',
-          check: 'If you did delegate to us, please check that you submitted a **used** receiving address from your wallet. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is refreshed once per hour only.',
-          retry: 'retry',
+          sorry: 'Il semble que vous n\'êtes pas délégateur chez STKH.',
+          check: 'Si vous avez délégué chez STKH, veuillez vérifier que vous avez bien entré l\'adresse de \"staking\" (stake1...) de votre portefeuille. Si votre délégation est récente, veuillez recommencer lorsque vous recevrez des récompenses de notre part. Notez que notre service est mis à jour toutes les heures.',
+          retry: 'Recommencer',
           /* rewards panel */
-          welcome: 'Welcome!',
-          address: 'My stake address:',
-          update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
-          powered: 'powered by'
+          welcome: 'Bienvenue !',
+          address: 'Mon adresse de staking :',
+          update: 'Ces statistiques sont mises à jour toutes les heures. Des changements récents peuvent ne pas immédiatement être reflétés ici.',
+          powered: 'rendu possible grâce à'
         }
       },
     },

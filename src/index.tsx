@@ -30,31 +30,32 @@ const theme = createMuiTheme({
   },
   typography: {
     h1: {
-      fontSize: 80,
+      fontSize: 70,
       fontWeight: 'bold',
+      lineHeight: "20px",
     },
     h2: {
-      fontSize: 56,
+      fontSize: 42,
       fontWeight: 'bold',
-      lineHeight: "70px",
+      lineHeight: "30px",
     },
     h3: {
-      fontSize: 36,
-      lineHeight: "50px",
+      fontSize: 30,
+      lineHeight: "30px",
       fontWeight: 'bold',
     },
     h4: {
-      fontSize: 28,
-      lineHeight: "50px",
+      fontSize: 24,
+      lineHeight: "30px",
       fontWeight: 'bold',
     },
     body1: {
-      fontSize: 26,
-      lineHeight: "45px",
+      fontSize: 18,
+      lineHeight: "26px",
     },
     body2: {
-      fontSize: 18,
-      lineHeight: "45px",
+      fontSize: 16,
+      lineHeight: "26px",
     },
   },
   overrides: {

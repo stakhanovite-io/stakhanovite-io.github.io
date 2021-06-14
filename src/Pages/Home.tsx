@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    width: 250,
+    width: 175,
     background: '#BDBDBD',
     borderRadius: '20px',
     paddingBottom: 30,
@@ -137,14 +137,14 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
   return (
     <div className={classes.pool}>
       <Typography variant="h3">{title}</Typography>
-      <Typography variant="h3">{name}</Typography>
-      <Typography component="span" variant="h2" color="textSecondary"><Text id="pool.margin" /></Typography>
+      <Typography variant="h4">{name}</Typography>
+      <Typography component="span" variant="h4" color="textSecondary"><Text id="pool.margin" /></Typography>
       <Typography component="span" variant="body2"><Text id="pool.fixed" /></Typography>
       <img className={classes.poolLogo} alt="pool logo" src={logo} />
       {poolDetails != undefined &&
       <>
-        <Typography component="span" variant="h3"><Text id="pool.saturation" /></Typography>
-        <div style={{width: '90%', height: 16, border: '3px solid #2C7568', borderRadius: 10}}>
+        <Typography component="span" variant="h4"><Text id="pool.saturation" /></Typography>
+        <div style={{width: '100%', height: 16, border: '2px solid #2C7568', borderRadius: 10}}>
           <div style={{background: '#2C7568', height: '100%', width: `${poolDetails['live_saturation']*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
         </div>
       </>}
@@ -156,7 +156,7 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
         >
           <FileCopyIcon />
         </IconButton>
-        <Typography component="span" variant="body2"><Text id="pool.copyId" raw={true} /></Typography>
+        <Typography component="span" variant="body1"><Text id="pool.copyId" raw={true} /></Typography>
       </div>
     </div>
   );
@@ -180,7 +180,7 @@ export function Home(): JSX.Element {
             <Text id="reliable" />
           </Typography>
         </Container>
-        <img alt="logo" src={home} width="auto" height={500} />
+        <img alt="logo" src={home} width="auto" height={350} />
       </Container>
 
       <Container className={classes.section}>

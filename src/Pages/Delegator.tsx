@@ -11,7 +11,7 @@ import notDelegator from '../../assets/not_delegator.png';
 
 const useStyles = makeStyles(theme => ({
   selector: {
-    width: '60%',
+    width: '70%',
     paddingTop: 100
   },
   input: {
@@ -65,7 +65,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
   const { t } = useTranslation();
   return (
     <>
-      <Typography component="span" align="left">
+      <Typography component="span" align="left" variant="h2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
       <Typography component="span">
@@ -73,7 +73,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         {address}
       </Typography>
       <MyResponsiveLine data={rewards} />
-      <Typography>
+      <Typography variant="body2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
       </Typography>
     </>
@@ -86,11 +86,11 @@ function AddressSelector({ onEnter }): JSX.Element {
   const [address, setAddress] = React.useState('');
   const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => setAddress(event.target.value);
   return (
-    <div className={classes.selector}>
-      <Typography variant="h3">
+    <div className={classes.selector} align="center">
+      <Typography variant="h4">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:please`))}}></span>
       </Typography>
-      <Typography variant="body1">
+      <Typography variant="body2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:store`))}}></span>
       </Typography>
       <TextField
@@ -104,7 +104,7 @@ function AddressSelector({ onEnter }): JSX.Element {
       <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(address)} disabled={!address}>
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:enter`))}}></span>
       </Button>
-      <Typography variant="body1">
+      <Typography variant="body2" align="Left">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:disclaimer`))}}></span>
       </Typography>
     </div>
@@ -115,12 +115,12 @@ function UnknownDelegator({ onEnter }): JSX.Element {
   const { t } = useTranslation();
   const classes = useStyles();
   return (
-    <div className={classes.selector}>
-      <img alt="not a delegator" src={notDelegator} width="auto" height={350} />
-      <Typography variant="h3">
+    <div className={classes.selector} align="center">
+      <Typography variant="h4">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:sorry`))}}></span>
       </Typography>
-      <Typography variant="body1">
+      <img  alt="not a delegator" src={notDelegator} width="auto" height={300} />
+      <Typography variant="body2" align="Left">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:check`))}}></span>
       </Typography>
       <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(null)}>
@@ -153,7 +153,7 @@ export function Delegator() {
       {address
         ? rewards
           ? rewards?.length > 0
-           ? <DelegatorRewards address={address} rewards={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
+           ? <DelegatorRewards address={address} rewards={rewards.map(o => {return {x: o.epoch, y: (o.amount)/1000000}})} />
            : <UnknownDelegator onEnter={() => setAddress(null)} />
           : <>LOADING</>
         : <AddressSelector onEnter={ (address) => setAddress(address) } />}
