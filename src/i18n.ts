@@ -26,7 +26,7 @@ Shelley Testnets, Incentivized Shelley ITN, Friends & Family Testnets, Alonzo Bl
           experienceTitle: "What do we offer?",
           experience: "We offer a **reliable** and **fairly priced** staking experience on the Cardano blockchain that translates into a **painless** and **profitable** ride for all our delegators.",
           transparentTitle: "We are transparent",
-          transparent: "From our costs to performance reports, you will know everything thanks to our monthly **newsletter** and our dedicated **Telegram channel**. Subscribe, and come say hi !",
+          transparent: "From our costs to performance reports, you will know everything thanks to our monthly **[newsletter](https://stakhanovite.substack.com/)** and our dedicated **[Telegram](https://t.me/StakhanoviteIO)** channel. Subscribe, and come say hi !",
           efficientTitle: "We are efficient",
           efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. **Try us out and join the crew!**",
           wallets: "Delegate using the most popular Cardano wallets - [**Daedalus**](https://daedaluswallet.io) or [**Yoroi**](https://yoroi-wallet.com) - and look for the **STKH1** ticker!",
@@ -94,9 +94,11 @@ In concrete terms, when you are eligible to receive 100 ada rewards, Stakhanovit
             expectTitle: "When can I expect to get my rewards?",
             expect: `**Be patient!** After your first delegation, there is a lag period of **3 full epochs** before receiving any rewards. This means **between 15 to 20 days**, depending when you delegated in the epoch. After that, rewards are paid regularly at the end of **every epoch** (5 days).
 
-The same lag period exists when you stop delegating. You still receive rewards for the following three epochs.`,
+The same lag period exists when you stop delegating. You still receive rewards for the following 3 epochs.`,
             expectMuchTitle: "How much rewards can I expect?",
-            expectMuch: "The protocol gives approximatively **~5% annual returns** on your stake. This translates to approximatively **0,068% per epoch.**",
+            expectMuch: "The protocol gives approximatively **5% annual returns** on your stake. This translates to **~ 0,068% per epoch.**",
+            variationTitle: "Why do my awards vary between epochs?",
+            variation: "A pool pays rewards according to the number of blocks produced. Each pool is allocated a random number of blocks at each time, which explains these variations.",
             locationTitle: "Where are my rewards deposited?",
             location: `Your rewards are paid in an **special account address** linked to your wallet. Whether you use Daedalus or Yoroi, the total balance shown by these wallets already includes those rewards.
 
@@ -122,18 +124,14 @@ Please note that Daedalus automatically retrieves your rewards when you spend yo
         }
         delegator: {
           /* adress selector */
-          please: 'Please enter the staking address of your wallet delegated to STKH',
-          store: 'We do not store any personal informations from you!',
+          please: 'Please enter the staking address⁽\*⁾ of your wallet delegated to STKH',
+          store: '**We do not store any personal informations from you!**',
           input: 'staking address \"stake1...\"',
           enter: 'Enter',
-          disclaimer: `In **Daedalus, you can find the staking address in the rewards section** of the delegation centre.
-          
-In **Yoroi, you can find it in the the rewards option of the receive panel**.
-
-All data provided are for informations purposes only.`,
+          disclaimer: `**⁽\*⁾** In **Daedalus, you can find the staking address in the rewards section** of the delegation centre. In **Yoroi, you can find it in the the rewards option of the receive panel**. All data provided are for informations purposes only.`,
           /* unknown delegator */
-          sorry: 'It seems you are not an STKH delegator.',
-          check: 'If you did delegate to us, please check that you submitted a valid staking address starting with ***\"stake1\"***. If your delegation is recent, try again once your stake receives rewards from us. Please note that our backend is updated once per hour.',
+          sorry: '**Oops.** It seems that you are not delegating to STKH!',
+          check: 'If you did delegate to us, please check that you submitted a valid staking address starting with ***\"stake1\"***. If your delegation is recent, **try again once you receive rewards from STKH.** Please note that our backend is updated once per hour.',
           retry: 'Retry',
           /* rewards panel */
           welcome: 'Welcome!',
@@ -159,11 +157,11 @@ Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au 
           experienceTitle: "Qu'offrons-nous ?",
           experience: "Nous offrons une expérience de staking **fiable** et **peu onéreuse** sur la blockchain Cardano. Cela se traduit en une expérience **facile** et **profitable** pour tous nos délégataires.",
           transparentTitle: "Nous sommes transparents",
-          transparent: "De nos coûts jusqu'à nos rapports concernant notre performance, vous saurez tout grâce à notre **newsletter** mensuelle et à notre **chaîne Télegram** dédiées. Abonnez-vous, et venez nous saluer !",
+          transparent: "De nos coûts jusqu'à nos rapports concernant notre performance, vous saurez tout grâce à notre **[newsletter](https://stakhanovite.substack.com/)** mensuelle et à notre **chaîne [Telegram](https://t.me/StakhanoviteIO)** dédiées. Abonnez-vous, et venez nous saluer !",
           efficientTitle: "Nous sommes efficaces",
           efficient: "Depuis son lancement, Stakhanovite a distribué plus de 6 millions d'ADA de récompenses à ses délégataires. **Essayez-nous !**",
           wallets: "Déléguez en utilisant les portefeuilles Cardano les plus populaires - [**Daedalus**](https://daedaluswallet.io) ou [**Yoroi**](https://yoroi-wallet.com) - et cherchez notre pool **STKH1** !",
-          faq: "Veuillez lire notre F.A.Q. pour plus de détails",
+          faq: "Consultez notre F.A.Q. pour plus de détails.",
           contact: "Contactez-nous",
           check: "Vérifiez sur la barre d'accueil, nous sommes présents sur Twitter et Telegram!",
           mail: `Vous n'êtes pas fans des réseaux sociaux ?
@@ -227,9 +225,11 @@ Concrètement, lorsque vous êtes éligibles pour 100 ada de récompenses, Stakh
             expectTitle: "Quand vais-je recevoir mes récompenses ?",
             expect: `Après votre première délégation, il y a une période de latence de **3 époques complètes** avant de recevoir des récompenses. Cela signifie **entre 15 et 20 jours**, selon le moment où vous avez délégué dans l'époque. Après cela, les récompenses sont payées régulièrement à la fin de **chaque époque** (5 jours).
 
-La même période de décalage existe lorsque vous cessez de déléguer. Vous recevrez des récompenses pendant les trois époques suivantes.`,
-            expectMuchTitle: "Conbien de récompenses vais-je avoir ?",
-            expectMuch: "Le protocole donne approximativement **~5% de rendement annuel** sur votre enjeu. Cela donne environ **0,068% par époque de 5 jours.**",
+Un même décalage existe lorsque vous cessez de déléguer. Vous recevrez des récompenses pendant les 3 époques suivantes.`,
+            expectMuchTitle: "Combien de récompenses vais-je recevoir ?",
+            expectMuch: "Le protocole donne approximativement **5% de rendement annuel** sur votre enjeu. Cela donne environ **~ 0,068% par époque de 5 jours.**",
+            variationTitle: "Pourquoi mes récompenses varient entre les époques ?",
+            variation: "Un pool paye les récompenses en fonction du nombre de blocs produits. A chaque époque, un nombre aléatoire de blocs est attribué à chaque pool, ce qui explique ces variations.",
             locationTitle: "Où se trouvent mes récompenses ?",
             location: `Vos récompenses sont versées dans une **adresse de compte spécial** liée à votre portefeuille. Que vous utilisiez Daedalus ou Yoroi, le solde total affiché par ces portefeuilles inclut déjà ces récompenses.
 
@@ -255,15 +255,11 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
         },
         delegator: {
           /* adress selector */
-          please: 'Veuillez entrer l\'adresse de staking du portefeuille délégué chez STKH',
+          please: 'Veuillez entrer l\'adresse de staking⁽\*⁾ du portefeuille délégué chez STKH',
           store: 'Nous ne conservons aucune de vos données personnelles.',
           input: 'adresse de rewards au format \"stake1...\"',
           enter: 'Entrer',
-          disclaimer: `Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation.
-          
-Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**.
-          
-Toutes les données fournies le sont uniquement à titre d'information.`,
+          disclaimer: `⁽\*⁾Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation. Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**. Toutes les données fournies le sont uniquement à titre d'information.`,
           /* unknown delegator */
           sorry: 'Il semble que vous n\'êtes pas délégateur chez STKH.',
           check: 'Si vous avez délégué chez STKH, veuillez vérifier que vous avez bien entré l\'adresse de \"staking\" (stake1...) de votre portefeuille. Si votre délégation est récente, veuillez recommencer lorsque vous recevrez des récompenses de notre part. Notez que notre service est mis à jour toutes les heures.',

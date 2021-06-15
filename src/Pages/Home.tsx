@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    width: 175,
+    width: 180,
     background: '#BDBDBD',
     borderRadius: '20px',
     paddingBottom: 30,
@@ -61,7 +61,8 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 50,
+    marginTop: 40,
+    marginBottom: 16,
     width: 64,
     height: 64,
     background: 'linear-gradient(0.4turn, rgba(189, 189, 189, 0.1), rgba(79, 79, 79, 1))',
@@ -71,7 +72,7 @@ const useStyles = makeStyles(theme => ({
   offerText: {
     color: '#333333',
     '& p' : {
-      margin: 0,
+      margin: 5,
     }
   },
   pools: {
@@ -85,13 +86,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '10px',
-    padding: 80,
+    padding: 40,
   },
   poolLogo: {
-    width: '250px'
+    width: '150px'
   },
   poolCopy: {
-    display: 'flex'
+    display: 'fixed'
   }
 }));
 
@@ -168,7 +169,7 @@ export function Home(): JSX.Element {
 
   return (
     <Page>
-      <Container className={classes.root}>
+      <Container disableGutters="true" className={classes.root}>
         <Container>
           <Typography variant="h1" color="textSecondary" component="span">
             <Text id="stakhanovite" />
@@ -180,7 +181,7 @@ export function Home(): JSX.Element {
             <Text id="reliable" />
           </Typography>
         </Container>
-        <img alt="logo" src={home} width="auto" height={350} />
+        <img alt="logo" src={home} width="auto" height={250} />
       </Container>
 
       <Container className={classes.section}>
@@ -197,7 +198,7 @@ export function Home(): JSX.Element {
 
       <Container className={classes.section}>
         <div className={classes.sectionTeam}>
-          <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={350} />
+          <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={250} />
           <div>
             <Typography variant="body1" component="span">
               <Text id="psychomb" />
@@ -233,7 +234,7 @@ export function Home(): JSX.Element {
            <ThumbUpIcon />
           </Offer>
         </Container>
-        <Container className={classes.subSection}>
+        <Container disableGutters="true" className={classes.subSection}>
           <Typography variant="h3" color="textSecondary" component="span">
             <Text id="transparentTitle" />
           </Typography>
@@ -242,7 +243,7 @@ export function Home(): JSX.Element {
           </Typography>
         </Container>
 
-        <Container className={classes.subSection}>
+        <Container disableGutters="true" className={classes.subSection}>
           <Typography variant="h3" color="textSecondary" component="span">
             <Text id="efficientTitle" />
           </Typography>

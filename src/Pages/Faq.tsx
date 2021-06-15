@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     padding: 20,
   },
   sectionTitle: {
-    margin: 10,
+    margin: 20,
   },
   sectionItems: {
     backgroundColor: '#212B36',
@@ -107,6 +107,7 @@ export function Faq(): JSX.Element {
           <Container className={classes.sectionItems}>
             <SectionItem category="rewards" id="expect" />
             <SectionItem category="rewards" id="expectMuch" />
+            <SectionItem category="rewards" id="variation" />
             <SectionItem category="rewards" id="location" />
             <SectionItem category="rewards" id="changing" />
             <SectionItem category="rewards" id="redelegate" />

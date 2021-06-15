@@ -86,11 +86,11 @@ function AddressSelector({ onEnter }): JSX.Element {
   const [address, setAddress] = React.useState('');
   const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => setAddress(event.target.value);
   return (
-    <div className={classes.selector} align="center">
+    <div className={classes.selector} >
       <Typography variant="h4">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:please`))}}></span>
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:store`))}}></span>
       </Typography>
       <TextField

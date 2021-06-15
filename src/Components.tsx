@@ -101,19 +101,19 @@ function Nav({ items }) {
             <IconButton
               href="https://twitter.com/StakhanoviteIO"
               color="secondary"
-              title="Twitter account">
+              title="STKH on Twitter">
               <TwitterIcon />
             </IconButton>
             <IconButton
               href="https://t.me/StakhanoviteIO"
               color="secondary"
-              title="Telegram account">
+              title="STKH on Telegram">
               <TelegramIcon />
             </IconButton>
             <IconButton
               href="https://stakhanovite.substack.com/"
               color="secondary"
-              title="Newsletter">
+              title="STKH Newsletter">
               <EmailIcon />
             </IconButton>
           </>
@@ -152,7 +152,7 @@ export function ToolbarMenu({ items }) {
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 1000px)');
     return (
-      <AppBar position="static" color="primary" elevation={0} style={{padding: 5}}>
+      <AppBar position="sticky" color="primary" elevation={0} style={{padding: 5}}>
         <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "flex-end"}}>
           {matches
             ? <Nav items={items} />
