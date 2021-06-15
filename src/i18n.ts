@@ -256,12 +256,12 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
         delegator: {
           /* adress selector */
           please: 'Veuillez entrer l\'adresse de staking⁽\*⁾ du portefeuille délégué chez STKH',
-          store: 'Nous ne conservons aucune de vos données personnelles.',
+          store: 'Nous ne conservons aucune donnée personnelle.',
           input: 'adresse de rewards au format \"stake1...\"',
           enter: 'Entrer',
-          disclaimer: `⁽\*⁾Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation. Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**. Toutes les données fournies le sont uniquement à titre d'information.`,
+          disclaimer: `**⁽\*⁾**Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation. Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**. Toutes les données fournies le sont uniquement à titre d'information.`,
           /* unknown delegator */
-          sorry: 'Il semble que vous n\'êtes pas délégateur chez STKH.',
+          sorry: 'Ooops... Nous n\'avons pas trouvé votre délégation chez STKH',
           check: 'Si vous avez délégué chez STKH, veuillez vérifier que vous avez bien entré l\'adresse de \"staking\" (stake1...) de votre portefeuille. Si votre délégation est récente, veuillez recommencer lorsque vous recevrez des récompenses de notre part. Notez que notre service est mis à jour toutes les heures.',
           retry: 'Recommencer',
           /* rewards panel */
