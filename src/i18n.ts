@@ -124,18 +124,20 @@ Please note that Daedalus automatically retrieves your rewards when you spend yo
         }
         delegator: {
           /* adress selector */
-          please: 'Please enter the staking address⁽\*⁾ of your wallet delegated to STKH',
+          please: 'Please enter the reward address⁽\*⁾ of your wallet delegated to STKH',
           store: '**We do not store any personal informations from you!**',
-          input: 'staking address \"stake1...\"',
+          input: 'Reward address starting with \"stake1...\"',
           enter: 'Enter',
-          disclaimer: `**⁽\*⁾** In **Daedalus, you can find the staking address in the rewards section** of the delegation centre. In **Yoroi, you can find it in the the rewards option of the receive panel**. All data provided are for informations purposes only.`,
+          disclaimer: `**⁽\*⁾** In **Daedalus, you can find the reward address in the rewards section** of the delegation centre. In **Yoroi, you can find it in the the rewards option of the receive panel**.
+          
+All data provided are for informations purposes only.`,
           /* unknown delegator */
           sorry: '**Oops.** It seems that you are not delegating to STKH!',
-          check: 'If you did delegate to us, please check that you submitted a valid staking address starting with ***\"stake1\"***. If your delegation is recent, **try again once you receive rewards from STKH.** Please note that our backend is updated once per hour.',
+          check: 'If you did delegate to us, please check that you submitted a valid reward address starting with ***\"stake1\"***. If your delegation is recent, **retry once you receive rewards from STKH.** Please note that our backend is updated once per hour.',
           retry: 'Retry',
           /* rewards panel */
           welcome: 'Welcome!',
-          address: 'My stake address:',
+          address: 'My reward address:',
           update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
           powered: 'powered by'
         }
@@ -255,14 +257,16 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
         },
         delegator: {
           /* adress selector */
-          please: 'Veuillez entrer l\'adresse de staking⁽\*⁾ du portefeuille délégué chez STKH',
+          please: 'Veuillez entrer l\'adresse de récompenses⁽\*⁾ du portefeuille délégué chez STKH',
           store: 'Nous ne conservons aucune donnée personnelle.',
-          input: 'adresse de rewards au format \"stake1...\"',
+          input: 'Adresse de récompense au format \"stake1...\"',
           enter: 'Entrer',
-          disclaimer: `**⁽\*⁾**Sur **Daedalus, vous pouvez trouver l'adresse de \"staking\" dans la section récompenses** du centre de délégation. Sur **Yoroi, vous pouvez la trouver dans l'option récompenses du panneau de Recevoir**. Toutes les données fournies le sont uniquement à titre d'information.`,
+          disclaimer: `**⁽\*⁾**Sur **Daedalus, vous pouvez trouver l'adresse de récompense sous l'onglet \"Rewards\" du centre de délégation**. Sur **Yoroi, vous pouvez la trouver dans l'option \"Récompenses\" sous l'onglet Recevoir**.
+
+Toutes les données fournies le sont à titre d'information uniquement.`,
           /* unknown delegator */
           sorry: 'Ooops... Nous n\'avons pas trouvé votre délégation chez STKH',
-          check: 'Si vous avez délégué chez STKH, veuillez vérifier que vous avez bien entré l\'adresse de \"staking\" (stake1...) de votre portefeuille. Si votre délégation est récente, veuillez recommencer lorsque vous recevrez des récompenses de notre part. Notez que notre service est mis à jour toutes les heures.',
+          check: 'Si vous avez délégué chez STKH, veuillez vérifier que vous avez bien entré l\'adresse de récompense de votre portefeuille commençant par \"***stake1***\". Si votre délégation est récente, veuillez recommencer lorsque vous recevrez des récompenses de notre part. Notez que notre service est mis à jour toutes les heures.',
           retry: 'Recommencer',
           /* rewards panel */
           welcome: 'Bienvenue !',

@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '20px',
     padding: 30,
-    boxShadow: "0px 0px 14px #46464e"
+    boxShadow: "0px 0px 8px #46464e"
   },
   poolLogo: {
     width: '130px'
@@ -146,7 +146,7 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
       {poolDetails != undefined &&
       <>
         <Typography component="span" variant="h4"><Text id="pool.saturation" /></Typography>
-        <div style={{width: '100%', height: 16, border: '2px solid #2C7568', borderRadius: 10}}>
+        <div style={{width: '100%', height: 12, border: '1px solid #2C7568', borderRadius: 10}}>
           <div style={{background: '#2C7568', height: '100%', width: `${poolDetails['live_saturation']*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
         </div>
       </>}
