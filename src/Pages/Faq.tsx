@@ -33,11 +33,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#212B36',
     borderRadius: "10px",
     padding: "20px 26px 20px 26px",
-    boxShadow: "8px 8px 16px #171D24"
+    boxShadow: "6px 6px 14px #171D24"
   },
   sectionItem: {
-    paddingTop: 12,
-    paddingBottom: 12,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   sectionItemHeading: {
     flexDirection: "column",
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   sectionItemContent: {
-    boxShadow: "8px 8px 16px #171D24",
+    boxShadow: "4px 4px 10px #171D24",
   },
 }));
 

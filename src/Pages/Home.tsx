@@ -85,14 +85,15 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     background: 'rgba(33, 43, 54, 1)',
-    borderRadius: '10px',
-    padding: 40,
+    borderRadius: '20px',
+    padding: 30,
+    boxShadow: "0px 0px 14px #46464e"
   },
   poolLogo: {
-    width: '150px'
+    width: '130px'
   },
   poolCopy: {
-    display: 'fixed'
+    display: 'fixed',
   }
 }));
 
@@ -181,7 +182,7 @@ export function Home(): JSX.Element {
             <Text id="reliable" />
           </Typography>
         </Container>
-        <img alt="logo" src={home} width="auto" height={250} />
+        <img alt="logo" src={home} width="auto" height={300} />
       </Container>
 
       <Container className={classes.section}>

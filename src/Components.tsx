@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: 20,
+      padding: 16,
       backgroundColor: "rgba(91, 94, 93, 0.28)",
     },
   }));
@@ -152,7 +152,7 @@ export function ToolbarMenu({ items }) {
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 1000px)');
     return (
-      <AppBar position="sticky" color="primary" elevation={0} style={{padding: 5}}>
+      <AppBar position="sticky" color="primary" elevation={0} style={{padding: 2}}>
         <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "flex-end"}}>
           {matches
             ? <Nav items={items} />
