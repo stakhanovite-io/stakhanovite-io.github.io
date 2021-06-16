@@ -170,7 +170,7 @@ Veuillez envoyez toutes vos questions à :
 
 **contact@stakhanovite.io**
 
-Nous ferons de notre mieux pour répondre rapidement, en français ou en anglais !`,
+Nous ferons de notre mieux pour répondre dans les plus brefs délais, en français ou en anglais !`,
           offer: {
             secureTitle: "Sécurisé",
             secure: "Serveurs renforcés",
