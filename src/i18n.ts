@@ -13,7 +13,7 @@ i18n
         home: {
           stakhanovite: "Stakhanovite",
           stakePools: "Stake Pool",
-          reliable: "Simple and **reliable** staking on Cardano",
+          reliable: "Your staking partner on Cardano - Simple and **reliable**",
           who: "Who are we?",
           first: `One of the first stake pool ever registered on a publicly available testnet, Stakhanovite is operated by **Cardano fans**!
 
@@ -28,7 +28,7 @@ Shelley Testnets, Incentivized Shelley ITN, Friends & Family Testnets, Alonzo Bl
           transparentTitle: "We are transparent",
           transparent: "From our costs to performance reports, you will know everything thanks to our monthly **[newsletter](https://stakhanovite.substack.com/)** and our dedicated **[Telegram](https://t.me/StakhanoviteIO)** channel. Subscribe, and come say hi !",
           efficientTitle: "We are efficient",
-          efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. **Try us out and join the crew!**",
+          efficient: "Since launch, Stakhanovite distributed more than 6 millions ADA rewards to our delegators. We operate since December 2019, uninterrupted. **Try us out and join the crew!**",
           wallets: "Delegate using the most popular Cardano wallets - [**Daedalus**](https://daedaluswallet.io) or [**Yoroi**](https://yoroi-wallet.com) - and look for the **STKH1** ticker!",
           faq: "Please read our **FAQ** for more details.",
           contact: "Contact us",
@@ -159,7 +159,7 @@ Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au 
           transparentTitle: "Nous sommes transparents",
           transparent: "De nos coûts jusqu'à nos rapports concernant notre performance, vous saurez tout grâce à notre **[newsletter](https://stakhanovite.substack.com/)** mensuelle et à notre **chaîne [Telegram](https://t.me/StakhanoviteIO)** dédiées. Abonnez-vous, et venez nous saluer !",
           efficientTitle: "Nous sommes efficaces",
-          efficient: "Depuis son lancement, Stakhanovite a distribué plus de 6 millions d'ADA de récompenses à ses délégataires. **Essayez-nous !**",
+          efficient: "Depuis son lancement, Stakhanovite a distribué plus de 6 millions d'ADA de récompenses à ses délégataires. Nous fonctionnons depuis le mois de Décember 2019, sans aucune interruption de service. **Rejoingnez-nous !**",
           wallets: "Déléguez en utilisant les portefeuilles Cardano les plus populaires - [**Daedalus**](https://daedaluswallet.io) ou [**Yoroi**](https://yoroi-wallet.com) - et cherchez notre pool **STKH1** !",
           faq: "Consultez notre F.A.Q. pour plus de détails.",
           contact: "Contactez-nous",
@@ -175,13 +175,13 @@ Nous ferons de notre mieux pour répondre rapidement, en français ou en anglais
             secureTitle: "Sécurisé",
             secure: "Serveurs renforcés",
             robustTitle: "Robuste",
-            robust: "Réseau Haut débit",
+            robust: "Réseau haut-débit",
             fairTitle: "Juste",
             fair: "Peu de frais",
           },
           pool: {
             margin: "Marge : 1.8%",
-            fixed: "340 ada de frais fixes (min. autorisé)",
+            fixed: "Frais fixes 340 ada (min. autorisé)",
             saturation: "Saturation",
             copyAddress: "Copier",
             copyId: "Copier l'ID du pool",
