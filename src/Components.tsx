@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'baseline',
-      marginBottom: theme.spacing(2),
+      marginBottom: theme.spacing(0),
     },
     nav: {
       display: 'flex',

@@ -62,9 +62,9 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
          body: {
-           background: 'radial-gradient(circle at right top, rgba(22, 28, 36, 0.46) 0%, rgba(22, 28, 36, 0.78) 5%, rgba(22, 28, 36, 1) 100%)',
+           background: 'linear-gradient(360deg, rgba(22, 28, 36, 1) 60%,  #1F5057 180%)',
            backgroundRepeat: "no-repeat",
-           backgroundAttachment: "fixed",
+           backgroundAttachment: "sticky",
         },
       },
     },

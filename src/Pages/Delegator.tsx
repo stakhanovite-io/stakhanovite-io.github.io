@@ -12,7 +12,8 @@ import notDelegator from '../../assets/not_delegator.png';
 const useStyles = makeStyles(theme => ({
   selector: {
     width: '70%',
-    paddingTop: 100
+    paddingTop: 20,
+    paddingBottom: 300,
   },
   input: {
     display: 'block',
