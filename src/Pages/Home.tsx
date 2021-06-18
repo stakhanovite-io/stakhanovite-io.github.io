@@ -53,10 +53,9 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     flexDirection: 'column',
     width: 180,
-    background: '#BDBDBD',
+    background: '#708090',
     borderRadius: '20px',
     paddingBottom: 30,
-    boxShadow: "2px 2px 6px black"
   },
   offerLogo: {
     display: 'flex',
@@ -66,8 +65,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 16,
     width: 64,
     height: 64,
-    background: 'linear-gradient(0.4turn, rgba(189, 189, 189, 0.1), rgba(79, 79, 79, 1))',
-    color: 'rgba(79, 79, 79, 1)',
+    background: 'linear-gradient(0.4turn, rgba(189, 189, 189, 0.1), rgba(54, 69, 79, 1))',
+    color: '#323232',
     borderRadius: '50px',
   },
   offerText: {
