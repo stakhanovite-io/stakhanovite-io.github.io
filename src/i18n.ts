@@ -97,8 +97,8 @@ In concrete terms, when you are eligible to receive 100 ada rewards, Stakhanovit
 The same lag period exists when you stop delegating. You still receive rewards for the following 3 epochs.`,
             expectMuchTitle: "How much rewards can I expect?",
             expectMuch: "The protocol gives approximatively **5% annual returns** on your stake. This translates to **~ 0,068% per epoch.**",
-            variationTitle: "Why do my awards vary between epochs?",
-            variation: "A pool pays rewards according to the number of blocks produced. Each pool is allocated a random number of blocks at each time, which explains these variations.",
+            variationTitle: "Why do my rewards vary between epochs?",
+            variation: "A pool pays rewards according to the number of blocks produced. Each pool is allocated a random number of blocks at each epoch, which explains these variations.",
             locationTitle: "Where are my rewards deposited?",
             location: `Your rewards are paid in an **special account address** linked to your wallet. Whether you use Daedalus or Yoroi, the total balance shown by these wallets already includes those rewards.
 
