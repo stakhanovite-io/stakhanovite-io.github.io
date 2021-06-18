@@ -46,7 +46,8 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     textAlign: 'center',
-    marginTop: 40
+    marginTop: 40,
+    marginBottom: 40
   },
   offer: {
     display: 'flex',
@@ -87,7 +88,8 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '20px',
     padding: 30,
-    boxShadow: "2px 2px 6px black"
+    boxShadow: "2px 2px 6px black",
+    marginBottom: 40,
   },
   poolLogo: {
     width: '130px'
@@ -220,10 +222,6 @@ export function Home(): JSX.Element {
       <Container className={classes.section}>
         <Typography variant="h2" component="span">
           <Text id="experienceTitle" />
-        </Typography>
-        <Typography className={classes.sectionContent} component="span">
-          <Text id="experience" />
-        </Typography>
         <Container className={classes.offers}>
           <Offer title="offer.secureTitle" details="offer.secure">
            <VpnKeyIcon />
@@ -235,6 +233,10 @@ export function Home(): JSX.Element {
            <ThumbUpIcon />
           </Offer>
         </Container>
+        </Typography>
+        <Typography className={classes.sectionContent} component="span">
+          <Text id="experience" />
+        </Typography>
         <Container disableGutters="true" className={classes.subSection}>
           <Typography variant="h3" color="textSecondary" component="span">
             <Text id="transparentTitle" />
