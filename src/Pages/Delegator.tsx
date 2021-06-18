@@ -99,6 +99,8 @@ function AddressSelector({ onEnter }): JSX.Element {
         fullWidth
         label={t('delegator:input')}
         variant="outlined"
+        size="normal"
+        color="secondary"
         value={address}
         onChange={handleAddressChange}
         />

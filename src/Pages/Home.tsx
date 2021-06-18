@@ -56,6 +56,7 @@ const useStyles = makeStyles(theme => ({
     background: '#BDBDBD',
     borderRadius: '20px',
     paddingBottom: 30,
+    boxShadow: "2px 2px 6px black"
   },
   offerLogo: {
     display: 'flex',
@@ -87,7 +88,7 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '20px',
     padding: 30,
-    boxShadow: "0px 0px 8px #46464e"
+    boxShadow: "2px 2px 6px black"
   },
   poolLogo: {
     width: '130px'
