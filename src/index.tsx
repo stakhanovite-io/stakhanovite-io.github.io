@@ -76,7 +76,7 @@ const theme = createMuiTheme({
     },
     MuiMenu: {
       list: {
-        backgroundColor: 'inherit',
+        backgroundColor: '#32363c',
       }
     },
   },

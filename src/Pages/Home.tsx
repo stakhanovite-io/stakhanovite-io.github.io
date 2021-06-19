@@ -184,7 +184,7 @@ export function Home(): JSX.Element {
             <Text id="reliable" />
           </Typography>
         </Container>
-        <img alt="logo" src={home} width="auto" height={300} />
+        <img alt="logo" src={home} width="auto" height={320} />
       </Container>
 
       <Container className={classes.section}>
