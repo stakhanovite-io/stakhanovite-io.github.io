@@ -9,6 +9,7 @@ import "./i18n";
 import { Delegator } from './Pages/Delegator';
 import { Faq } from './Pages/Faq';
 import { Home } from './Pages/Home';
+import { link } from './link';
 
 const theme = createMuiTheme({
   palette: {
@@ -62,9 +63,9 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
          body: {
-           background: 'linear-gradient(360deg, rgba(22, 28, 36, 1) 60%,  #1F5057 180%)',
+           background: 'linear-gradient(0deg, #161C24 40%, #162A31 80%)'
            backgroundRepeat: "no-repeat",
-           backgroundAttachment: "sticky",
+           backgroundAttachment: "fixed",
         },
       },
     },
@@ -77,7 +78,7 @@ const theme = createMuiTheme({
       list: {
         backgroundColor: 'white',
       }
-    }
+    },
   },
 });
 

@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       marginRight: 60,
       marginTop: 5,
       marginBottom: 5,
-      ['@media (max-width:780px)']: {
+      ['@media (max-width:500px)']: {
         marginLeft: 0,
         marginRight: 0,
       }
@@ -91,7 +91,7 @@ function Nav({ items }) {
       <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
         <nav className={matches ? classes.nav : classes.navSmall}>
           {Object.keys(items).map((key) =>
-          <Link component={RLink} to={key} key={key} color="textPrimary" variant="button" href="#" className={classes.link}>
+          <Link underline="none" component={RLink} to={key} key={key} color="textPrimary" variant="button" href="#" className={classes.link}>
             {items[key].title}
           </Link>
           )}
