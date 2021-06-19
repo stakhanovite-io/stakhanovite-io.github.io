@@ -1,6 +1,7 @@
 import * as React from 'react';
 import marked from 'marked';
 import { Line } from '@nivo/line'
+import { render } from 'react-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -8,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 import { Page } from '../Page';
 import notDelegator from '../../assets/not_delegator.png';
+import { Gradient } from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   selector: {
@@ -27,46 +29,86 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const plotTheme = {
+    "textColor": '#919EAB',
+    "fontSize": 13,
+    "axis": {
+        "domain": {
+            "line": {
+                "stroke": '#919EAB',
+                "strokeWidth": 2
+            }
+        },
+        "ticks": {
+            "line": {
+                "stroke": '#919EAB',
+                "strokeWidth": 2
+            }
+        }
+    }
+}
+
 const commonProperties = {
-  width: 900,
-  height: 400,
-  margin: { top: 20, right: 20, bottom: 60, left: 80 },
+  width: 600,
+  height: 350,
+  margin: { top: 100, right: 60, bottom: 60, left: 100 },
   animate: true,
+  pointColor: '#919EAB',
+  pointSize: 8,
+  pointBorderWidth: 1.5, 
+  pointBorderColor: '#2C7568',
+  enablePointLabel: false,
+  enableGridX: false,
+  enableGridY: false,
+  tickPadding: 4,
+  colors: '#2C7568'
+  lineWidth: 2.5,
 }
 
 function MyResponsiveLine ({ data }): JSX.Element {
   return (
-  <Line
-  {...commonProperties}
-  curve="monotoneX"
-  data={[
-      {
-          id: 'rewards',
-          data: data
-      },
-  ]}
-  xScale={{
-      type: 'linear',
-      min: 'auto',
-      max: 'auto',
-  }}
-  axisLeft={{
-      legend: 'linear scale',
-      legendOffset: 12,
-  }}
-  axisBottom={{
-      legend: 'linear scale',
-      legendOffset: -12,
-  }}
-  />
-)
+      <Line
+      {...commonProperties}
+      theme= {plotTheme}
+      curve="linear"
+      enableArea={true}
+      data={[
+          {
+              id: 'rewards',
+              data: data
+          },
+      ]}
+      yScale={{
+          type: 'linear',
+          min: '0',
+          max: 'auto',
+      }}
+      xScale={{
+        type: 'point',
+        min: 'auto',
+        max: 'auto',
+      }}
+      axisLeft={{
+          legend: 'Rewards (ADA)',
+          legendOffset: -60,
+          legendPosition: 'middle',
+          legendSize: 8,
+      }}
+      axisBottom={{
+          legend: 'Epochs',
+          legendOffset: 45,
+          legendPosition: 'middle'
+          tickRotation: -75
+      }}
+   />
+  ); 
 }
 
 function DelegatorRewards({ address, rewards }): JSX.Element {
   const { t } = useTranslation();
   return (
     <>
-      <Typography component="span" align="left" variant="h2">
+      <Typography component="span" align="left" variant="h3">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
       <Typography component="span">
