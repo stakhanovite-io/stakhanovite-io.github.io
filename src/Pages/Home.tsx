@@ -260,7 +260,7 @@ export function Home(): JSX.Element {
         <Typography variant="h2" align="right" component="span">
           <Text id="pools.title" />
         </Typography>
-        <Container className={classes.pools}>
+        <Container justifyContent="space-between" className={classes.pools}>
           <Pool
             title={t('pools.pool1')}
             name="STKH1"

@@ -55,7 +55,7 @@ const theme = createMuiTheme({
       lineHeight: "28px",
     },
     body2: {
-      fontSize: 16,
+      fontSize: 14,
       lineHeight: "26px",
     },
   },
@@ -63,8 +63,8 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
          body: {
-           background: 'linear-gradient(0deg, #161C24 60%, #162A31 100%)'
-           backgroundRepeat: "no-repeat",
+           background: 'linear-gradient(0deg, rgb(22, 28, 36, 1), rgb(22, 42, 49, 1) 100%)'
+           backgroundRepeat: "repeat",
            backgroundAttachment: "fixed",
         },
       },
@@ -76,7 +76,7 @@ const theme = createMuiTheme({
     },
     MuiMenu: {
       list: {
-        backgroundColor: '#32363c',
+        backgroundColor: '#32363C',
       }
     },
   },

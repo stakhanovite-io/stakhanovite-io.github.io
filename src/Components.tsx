@@ -68,8 +68,8 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: 16,
-      backgroundColor: "rgba(91, 94, 93, 0.28)",
+      padding: 12,
+      backgroundColor: "rgba(0, 0, 0, 0.2)",
     },
   }));
 
