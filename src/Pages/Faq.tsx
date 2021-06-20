@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#212B36',
     borderRadius: "10px",
     padding: "20px 26px 20px 26px",
-    boxShadow: "6px 6px 14px #171D24"
+    boxShadow: "6px 6px 14px #171D24",
   },
   sectionItem: {
     paddingTop: 10,
@@ -47,6 +47,7 @@ const useStyles = makeStyles(theme => ({
   },
   sectionItemContent: {
     boxShadow: "4px 4px 10px #171D24",
+    backgroundColor: '#212B36',
   },
 }));
 

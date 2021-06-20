@@ -63,25 +63,25 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
          body: {
-           background: 'linear-gradient(0deg, rgb(22, 28, 36, 1), rgb(22, 42, 49, 1) 100%)'
-           backgroundRepeat: "repeat",
+           background: 'linear-gradient(0deg, rgb(22, 28, 36, 1), rgb(22, 42, 49, 1) 100%)',
+           backgroundRepeat: "no-repeat",
            backgroundAttachment: "fixed",
         }, 
        },      
       },
-    },
-    MuiPaper: { // Name of the component ⚛️ / style sheet
+    MuiPaper: { // Name of the component ⚛️/ style sheet
       root: { // Name of the rule
         backgroundColor: 'inherit', // Some CSS
       },
     },
     MuiMenu: {
       list: {
-        backgroundColor: 'rgba(33, 43, 54, 1)',
+        backgroundColor: 'rgb(35, 43, 53, 1)',
       }
-    },
+    }
   },
 });
+
 
 const history = createBrowserHistory();
 
