@@ -117,7 +117,7 @@ function Offer({ title, details, children }: { title: string, details: string, c
           <Text id={title} />
         </Box>
       </Typography>
-      <Typography className={classes.offerText} variant="body2" component="span">
+      <Typography className={classes.offerText} variant="subtitle2" component="span">
         <Text id={details} />
       </Typography>
     </div>
@@ -246,7 +246,7 @@ export function Home(): JSX.Element {
             <Text id="transparentTitle" />
           </Typography>
           <Typography className={classes.subSectionContent} component="span">
-            <Text id="transparent" />
+            <Text id="transparent"/>
           </Typography>
         </Container>
 

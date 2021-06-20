@@ -9,7 +9,7 @@ import "./i18n";
 import { Delegator } from './Pages/Delegator';
 import { Faq } from './Pages/Faq';
 import { Home } from './Pages/Home';
-import { link } from './link';
+
 
 const theme = createMuiTheme({
   palette: {
