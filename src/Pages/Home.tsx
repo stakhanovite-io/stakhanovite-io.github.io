@@ -160,7 +160,7 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
         >
           <FileCopyIcon />
         </IconButton>
-        <Typography component="span" variant="body1"><Text id="pool.copyId" raw={true} /></Typography>
+        <Typography component="span" variant="body2"><Text id="pool.copyId" raw={true} /></Typography>
       </div>
     </div>
   );
@@ -184,7 +184,9 @@ export function Home(): JSX.Element {
             <Text id="reliable" />
           </Typography>
         </Container>
+        <Box display={{ xs: 'none', md: 'block' }}>
         <img alt="logo" src={home} width="auto" height={320} />
+        </Box>
       </Container>
 
       <Container className={classes.section}>
@@ -201,18 +203,20 @@ export function Home(): JSX.Element {
 
       <Container className={classes.section}>
         <div className={classes.sectionTeam}>
-          <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={250} />
+          <Box display={{ xs: 'none', md: 'block' }}>
+          <img className={classes.sectionTeamLogo} alt="team" src={team} width="auto" height={300} />
+          </Box>
           <div>
-            <Typography variant="body1" component="span">
+            <Typography variant="subtitle1" component="span">
               <Text id="psychomb" />
             </Typography>
-            <Typography variant="body1" align="right" color="textSecondary" component="span">
+            <Typography variant="body2" align="right" color="textSecondary" component="span">
               <Text id="psychomb_sig" />
             </Typography>
-            <Typography variant="body1" component="span">
+            <Typography variant="subtitle1" component="span">
               <Text id="alexey" />
             </Typography>
-            <Typography variant="body1" align="right" color="textSecondary" component="span">
+            <Typography variant="body2" align="right" color="textSecondary" component="span">
               <Text id="alexey_sig" />
             </Typography>
           </div>

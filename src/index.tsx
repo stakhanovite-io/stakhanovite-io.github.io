@@ -33,7 +33,7 @@ const theme = createMuiTheme({
     h1: {
       fontSize: 70,
       fontWeight: 'bold',
-      lineHeight: "60px",
+      lineHeight: "40px",
     },
     h2: {
       fontSize: 42,
@@ -66,7 +66,8 @@ const theme = createMuiTheme({
            background: 'linear-gradient(0deg, rgb(22, 28, 36, 1), rgb(22, 42, 49, 1) 100%)'
            backgroundRepeat: "repeat",
            backgroundAttachment: "fixed",
-        },
+        }, 
+       },      
       },
     },
     MuiPaper: { // Name of the component ⚛️ / style sheet
@@ -76,7 +77,7 @@ const theme = createMuiTheme({
     },
     MuiMenu: {
       list: {
-        backgroundColor: '#32363C',
+        backgroundColor: 'rgba(33, 43, 54, 1)',
       }
     },
   },
