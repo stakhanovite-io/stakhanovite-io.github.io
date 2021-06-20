@@ -11,6 +11,7 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import { Saturation } from '../Components';
 import { Page } from '../Page';
 import home from '../../assets/home.png';
 import team from '../../assets/team.png';
@@ -148,9 +149,7 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
       {poolDetails != undefined &&
       <>
         <Typography component="span" variant="h4"><Text id="pool.saturation" /></Typography>
-        <div style={{width: '100%', height: 12, border: '1px solid #2C7568', borderRadius: 10}}>
-          <div style={{background: '#2C7568', height: '100%', width: `${poolDetails['live_saturation']*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
-        </div>
+        <Saturation liveSaturation={poolDetails['live_saturation']} />
       </>}
       <div className={classes.poolCopy}>
         <IconButton

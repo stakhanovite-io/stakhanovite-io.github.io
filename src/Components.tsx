@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-export function Copyright() {
+export function Copyright(): JSX.Element {
     return (
       <Typography variant="h4">
         Copyright Stakhanovite.io
@@ -84,7 +84,7 @@ export function Copyright() {
     );
 }
 
-function Nav({ items }) {
+function Nav({ items }): JSX.Element {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width: 1000px)');
   return (
@@ -123,7 +123,7 @@ function Nav({ items }) {
     </>);
 }
 
-function SimpleMenu({ items }) {
+function SimpleMenu({ items }): JSX.Element {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => setAnchorEl(event.currentTarget);
@@ -149,7 +149,7 @@ function SimpleMenu({ items }) {
   );
 }
 
-export function ToolbarMenu({ items }) {
+export function ToolbarMenu({ items }): JSX.Element {
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 1000px)');
     return (
@@ -164,7 +164,7 @@ export function ToolbarMenu({ items }) {
     );
 }
 
-export function Footer() {
+export function Footer(): JSX.Element {
     const classes = useStyles();
     return (
       <Container component="footer" maxWidth={false} className={classes.footer}>
@@ -172,4 +172,12 @@ export function Footer() {
        <Typography variant="body2">made with love by our dedicated team</Typography>
       </Container>
     );
+}
+
+export function Saturation({ liveSaturation }: { liveSaturation: number }): JSX.Element {
+  return (
+    <div style={{width: '100%', height: 12, border: '1px solid #2C7568', borderRadius: 10}}>
+      <div style={{background: '#2C7568', height: '100%', width: `${liveSaturation*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
+    </div>
+  );
 }

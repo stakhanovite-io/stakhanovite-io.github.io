@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
+import { Saturation } from '../Components';
 import { Page } from '../Page';
 import notDelegator from '../../assets/not_delegator.png';
 import { Gradient } from '@material-ui/icons';
@@ -49,9 +50,9 @@ const plotTheme = {
 }
 
 const commonProperties = {
-  width: 600,
-  height: 350,
-  margin: { top: 100, right: 60, bottom: 60, left: 100 },
+  width: 800,
+  height: 300,
+  margin: { top: 20, right: 20, bottom: 60, left: 80 },
   animate: true,
   pointColor: '#919EAB',
   pointSize: 8,
@@ -104,8 +105,44 @@ function MyResponsiveLine ({ data }): JSX.Element {
   ); 
 }
 
+function Cartouche({ children }: { children: NonNullable<React.ReactNode> }): JSX.Element {
+  return (
+    <div style={{backgroundColor: '#212B36', borderRadius: 5, padding: 20, height: 100}}>
+      {children}
+    </div>
+  );
+}
+
+function Bubble({ title, children }: { title: string, children: NonNullable<React.ReactNode> }): JSX.Element {
+  return (
+    <>
+      <Cartouche>
+        <Typography>{title}</Typography>
+        {children}
+      </Cartouche>
+    </>
+  );
+}
+
 function DelegatorRewards({ address, rewards }): JSX.Element {
+  const classes = useStyles();
   const { t } = useTranslation();
+  const [latestEpoch, setLatestEpoch] = React.useState({});
+  const [poolDetails, setPoolDetails] = React.useState();
+
+  React.useEffect(() => {
+    async function fetchLatestEpoch(): Promise<void> {
+      try {
+        setLatestEpoch(await (await fetch(`cardano/data/epochs/latest.json`)).json());
+        setPoolDetails(await (await fetch(`cardano/data/pools/STKH1.json`)).json());
+      } catch {
+        setLatestEpoch({});
+      }
+    }
+
+    fetchLatestEpoch();
+  }, []);
+
   return (
     <>
       <Typography component="span" align="left" variant="h3">
@@ -115,7 +152,38 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:address`))}}></span>
         {address}
       </Typography>
-      <MyResponsiveLine data={rewards} />
+      <div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 100}}>
+          <Bubble title="Current epoch">
+            <Typography>
+            {latestEpoch.epoch}
+            </Typography>
+          </Bubble>
+          <Bubble title="Saturation of my pool">
+           {poolDetails &&
+           <Saturation liveSaturation={poolDetails['live_saturation']} />}
+          </Bubble>
+          <Bubble title="Number of epoch delegated">
+          </Bubble>
+          <Bubble title="My total stake">
+          </Bubble>
+          <div style={{gridColumnStart: 1,
+  gridColumnEnd: 4,
+  gridRowStart: 2,
+  gridRowEnd: 5}}>
+<MyResponsiveLine data={rewards} />
+          </div>
+          <Bubble title="My total rewards">
+          </Bubble>
+          <Bubble title="My last epoch rewards">
+          </Bubble>
+          <Bubble title="My rewards history">
+            <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(address)} disabled={!address}>
+              Icon
+            </Button>
+          </Bubble>
+        </div>
+      </div>
       <Typography variant="body2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
       </Typography>
@@ -149,7 +217,7 @@ function AddressSelector({ onEnter }): JSX.Element {
       <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(address)} disabled={!address}>
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:enter`))}}></span>
       </Button>
-      <Typography variant="body2" align="Left">
+      <Typography variant="body2" align="left">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:disclaimer`))}}></span>
       </Typography>
     </div>
@@ -165,7 +233,7 @@ function UnknownDelegator({ onEnter }): JSX.Element {
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:sorry`))}}></span>
       </Typography>
       <img  alt="not a delegator" src={notDelegator} width="auto" height={300} />
-      <Typography variant="body2" align="Left">
+      <Typography variant="body2" align="left">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:check`))}}></span>
       </Typography>
       <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(null)}>
@@ -176,9 +244,7 @@ function UnknownDelegator({ onEnter }): JSX.Element {
 }
 
 export function Delegator() {
-  const [address, setAddress] = React.useState<undefined | string>(
-    undefined
-    );
+  const [address, setAddress] = React.useState<undefined | string>('stake1u8ackrpx3kcnu8kua5s9s9sq902zsf629vmmseq33rqdfhcrcyekg');
   const [rewards, setRewards] = React.useState<undefined | []>(undefined);
 
   React.useEffect(() => {
