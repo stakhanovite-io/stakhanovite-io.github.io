@@ -136,7 +136,6 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
   const { t } = useTranslation();
   const [latestEpoch, setLatestEpoch] = React.useState({});
   const [poolDetails, setPoolDetails] = React.useState();
-  const [accountDetails, setAccountDetails] = React.useState();
   const [stakes, setStakes] = React.useState();
 
   React.useEffect(() => {
@@ -145,7 +144,6 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         const latest = await (await fetch(`cardano/data/epochs/latest.json`)).json();
         setLatestEpoch(latest);
         setPoolDetails(await (await fetch(`cardano/data/pools/STKH1.json`)).json());
-        setAccountDetails(await (await fetch(`cardano/data/accounts/${address}/rewards.json`)).json());
         setStakes(await (await fetch(`cardano/data/epochs/${latest.epoch}/stakes/STKH1.json`)).json());
       } catch {
         setLatestEpoch({});
@@ -181,16 +179,16 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
             {stakes && stakes[0]?.amount}
           </Bubble>
           <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
-            <MyResponsiveLine data={rewards} />
+            <MyResponsiveLine data={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
           </div>
           <Bubble title={t('delegator:rewards')}>
-            {accountDetails && formatAmount(totalRewards(accountDetails, address))}
+            {formatAmount(totalRewards(rewards, address))}
           </Bubble>
-          <Bubble title={t('delegator:rewards')}>
-            {accountDetails && formatAmount(accountDetails.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
+          <Bubble title={t('delegator:last')}>
+            {formatAmount(rewards.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
           </Bubble>
           <Bubble title={t('delegator:history')}>
-            <Button style={{margin: 5, padding: 5}} className={classes.button} variant="contained" color="secondary" disabled={!address}>
+            <Button style={{margin: 5, padding: 5}} className={classes.button} variant="contained" color="secondary" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
               <GetAppIcon />
             </Button>
           </Bubble>
@@ -276,7 +274,7 @@ export function Delegator() {
       {address
         ? rewards
           ? rewards?.length > 0
-           ? <DelegatorRewards address={address} rewards={rewards.map(o => {return {x: o.epoch, y: (o.amount)/1000000}})} />
+           ? <DelegatorRewards address={address} rewards={rewards.map(o => {return {pool_id: o['pool_id'], epoch: o.epoch, amount: (o.amount)/1000000}})} />
            : <UnknownDelegator onEnter={() => setAddress(null)} />
           : <>LOADING</>
         : <AddressSelector onEnter={ (address) => setAddress(address) } />}
