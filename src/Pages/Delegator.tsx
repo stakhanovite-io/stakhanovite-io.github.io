@@ -1,7 +1,7 @@
 import * as React from 'react';
 import marked from 'marked';
 import { Line } from '@nivo/line';
-import { makeStyles } from '@material-ui/core/styles';
+import { hexToRgb, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -49,13 +49,13 @@ const plotTheme = {
 }
 
 const commonProperties = {
-  width: 800,
+  width: 600,
   height: 300,
-  margin: { top: 20, right: 20, bottom: 60, left: 80 },
+  margin: { top: 20, right: 30, bottom: 30, left: 70 },
   animate: true,
   pointColor: '#919EAB',
-  pointSize: 8,
-  pointBorderWidth: 1.5, 
+  pointSize: 6,
+  pointBorderWidth: 1, 
   pointBorderColor: '#2C7568',
   enablePointLabel: false,
   enableGridX: false,
@@ -70,8 +70,10 @@ function MyResponsiveLine ({ data }): JSX.Element {
       <Line
       {...commonProperties}
       theme= {plotTheme}
-      curve="linear"
+      curve="monotoneX"
       enableArea={true}
+      areaOpacity= '0.3'
+      areaBaselineValue= "1"
       data={[
           {
               id: 'rewards',
@@ -89,7 +91,7 @@ function MyResponsiveLine ({ data }): JSX.Element {
         max: 'auto',
       }}
       axisLeft={{
-          legend: 'Rewards (ADA)',
+          legend: 'ADA Rewards',
           legendOffset: -60,
           legendPosition: 'middle',
           legendSize: 8,
@@ -97,8 +99,9 @@ function MyResponsiveLine ({ data }): JSX.Element {
       axisBottom={{
           legend: 'Epochs',
           legendOffset: 45,
-          legendPosition: 'middle'
-          tickRotation: -75
+          legendPosition: 'middle',
+          tickRotation: -75,
+          tickValues: 0
       }}
    />
   ); 
@@ -106,7 +109,7 @@ function MyResponsiveLine ({ data }): JSX.Element {
 
 function Cartouche({ children }: { children: NonNullable<React.ReactNode> }): JSX.Element {
   return (
-    <div style={{backgroundColor: '#212B36', borderRadius: 5, padding: 20, height: 100}}>
+    <div style={{backgroundColor: '#212B36', boxShadow: "4px 4px 8px #171D24", borderRadius: 10, padding: 15, width: 190, height: 100}}>
       {children}
     </div>
   );
@@ -124,7 +127,7 @@ function Bubble({ title, children }: { title: string, children: NonNullable<Reac
   return (
     <>
       <Cartouche>
-        <Typography>{title}</Typography>
+        <Typography align="center" variant="body2">{title}</Typography>
         {children}
       </Cartouche>
     </>
@@ -157,14 +160,14 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
       <Typography component="span" align="left" variant="h3">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
-      <Typography component="span">
+      <Typography variant="h4" component="span">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:address`))}}></span>
         {address}
       </Typography>
       <div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 100}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 108}}>
           <Bubble title={t('delegator:current')}>
-            <Typography>
+            <Typography variant="h4" align="center">
             {latestEpoch.epoch}
             </Typography>
           </Bubble>
@@ -173,22 +176,30 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
            <Saturation liveSaturation={poolDetails['live_saturation']} />}
           </Bubble>
           <Bubble title={t('delegator:number')}>
+            <Typography variant="h4" align="center">
             {formatAmount(stakes?.length)}
+            </Typography>
           </Bubble>
           <Bubble title={t('delegator:stake')}>
+            <Typography variant="h4" align="center">
             {stakes && stakes[0]?.amount}
+            </Typography>
           </Bubble>
           <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
             <MyResponsiveLine data={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
           </div>
           <Bubble title={t('delegator:rewards')}>
+            <Typography variant="h4" align="center">
             {formatAmount(totalRewards(rewards, address))}
+            </Typography>
           </Bubble>
           <Bubble title={t('delegator:last')}>
+            <Typography variant="h4" align="center">
             {formatAmount(rewards.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
+            </Typography>
           </Bubble>
           <Bubble title={t('delegator:history')}>
-            <Button style={{margin: 5, padding: 5}} className={classes.button} variant="contained" color="secondary" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
+            <Button style={{margin: 0, padding: 8}} className={classes.button} variant="focusVisible" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
               <GetAppIcon />
             </Button>
           </Bubble>

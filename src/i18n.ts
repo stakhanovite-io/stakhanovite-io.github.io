@@ -140,13 +140,13 @@ All data provided are for informations purposes only.`,
           address: 'My reward address:',
           update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
           powered: 'powered by',
-          current: 'Current epoch',
-          saturation: 'Saturation of my pool',
-          number: 'Number of delegators',
-          stake: 'My total stake',
-          rewards: 'My total rewards',
-          last: 'My last epoch rewards',
-          history: 'My rewards history'
+          current: 'Current Epoch',
+          saturation: 'Pool Saturation',
+          number: 'Number of Delegators',
+          stake: 'Total Stake',
+          rewards: 'Total Rewards',
+          last: 'Last Rewards',
+          history: 'Download History'
         }
       },
       fr: {
