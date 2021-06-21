@@ -48,5 +48,35 @@
     "epoch": 265,
     "amount": "37161354",
     "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 266,
+    "amount": "34661917",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 267,
+    "amount": "35949999",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 268,
+    "amount": "33840240",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 269,
+    "amount": "31490045",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 270,
+    "amount": "36368493",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 271,
+    "amount": "33967252",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
   }
 ]
