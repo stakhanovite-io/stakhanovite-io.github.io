@@ -79,8 +79,8 @@ const csvWriter = createObjectCsvWriter({
 
   const accountsFolder =`${dataFolder}/accounts/`;
   for (const delegator of delegators) {
-    const rewards = await callPaged(`accounts/${delegator.address}/rewards`);
     const accountFolder = `${accountsFolder}/${delegator.address}`;
+    const rewards = await callPaged(`accounts/${delegator.address}/rewards`);
     await writeBlob(accountFolder, 'rewards', rewards);
   }
 

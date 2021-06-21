@@ -1,16 +1,15 @@
 import * as React from 'react';
 import marked from 'marked';
-import { Line } from '@nivo/line'
-import { render } from 'react-dom'
+import { Line } from '@nivo/line';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import { useTranslation } from 'react-i18next';
 import { Saturation } from '../Components';
 import { Page } from '../Page';
 import notDelegator from '../../assets/not_delegator.png';
-import { Gradient } from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   selector: {
@@ -113,6 +112,14 @@ function Cartouche({ children }: { children: NonNullable<React.ReactNode> }): JS
   );
 }
 
+function totalRewards(accountDetails): number {
+  return accountDetails.filter(o => o["pool_id"] == "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj").reduce((acc, o) => acc + parseInt(o.amount), 0);
+}
+
+function formatAmount(amount: number): string {
+  return new Intl.NumberFormat('en-EN', { style: 'decimal' }).format(amount);
+}
+
 function Bubble({ title, children }: { title: string, children: NonNullable<React.ReactNode> }): JSX.Element {
   return (
     <>
@@ -129,12 +136,17 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
   const { t } = useTranslation();
   const [latestEpoch, setLatestEpoch] = React.useState({});
   const [poolDetails, setPoolDetails] = React.useState();
+  const [accountDetails, setAccountDetails] = React.useState();
+  const [stakes, setStakes] = React.useState();
 
   React.useEffect(() => {
     async function fetchLatestEpoch(): Promise<void> {
       try {
-        setLatestEpoch(await (await fetch(`cardano/data/epochs/latest.json`)).json());
+        const latest = await (await fetch(`cardano/data/epochs/latest.json`)).json();
+        setLatestEpoch(latest);
         setPoolDetails(await (await fetch(`cardano/data/pools/STKH1.json`)).json());
+        setAccountDetails(await (await fetch(`cardano/data/accounts/${address}/rewards.json`)).json());
+        setStakes(await (await fetch(`cardano/data/epochs/${latest.epoch}/stakes/STKH1.json`)).json());
       } catch {
         setLatestEpoch({});
       }
@@ -142,7 +154,6 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
 
     fetchLatestEpoch();
   }, []);
-
   return (
     <>
       <Typography component="span" align="left" variant="h3">
@@ -163,23 +174,24 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
            {poolDetails &&
            <Saturation liveSaturation={poolDetails['live_saturation']} />}
           </Bubble>
-          <Bubble title="Number of epoch delegated">
+          <Bubble title="Number of delegators">
+            {formatAmount(stakes?.length)}
           </Bubble>
           <Bubble title="My total stake">
+            {stakes && stakes[0]?.amount}
           </Bubble>
-          <div style={{gridColumnStart: 1,
-  gridColumnEnd: 4,
-  gridRowStart: 2,
-  gridRowEnd: 5}}>
-<MyResponsiveLine data={rewards} />
+          <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
+            <MyResponsiveLine data={rewards} />
           </div>
           <Bubble title="My total rewards">
+            {accountDetails && formatAmount(totalRewards(accountDetails, address))}
           </Bubble>
           <Bubble title="My last epoch rewards">
+            {accountDetails && formatAmount(accountDetails.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
           </Bubble>
           <Bubble title="My rewards history">
-            <Button className={classes.button} variant="contained" color="secondary" onClick={() => onEnter(address)} disabled={!address}>
-              Icon
+            <Button style={{margin: 5, padding: 5}} className={classes.button} variant="contained" color="secondary" disabled={!address}>
+              <GetAppIcon />
             </Button>
           </Bubble>
         </div>
