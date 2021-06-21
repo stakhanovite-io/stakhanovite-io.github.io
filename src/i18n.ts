@@ -121,7 +121,7 @@ Please note that Daedalus automatically retrieves your rewards when you spend yo
             hardwareTitle: "Are hardware wallets supported for storing ada?",
             hardware: "**Yes. Ledger S, Ledger Nano X and Trezor T** support Cardano and can be used in combination with both Daedalus and Yoroi. Please read the instructions specific to your hardware wallet.",
           },
-        }
+        },
         delegator: {
           /* adress selector */
           please: 'Please enter the reward address⁽\*⁾ of your wallet delegated to STKH',
@@ -139,7 +139,14 @@ All data provided are for informations purposes only.`,
           welcome: 'Welcome!',
           address: 'My reward address:',
           update: 'These statistics are updated every hour. Recent changes might not be immediatly reflected here.',
-          powered: 'powered by'
+          powered: 'powered by',
+          current: 'Current epoch',
+          saturation: 'Saturation of my pool',
+          number: 'Number of delegators',
+          stake: 'My total stake',
+          rewards: 'My total rewards',
+          last: 'My last epoch rewards',
+          history: 'My rewards history'
         }
       },
       fr: {

@@ -165,31 +165,31 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
       </Typography>
       <div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 100}}>
-          <Bubble title="Current epoch">
+          <Bubble title={t('delegator:current')}>
             <Typography>
             {latestEpoch.epoch}
             </Typography>
           </Bubble>
-          <Bubble title="Saturation of my pool">
+          <Bubble title={t('delegator:saturation')}>
            {poolDetails &&
            <Saturation liveSaturation={poolDetails['live_saturation']} />}
           </Bubble>
-          <Bubble title="Number of delegators">
+          <Bubble title={t('delegator:number')}>
             {formatAmount(stakes?.length)}
           </Bubble>
-          <Bubble title="My total stake">
+          <Bubble title={t('delegator:stake')}>
             {stakes && stakes[0]?.amount}
           </Bubble>
           <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
             <MyResponsiveLine data={rewards} />
           </div>
-          <Bubble title="My total rewards">
+          <Bubble title={t('delegator:rewards')}>
             {accountDetails && formatAmount(totalRewards(accountDetails, address))}
           </Bubble>
-          <Bubble title="My last epoch rewards">
+          <Bubble title={t('delegator:rewards')}>
             {accountDetails && formatAmount(accountDetails.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
           </Bubble>
-          <Bubble title="My rewards history">
+          <Bubble title={t('delegator:history')}>
             <Button style={{margin: 5, padding: 5}} className={classes.button} variant="contained" color="secondary" disabled={!address}>
               <GetAppIcon />
             </Button>
