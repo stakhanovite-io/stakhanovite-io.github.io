@@ -31,18 +31,18 @@ const useStyles = makeStyles(theme => ({
 
 const plotTheme = {
     "textColor": '#919EAB',
-    "fontSize": 13,
+    "fontSize": 14,
     "axis": {
         "domain": {
             "line": {
                 "stroke": '#919EAB',
-                "strokeWidth": 2
+                "strokeWidth": 2.5
             }
         },
         "ticks": {
             "line": {
                 "stroke": '#919EAB',
-                "strokeWidth": 2
+                "strokeWidth": 1
             }
         }
     }
@@ -50,9 +50,10 @@ const plotTheme = {
 
 const commonProperties = {
   width: 600,
-  height: 300,
-  margin: { top: 20, right: 30, bottom: 30, left: 70 },
+  height: 350,
+  margin: { top: 20, right: 30, bottom: 30, left: 50 },
   animate: true,
+  enableSlices: 'x',
   pointColor: '#919EAB',
   pointSize: 6,
   pointBorderWidth: 1, 
@@ -61,7 +62,7 @@ const commonProperties = {
   enableGridX: false,
   enableGridY: false,
   tickPadding: 4,
-  colors: '#2C7568'
+  colors: '#2C7568',
   lineWidth: 2.5,
 }
 
@@ -70,13 +71,13 @@ function MyResponsiveLine ({ data }): JSX.Element {
       <Line
       {...commonProperties}
       theme= {plotTheme}
-      curve="monotoneX"
-      enableArea={true}
-      areaOpacity= '0.3'
-      areaBaselineValue= "1"
+      curve= "monotoneX"
+      enableArea= {true}
+      areaOpacity= '0.18'
+      isInteractive= {true}
       data={[
           {
-              id: 'rewards',
+              id: 'rewards'
               data: data
           },
       ]}
@@ -91,18 +92,9 @@ function MyResponsiveLine ({ data }): JSX.Element {
         max: 'auto',
       }}
       axisLeft={{
-          legend: 'ADA Rewards',
-          legendOffset: -60,
           legendPosition: 'middle',
-          legendSize: 8,
       }}
-      axisBottom={{
-          legend: 'Epochs',
-          legendOffset: 45,
-          legendPosition: 'middle',
-          tickRotation: -75,
-          tickValues: 0
-      }}
+      axisBottom={null}
    />
   ); 
 }
@@ -127,7 +119,7 @@ function Bubble({ title, children }: { title: string, children: NonNullable<Reac
   return (
     <>
       <Cartouche>
-        <Typography align="center" variant="body2">{title}</Typography>
+        <Typography gutterBottom='false' align="center" variant="body2">{title}</Typography>
         {children}
       </Cartouche>
     </>
@@ -165,7 +157,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         {address}
       </Typography>
       <div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 108}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
           <Bubble title={t('delegator:current')}>
             <Typography variant="h4" align="center">
             {latestEpoch.epoch}
