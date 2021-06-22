@@ -111,6 +111,14 @@ function totalRewards(accountDetails): number {
   return accountDetails.filter(o => o["pool_id"] == "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj").reduce((acc, o) => acc + parseInt(o.amount), 0);
 }
 
+function totalStake(stakes, address): number {
+  const stake = stakes.find(o => o['stake_address'] == address)?.amount;
+  if (stake) {
+    return stake / 1000000
+  }
+  return 0;
+}
+
 function formatAmount(amount: number): string {
   return new Intl.NumberFormat('en-EN', { style: 'decimal' }).format(amount);
 }
@@ -147,6 +155,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
 
     fetchLatestEpoch();
   }, []);
+
   return (
     <>
       <Typography component="span" align="left" variant="h3">
@@ -174,7 +183,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
           </Bubble>
           <Bubble title={t('delegator:stake')}>
             <Typography variant="h4" align="center">
-            {stakes && stakes[0]?.amount}
+            {stakes && formatAmount(totalStake(stakes, address))}
             </Typography>
           </Bubble>
           <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
