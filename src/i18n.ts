@@ -263,7 +263,7 @@ Notez que Daedalus récupère automatiquement vos récompenses lorsque vous dép
         delegator: {
           /* adress selector */
           please: 'Veuillez entrer l\'adresse de récompenses⁽\*⁾ du portefeuille délégué chez STKH',
-          store: 'Nous ne conservons aucune donnée personnelle.',
+          store: '**Nous ne conservons aucune de vos données personnelles !**',
           input: 'Adresse de récompense au format \"stake1...\"',
           enter: 'Entrer',
           disclaimer: `**⁽\*⁾**Sur **Daedalus, vous pouvez trouver l'adresse de récompense sous l'onglet \"Rewards\" du centre de délégation**. Sur **Yoroi, vous pouvez la trouver dans l'option \"Récompenses\" sous l'onglet Recevoir**.
