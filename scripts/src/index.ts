@@ -105,7 +105,7 @@ async function pricesForEpoch(epoch: number): Promise<any> {
           {id: 'date', title: 'DATE'},
           {id: 'priceEUR', title: 'PRICE_EUR'},
           {id: 'priceUSD', title: 'PRICE_USD'},
-          {id: 'priceYEN', title: 'PRICE_YEN'},
+          {id: 'priceYEN', title: 'PRICE_JPY'},
       ]
     });
     const rewardsWithPrices = Promise.all(rewards.map(async o => {

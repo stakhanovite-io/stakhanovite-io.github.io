@@ -10,15 +10,30 @@ import { useTranslation } from 'react-i18next';
 import { Saturation } from '../Components';
 import { Page } from '../Page';
 import notDelegator from '../../assets/not_delegator.png';
+import { Container } from '@material-ui/core';
+import blockfrost from '../../assets/blockfrost.png';
 
 const useStyles = makeStyles(theme => ({
   selector: {
-    width: '70%',
+    width: '80%',
     paddingTop: 20,
-    paddingBottom: 300,
+    paddingBottom: 150,
   },
-  input: {
+  image: {
+    display: 'flex',
+    width: '100%',
+    paddingTop: 0,
+    paddingBottom: 0,
+    alignItems: 'center',
+  }
+  delegator: {
     display: 'block',
+    width: '80%',
+    paddingTop: 0,
+    paddingBottom: 0,
+  }
+  input: {
+    display: 'inline flex',
     width: '100%',
   },
   button: {
@@ -73,7 +88,7 @@ function MyResponsiveLine ({ data }): JSX.Element {
       theme= {plotTheme}
       curve= "monotoneX"
       enableArea= {true}
-      areaOpacity= '0.18'
+      areaOpacity= '0.15'
       isInteractive= {true}
       data={[
           {
@@ -158,13 +173,11 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
 
   return (
     <>
-      <Typography component="span" variant="h2">
+      <div className={classes.delegator}>
+      <Typography component="span" variant="h3" align='center'>
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
-      <Typography variant="body1" component="span">
-        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:address`))}}></span>
-        {address}
-      </Typography>
+      </div>
       <div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
           <Bubble title={t('delegator:current')}>
@@ -204,6 +217,9 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
               <GetAppIcon />
             </Button>
           </Bubble>
+          <div className={classes.image}>
+            <img alt="blockFrostLogo" src={blockfrost} width="auto" height={110}/>
+          </div>
         </div>
       </div>
       <Typography variant="body2">
@@ -266,7 +282,7 @@ function UnknownDelegator({ onEnter }): JSX.Element {
 }
 
 export function Delegator() {
-  const [address, setAddress] = React.useState<undefined | string>('stake1u8ackrpx3kcnu8kua5s9s9sq902zsf629vmmseq33rqdfhcrcyekg');
+  const [address, setAddress] = React.useState<undefined | string>(address);
   const [rewards, setRewards] = React.useState<undefined | []>(undefined);
 
   React.useEffect(() => {
