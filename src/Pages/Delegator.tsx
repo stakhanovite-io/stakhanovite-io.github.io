@@ -178,7 +178,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
       </Typography>
       </div>
       <div className={classes.image}>
-            <img alt="blockFrostLogo" src={blockfrost2} width={220} height="auto"/>
+            <img alt="blockFrostLogo" src={blockfrost2} width={300} height="auto"/>
       </div>
       <div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
