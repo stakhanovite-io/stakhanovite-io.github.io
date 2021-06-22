@@ -39,12 +39,39 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
   fs.promises.writeFile(`${path}/${name}.json`, JSON.stringify(json, null, 2));
 }
 
+const cache = {};
+async function pricesForEpoch(epoch: number): Promise<any> {
+  const cached = cache[epoch];
+  if (cached) {
+    return cached;
+  } else {
+    const epochDetails = await call(`epochs/${epoch}`);
+    const date = new Date(1000*epochDetails.start_time);
+    const strDate = `${date.getUTCDate()}-${date.getUTCMonth()+1}-${date.getUTCFullYear()}`;
+    const gecko = (await fetch(`https://api.coingecko.com/api/v3/coins/cardano/history?date=${strDate}&localization=false`, {
+      method: 'GET'
+    })).json();
+    const priceEUR = (await gecko).market_data.current_price.eur;
+    const priceUSD = (await gecko).market_data.current_price.usd;
+    const priceYEN = (await gecko).market_data.current_price.jpy;
+    const prices = {
+      date: strDate,
+      priceEUR: priceEUR,
+      priceUSD: priceUSD,
+      priceYEN: priceYEN,
+    };
+    cache[epoch] = prices;
+    return prices;
+  }
+}
+
 (async function() {
   // Epoch details
 
   console.log("Epoch");
 
   const latest = await call(`epochs/latest`);
+  const { epoch } = latest;
 
   await writeBlob(`${dataFolder}/epochs`, 'latest', latest);
 
@@ -75,16 +102,22 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
       header: [
           {id: 'epoch', title: 'EPOCH'},
           {id: 'amount', title: 'AMOUNT'},
+          {id: 'date', title: 'DATE'},
+          {id: 'priceEUR', title: 'PRICE_EUR'},
+          {id: 'priceUSD', title: 'PRICE_USD'},
+          {id: 'priceYEN', title: 'PRICE_YEN'},
       ]
     });
-    await csvWriter.writeRecords(rewards);
+    const rewardsWithPrices = Promise.all(rewards.map(async o => {
+      const epochPrices = await pricesForEpoch(o.epoch);
+      return {...o, ...epochPrices};
+    }));
+    await csvWriter.writeRecords(await rewardsWithPrices);
   }
 
   // Epochs stakes
 
   console.log("Stakes");
-
-  const { epoch } = latest;
 
   const stake = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
 
