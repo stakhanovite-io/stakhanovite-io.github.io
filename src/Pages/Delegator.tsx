@@ -16,11 +16,12 @@ const useStyles = makeStyles(theme => ({
   selector: {
     width: '80%',
     paddingTop: 20,
-    paddingBottom: 250,
+    paddingBottom: 300,
   },
   image: {
     display: 'block',
-    position: 'fixed',
+    position: 'sticky',
+    left: '300px',
     width: '100%',
     paddingTop: 0,
     paddingBottom: 0,
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     width: '80%',
     paddingTop: 0,
-    paddingBottom: 40,
+    paddingBottom: 10,
   }
   input: {
     display: 'inline flex',
@@ -177,9 +178,6 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
       </div>
-      <div className={classes.image}>
-            <img alt="blockFrostLogo" src={blockfrost2} width={300} height="auto"/>
-      </div>
       <div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
           <Bubble title={t('delegator:current')}>
@@ -224,6 +222,9 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
       <Typography variant="body2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
       </Typography>
+      <div className={classes.image}>
+            <img alt="blockFrostLogo" src={blockfrost2} width={300} height="auto"/>
+      </div>
     </>
   );
 }
