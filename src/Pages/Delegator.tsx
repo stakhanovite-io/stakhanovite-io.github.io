@@ -1,7 +1,7 @@
 import * as React from 'react';
 import marked from 'marked';
 import { Line } from '@nivo/line';
-import { hexToRgb, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -19,12 +19,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 300,
   },
   image: {
-    display: 'block',
-    position: 'sticky',
-    left: '300px',
-    width: '100%',
     paddingTop: 0,
-    paddingBottom: 0,
+    paddingBottom: 100,
   }
   delegator: {
     display: 'block',
@@ -173,8 +169,9 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
 
   return (
     <>
+      <div>
       <div className={classes.delegator}>
-      <Typography component="span" variant="h3" align='center'>
+      <Typography component="span" variant="h3">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
       </div>
@@ -219,11 +216,14 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
           </Bubble>
         </div>
       </div>
+      <div className={classes.image} align='center'>
       <Typography variant="body2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
       </Typography>
-      <div className={classes.image}>
-            <img alt="blockFrostLogo" src={blockfrost2} width={300} height="auto"/>
+      <div>
+            <img alt="blockFrostLogo" src={blockfrost2} width={250} height="auto"/>
+      </div>
+      </div>
       </div>
     </>
   );
