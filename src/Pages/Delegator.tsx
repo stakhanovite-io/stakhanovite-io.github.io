@@ -10,17 +10,17 @@ import { useTranslation } from 'react-i18next';
 import { Saturation } from '../Components';
 import { Page } from '../Page';
 import notDelegator from '../../assets/not_delegator.png';
-import { Container } from '@material-ui/core';
-import blockfrost from '../../assets/blockfrost.png';
+import blockfrost2 from '../../assets/blockfrost2.png';
 
 const useStyles = makeStyles(theme => ({
   selector: {
     width: '80%',
     paddingTop: 20,
-    paddingBottom: 150,
+    paddingBottom: 250,
   },
   image: {
-    display: 'flex',
+    display: 'block',
+    position: 'fixed',
     width: '100%',
     paddingTop: 0,
     paddingBottom: 0,
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     width: '80%',
     paddingTop: 0,
-    paddingBottom: 0,
+    paddingBottom: 40,
   }
   input: {
     display: 'inline flex',
@@ -178,6 +178,9 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
       </div>
+      <div className={classes.image}>
+            <img alt="blockFrostLogo" src={blockfrost2} width={220} height="auto"/>
+      </div>
       <div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
           <Bubble title={t('delegator:current')}>
@@ -217,9 +220,6 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
               <GetAppIcon />
             </Button>
           </Bubble>
-          <div className={classes.image}>
-            <img alt="blockFrostLogo" src={blockfrost} width="auto" height={110}/>
-          </div>
         </div>
       </div>
       <Typography variant="body2">
