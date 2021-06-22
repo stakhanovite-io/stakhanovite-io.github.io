@@ -24,7 +24,6 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     paddingTop: 0,
     paddingBottom: 0,
-    alignItems: 'center',
   }
   delegator: {
     display: 'block',
