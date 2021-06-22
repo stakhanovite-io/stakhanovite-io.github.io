@@ -266,7 +266,7 @@ function UnknownDelegator({ onEnter }): JSX.Element {
 }
 
 export function Delegator() {
-  const [address, setAddress] = React.useState<undefined | string>('stake1u8ackrpx3kcnu8kua5s9s9sq902zsf629vmmseq33rqdfhcrcyekg');
+  const [address, setAddress] = React.useState<undefined | string>('');
   const [rewards, setRewards] = React.useState<undefined | []>(undefined);
 
   React.useEffect(() => {
