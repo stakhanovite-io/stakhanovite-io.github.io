@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(33, 43, 54, 1)',
     borderRadius: '20px',
     padding: 30,
-    boxShadow: "2px 2px 6px black",
+    boxShadow: "2px 2px 8px #141a20",
     marginBottom: 40,
   },
   poolLogo: {

@@ -101,7 +101,7 @@ function MyResponsiveLine ({ data }): JSX.Element {
 
 function Cartouche({ children }: { children: NonNullable<React.ReactNode> }): JSX.Element {
   return (
-    <div style={{backgroundColor: '#212B36', boxShadow: "4px 4px 8px #171D24", borderRadius: 10, padding: 15, width: 190, height: 100}}>
+    <div style={{backgroundColor: '#212B36', boxShadow: "4px 4px 8px #141a20", borderRadius: 10, padding: 15, width: 190, height: 100}}>
       {children}
     </div>
   );
@@ -158,10 +158,10 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
 
   return (
     <>
-      <Typography component="span" align="left" variant="h3">
+      <Typography component="span" variant="h2">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
       </Typography>
-      <Typography variant="h4" component="span">
+      <Typography variant="body1" component="span">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:address`))}}></span>
         {address}
       </Typography>
@@ -200,7 +200,7 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
             </Typography>
           </Bubble>
           <Bubble title={t('delegator:history')}>
-            <Button style={{margin: 0, padding: 8}} className={classes.button} variant="focusVisible" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
+            <Button style={{margin: 0, padding: 8}} className={classes.button} variant="outlined" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
               <GetAppIcon />
             </Button>
           </Bubble>
