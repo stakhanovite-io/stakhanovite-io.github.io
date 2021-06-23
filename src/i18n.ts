@@ -22,7 +22,7 @@ Shelley Testnets, Incentivized Shelley ITN, Friends & Family Testnets, Alonzo Bl
           psychomb: "*\" French translator of various Cardano content such as 'Why Cardano?', IOG Blog posts, or the light wallet Yoroi, I have been a Cardano Ambassador  since day one. Setting up a stake pool was a natural thing to do in order to further support the Cardano Community.* \"",
           psychomb_sig: "***@psychomb***",
           alexey: "*\" I am a blockchain dev. I hack the ERC20, the ERC21, the Covid 19, the borsch, the cucumber. With bare hands. Enough said already!* \"",
-          alexey_sig: "***@Aleksei***"
+          alexey_sig: "***@Aleksei***",
           experienceTitle: "What do we offer?",
           experience: "We offer a **reliable** and **fairly priced** staking experience on the Cardano blockchain that translates into a **painless** and **profitable** ride for all our delegators.",
           transparentTitle: "We are transparent",
@@ -160,7 +160,7 @@ Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au 
           psychomb: "*\" Traducteur français de divers contenus sur Cardano tels que 'Pourquoi Cardano ?', des articles du blog d'I.O.G., ou du portefeuille Yoroi, je suis Ambassadeur Cardano depuis le premier jour. La mise en place d'un pool était une chose naturelle à faire afin de soutenir davantage la communauté Cardano* \"",
           psychomb_sig: "***@psychomb***",
           alexey: "*\" Je suis développeur blockchain. Je pirate l'ERC20, l'ERC21, le Covid 19, le borsch, le concombre. A mains nues. Assez parlé !* \"",
-          alexey_sig: "***@Aleksei***"
+          alexey_sig: "***@Aleksei***",
           experienceTitle: "Qu'offrons-nous ?",
           experience: "Nous offrons une expérience de staking **fiable** et **peu onéreuse** sur la blockchain Cardano. Cela se traduit en une expérience **facile** et **profitable** pour tous nos délégateurs.",
           transparentTitle: "Transparence",
