@@ -1,26 +1,23 @@
 import * as React from 'react';
+import { Link as RLink } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
-import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import TelegramIcon from '@material-ui/icons/Telegram';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Link as RLink } from "react-router-dom";
-import { items } from './Navigation';
-import joinUsLogo from './../public/assets/Join_us.png';
+import EmailIcon from '@material-ui/icons/Email';
+import MenuIcon from '@material-ui/icons/Menu';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+
 
 const useStyles = makeStyles(theme => ({
     '@global': {
-      body: {
-        backgroundColor: theme.palette.common.white,
-      },
       ul: {
         margin: 0,
         padding: 0,
@@ -29,19 +26,13 @@ const useStyles = makeStyles(theme => ({
         listStyle: 'none',
       },
     },
-    appBar: {
-      marginBottom: 20,
-    },
-    menu: {
-      backgroundColor: 'white'
-    },
     toolbar: {
       flexWrap: 'wrap',
       marginLeft: 60,
       marginRight: 60,
       marginTop: 5,
       marginBottom: 5,
-      ['@media (max-width:780px)']: {
+      ['@media (max-width:500px)']: {
         marginLeft: 0,
         marginRight: 0,
       }
@@ -55,16 +46,14 @@ const useStyles = makeStyles(theme => ({
     heroContent: {
       padding: theme.spacing(8, 0, 6),
     },
-    cardHeader: {
-      backgroundColor: theme.palette.grey[200],
-    },
     cardPricing: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'baseline',
-      marginBottom: theme.spacing(2),
+      marginBottom: theme.spacing(0),
     },
     nav: {
+      display: 'flex',
       '& a': {
         fontWeight: 700
       }
@@ -77,77 +66,71 @@ const useStyles = makeStyles(theme => ({
       }
     },
     footer: {
-      borderTop: `1px solid ${theme.palette.divider}`,
-      marginTop: theme.spacing(8),
-      paddingTop: theme.spacing(3),
-      paddingBottom: theme.spacing(3),
-      backgroundColor: "rgba(25,29,23,0.60)",
-      [theme.breakpoints.up('sm')]: {
-        paddingTop: theme.spacing(6),
-        paddingBottom: theme.spacing(6),
-      },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: 12,
+      backgroundColor: "rgba(0, 0, 0, 0.2)",
     },
   }));
 
-export function Copyright() {
+export function Copyright(): JSX.Element {
     return (
-      <Typography variant="h5" color="textSecondary">
-        {'© '}
-        <Link color="inherit" href="https://stakhanovite.io/">
-          Stakhanovite.io
-        </Link>{' '}
+      <Typography variant="h4">
+        Copyright Stakhanovite.io
+        {' '}
         {new Date().getFullYear()}
       </Typography>
     );
-  }
+}
 
-function Nav({ color }) {
+function Nav({ items }): JSX.Element {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width: 1000px)');
   return (
-  <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-    <nav className={matches ? classes.nav : classes.navSmall}>
-      {Object.keys(items).map((key) =>
-      <Link component={RLink} to={key} key={key} variant="button" color={color} href="#" className={classes.link}>
-        {items[key].title}
-      </Link>
-      )}
-      <Link variant="button" color={color} href="https://stakhanovite.substack.com/" className={classes.link}>
-        NEWSLETTER
-      </Link>
-    </nav>
-    {matches &&
-      <div>
-      <IconButton
-        href="https://t.me/StakhanoviteIO"
-        title="Telegram"
-      >
-        <TelegramIcon />
-      </IconButton>
-      <IconButton
-        href="https://twitter.com/StakhanoviteIO"
-        title="Twitter account"
-      >
-        <TwitterIcon />
-      </IconButton>
+    <>
+      <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+        <nav className={matches ? classes.nav : classes.navSmall}>
+          {Object.keys(items).map((key) =>
+          <Link underline="none" component={RLink} to={key} key={key} color="textPrimary" variant="button" href="#" className={classes.link}>
+            {items[key].title}
+          </Link>
+          )}
+        </nav>
+        {matches &&
+          <>
+            <IconButton
+              href="https://twitter.com/StakhanoviteIO"
+              color="secondary"
+              title="STKH on Twitter">
+              <TwitterIcon />
+            </IconButton>
+            <IconButton
+              href="https://t.me/StakhanoviteIO"
+              color="secondary"
+              title="STKH on Telegram">
+              <TelegramIcon />
+            </IconButton>
+            <IconButton
+              href="https://stakhanovite.substack.com/"
+              color="secondary"
+              title="STKH Newsletter">
+              <EmailIcon />
+            </IconButton>
+          </>
+        }
       </div>
-    }
-  </div>);
+    </>);
 }
 
-function SimpleMenu() {
+function SimpleMenu({ items }): JSX.Element {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClick = event => setAnchorEl(event.currentTarget);
+  const handleClose = _event => setAnchorEl(null);
 
   return (
-    <div>
+    <>
       <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         <MenuIcon />
       </IconButton>
@@ -162,32 +145,39 @@ function SimpleMenu() {
         <MenuItem component={RLink} to={key} key={key} onClick={handleClose}>{items[key].title}</MenuItem>
         )}
       </Menu>
-    </div>
+    </>
   );
 }
 
-export function ToolbarMenu() {
+export function ToolbarMenu({ items }): JSX.Element {
     const classes = useStyles();
     const matches = useMediaQuery('(min-width: 1000px)');
     return (
-      <AppBar position="static" color="primary" elevation={0} className={classes.appBar} style={{padding: 5}}>
-        <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "space-between"}}>
-          <img alt="logo" src={joinUsLogo} style={{width: 75}} />
+      <AppBar position="sticky" color="primary" elevation={0} style={{padding: 2}}>
+        <Toolbar className={classes.toolbar} style={{display: "flex", justifyContent: "flex-end"}}>
           {matches
-            ? <Nav color={"textPrimary"} />
-            : <SimpleMenu />
+            ? <Nav items={items} />
+            : <SimpleMenu items={items} />
           }
         </Toolbar>
       </AppBar>
     );
 }
 
-export function Footer() {
+export function Footer(): JSX.Element {
     const classes = useStyles();
     return (
       <Container component="footer" maxWidth={false} className={classes.footer}>
        <Copyright />
-       <Nav color={"textSecondary"} />
+       <Typography variant="body2">made with love by our dedicated team</Typography>
       </Container>
     );
+}
+
+export function Saturation({ liveSaturation }: { liveSaturation: number }): JSX.Element {
+  return (
+    <div style={{width: '100%', height: 12, border: '1px solid #2C7568', borderRadius: 10}}>
+      <div style={{background: '#2C7568', height: '100%', width: `${liveSaturation*100}%`, borderTopLeftRadius: 10, borderBottomLeftRadius: 10}}></div>
+    </div>
+  );
 }

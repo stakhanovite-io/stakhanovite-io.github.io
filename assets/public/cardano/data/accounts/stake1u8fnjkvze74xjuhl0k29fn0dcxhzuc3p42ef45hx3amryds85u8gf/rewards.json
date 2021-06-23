@@ -1,0 +1,27 @@
+[
+  {
+    "epoch": 267,
+    "amount": "117136",
+    "pool_id": "pool1qqvukkkfr3ux4qylfkrky23f6trl2l6xjluv36z90ax7gfa8yxt"
+  },
+  {
+    "epoch": 268,
+    "amount": "106305",
+    "pool_id": "pool1qqvukkkfr3ux4qylfkrky23f6trl2l6xjluv36z90ax7gfa8yxt"
+  },
+  {
+    "epoch": 269,
+    "amount": "125475",
+    "pool_id": "pool1qqvukkkfr3ux4qylfkrky23f6trl2l6xjluv36z90ax7gfa8yxt"
+  },
+  {
+    "epoch": 270,
+    "amount": "1497718",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 271,
+    "amount": "1397964",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  }
+]

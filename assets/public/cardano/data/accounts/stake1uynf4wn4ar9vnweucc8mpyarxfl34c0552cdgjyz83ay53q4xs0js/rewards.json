@@ -1,0 +1,82 @@
+[
+  {
+    "epoch": 256,
+    "amount": "34374544",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 257,
+    "amount": "36755693",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 258,
+    "amount": "36505441",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 259,
+    "amount": "34858908",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 260,
+    "amount": "35857012",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 261,
+    "amount": "27820813",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 262,
+    "amount": "32830402",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 263,
+    "amount": "27962224",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 264,
+    "amount": "31258107",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 265,
+    "amount": "37161354",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 266,
+    "amount": "34661917",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 267,
+    "amount": "35949999",
+    "pool_id": "pool18mege8wvzzdvh8cxx6ncnqyvacl4lxukw495c87xmz8qcdl6lj8"
+  },
+  {
+    "epoch": 268,
+    "amount": "33840240",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 269,
+    "amount": "31490045",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 270,
+    "amount": "36368493",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 271,
+    "amount": "33967252",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  }
+]
