@@ -40,10 +40,10 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
 }
 
 const cache = {};
+
 async function pricesForEpoch(epoch: number): Promise<any> {
-  const cached = cache[epoch];
-  if (cached) {
-    return cached;
+  if (epoch in cache) {
+    return cache[epoch];
   } else {
     const epochDetails = await call(`epochs/${epoch}`);
     const date = new Date(1000*epochDetails.start_time);
@@ -109,6 +109,7 @@ async function pricesForEpoch(epoch: number): Promise<any> {
       ]
     });
     const rewardsWithPrices = Promise.all(rewards.map(async o => {
+      o.amount = o.amount / 1000000;
       const epochPrices = await pricesForEpoch(o.epoch);
       return {...o, ...epochPrices};
     }));
@@ -124,5 +125,5 @@ async function pricesForEpoch(epoch: number): Promise<any> {
   const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
   await writeBlob(folder, ticker, stake);
   }().catch(e => {
-	  console.error("Failed to start template" ,e)
+	  console.error("Failure" ,e)
 }));
