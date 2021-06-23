@@ -155,7 +155,7 @@ function Pool({ title, name, logo, poolID }: { title: string, name: string, logo
         <IconButton
           color="inherit"
           title={t('pool.copyAddress')}
-          onClick={() => clipboard.copy({poolID})}
+          onClick={() => clipboard.copy(poolID)}
         >
           <FileCopyIcon />
         </IconButton>
@@ -263,7 +263,7 @@ export function Home(): JSX.Element {
         <Typography variant="h2" align="right" component="span">
           <Text id="pools.title" />
         </Typography>
-        <Container justifyContent="space-between" className={classes.pools}>
+        <Container className={classes.pools}>
           <Pool
             title={t('pools.pool1')}
             name="STKH1"
