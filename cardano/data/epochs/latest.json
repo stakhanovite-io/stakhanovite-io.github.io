@@ -1,0 +1,12 @@
+{
+  "epoch": 273,
+  "start_time": 1624139091,
+  "end_time": 1624571091,
+  "first_block_time": 1624139124,
+  "last_block_time": 1624428828,
+  "block_count": 14330,
+  "tx_count": 108229,
+  "output": "9743072897901640",
+  "fees": "23107259601",
+  "active_stake": "23075664958746578"
+}
