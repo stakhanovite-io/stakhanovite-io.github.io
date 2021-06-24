@@ -6,7 +6,7 @@ on:
     - cron:  '*/30 * * * *' # Every 30 minutes
 
 jobs:
-  test:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +14,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "10"
 
       - name: Run tests
         run: yarn && yarn build && yarn start
