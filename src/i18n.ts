@@ -164,7 +164,7 @@ Réseaux de test Shelley, réseau avec récompenses \"ITN\", réseau de mise au 
           experienceTitle: "Qu'offrons-nous ?",
           experience: "Nous offrons une expérience de staking **fiable** et **peu onéreuse** sur la blockchain Cardano. Cela se traduit en une expérience **facile** et **profitable** pour tous nos délégateurs.",
           transparentTitle: "Transparence",
-          transparent: "De nos coûts jusqu'à nos relevés de performance, vous saurez tout grâce à notre **[newsletter](https://stakhanovite.substack.com/)** mensuelle et à notre **chaîne [Telegram](https://t.me/StakhanoviteIO)** dédiées. Abonnez-vous, et venez nous saluer !",
+          transparent: "De nos coûts jusqu'à nos relevés de performance, vous saurez tout grâce à notre **[newsletter](https://stakhanovite.substack.com/)** mensuelle et à notre chaîne **[Telegram](https://t.me/StakhanoviteIO)** dédiées. Abonnez-vous, et venez nous saluer !",
           efficientTitle: "Efficacité",
           efficient: "Depuis son lancement, Stakhanovite a distribué plus de 6 millions d'ADA de récompenses à ses délégateurs. Nous fonctionnons depuis le mois de Décember 2019, sans aucune interruption de service. **Rejoignez-nous !**",
           wallets: "Déléguez en utilisant les portefeuilles Cardano les plus populaires - [**Daedalus**](https://daedaluswallet.io) ou [**Yoroi**](https://yoroi-wallet.com) - et cherchez notre pool **STKH1** !",
