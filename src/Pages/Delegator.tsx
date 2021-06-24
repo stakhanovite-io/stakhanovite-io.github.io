@@ -9,8 +9,8 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 import { useTranslation } from 'react-i18next';
 import { Saturation } from '../Components';
 import { Page } from '../Page';
-import notDelegator from '../../assets/not_delegator.png';
-import blockfrost2 from '../../assets/blockfrost2.png';
+import notDelegator from 'url:../../assets/not_delegator.png';
+import blockfrost2 from 'url:../../assets/blockfrost2.png';
 
 const useStyles = makeStyles(theme => ({
   selector: {
@@ -21,13 +21,13 @@ const useStyles = makeStyles(theme => ({
   image: {
     paddingTop: 0,
     paddingBottom: 100,
-  }
+  },
   delegator: {
     display: 'block',
     width: '80%',
     paddingTop: 0,
     paddingBottom: 10,
-  }
+  },
   input: {
     display: 'inline flex',
     width: '100%',
@@ -88,7 +88,7 @@ function MyResponsiveLine ({ data }): JSX.Element {
       isInteractive= {true}
       data={[
           {
-              id: 'rewards'
+              id: 'rewards',
               data: data
           },
       ]}
@@ -247,7 +247,7 @@ function AddressSelector({ onEnter }): JSX.Element {
         fullWidth
         label={t('delegator:input')}
         variant="outlined"
-        size="normal"
+        size="medium"
         color="secondary"
         value={address}
         onChange={handleAddressChange}
@@ -282,8 +282,8 @@ function UnknownDelegator({ onEnter }): JSX.Element {
 }
 
 export function Delegator() {
-  const [address, setAddress] = React.useState<undefined | string>(address);
-  const [rewards, setRewards] = React.useState<undefined | []>(undefined);
+  const [address, setAddress] = React.useState<undefined | string>();
+  const [rewards, setRewards] = React.useState<undefined | []>();
 
   React.useEffect(() => {
     async function fetchRewards(): Promise<void> {

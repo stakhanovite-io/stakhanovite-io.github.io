@@ -13,9 +13,9 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import { Saturation } from '../Components';
 import { Page } from '../Page';
-import home from '../../assets/home.png';
-import team from '../../assets/team.png';
-import stkh1 from '../../assets/stkh1.png';
+import home from 'url:../../assets/home.png';
+import team from 'url:../../assets/team.png';
+import stkh1 from 'url:../../assets/stkh1.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -171,7 +171,7 @@ export function Home(): JSX.Element {
 
   return (
     <Page>
-      <Container disableGutters="true" className={classes.root}>
+      <Container disableGutters={true} className={classes.root}>
         <Container>
           <Typography variant="h1" color="textSecondary" component="span">
             <Text id="stakhanovite" />
@@ -240,7 +240,7 @@ export function Home(): JSX.Element {
         <Typography className={classes.sectionContent} component="span">
           <Text id="experience" />
         </Typography>
-        <Container disableGutters="true" className={classes.subSection}>
+        <Container disableGutters={true} className={classes.subSection}>
           <Typography variant="h3" color="textSecondary" component="span">
             <Text id="transparentTitle" />
           </Typography>
@@ -249,7 +249,7 @@ export function Home(): JSX.Element {
           </Typography>
         </Container>
 
-        <Container disableGutters="true" className={classes.subSection}>
+        <Container disableGutters={true} className={classes.subSection}>
           <Typography variant="h3" color="textSecondary" component="span">
             <Text id="efficientTitle" />
           </Typography>
