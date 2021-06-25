@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "run": "node dist/index.js",
     "clean": "rm -rf dist/ node_modules/ yarn.lock"
   },
   "dependencies": {
