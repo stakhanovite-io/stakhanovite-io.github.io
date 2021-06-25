@@ -1,0 +1,14 @@
+name: Update data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/30 * * * *' # Every 30 minutes
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jtalk/url-health-check-action@v1.5
+      - with:
+         url: https://www.stakhanovite.io/cardano/stkh-1.json
