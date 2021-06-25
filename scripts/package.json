@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "./dist/index.js",
-  "type": "module",
   "scripts": {
     "build": "tsc",
-    "run": "node dist/index.js",
+    "start": "node dist/index.js",
     "clean": "rm -rf dist/ node_modules/ yarn.lock"
   },
   "dependencies": {

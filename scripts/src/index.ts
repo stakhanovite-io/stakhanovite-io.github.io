@@ -110,7 +110,7 @@ async function pricesForEpoch(epoch: number): Promise<any> {
     });
     const rewardsWithPrices = Promise.all(rewards.map(async o => {
       o.amount = o.amount / 1000000;
-      const epochPrices = await pricesForEpoch(o.epoch);
+      const epochPrices = await pricesForEpoch(o.epoch+2);
       return {...o, ...epochPrices};
     }));
     await csvWriter.writeRecords(await rewardsWithPrices);
