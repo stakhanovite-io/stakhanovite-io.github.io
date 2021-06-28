@@ -2,6 +2,7 @@ import * as React from 'react';
 import marked from 'marked';
 import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -9,12 +10,16 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+const breakpoints = createBreakpoints({});
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "80vw",
+    [breakpoints.up("sm")]: {
+      width: "80vw"
+    }
   },
   heading: {
     marginTop: 84,
@@ -84,7 +89,7 @@ export function Faq(): JSX.Element {
     const classes = useStyles();
     return (
       <Container className={classes.root}>
-        <Typography className={classes.heading} variant="h2">{t('faq:title')}</Typography>
+        <Typography align='center' className={classes.heading} variant="h2">{t('faq:title')}</Typography>
         <Container className={classes.section}>
           <SectionTitle category="general" />
           <Container className={classes.sectionItems}>

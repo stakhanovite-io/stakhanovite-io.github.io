@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createBrowserHistory } from "history";
 import { Router, Route } from "react-router-dom";
@@ -10,6 +11,8 @@ import { Delegator } from './Pages/Delegator';
 import { Faq } from './Pages/Faq';
 import { Home } from './Pages/Home';
 
+
+const breakpoints = createBreakpoints({});
 
 const theme = createMuiTheme({
   palette: {
@@ -31,9 +34,12 @@ const theme = createMuiTheme({
   },
   typography: {
     h1: {
-      fontSize: 70,
+      fontSize: "5rem",
       fontWeight: 'bold',
       lineHeight: "70px",
+      [breakpoints.down("sm")]: {
+        fontSize: "3rem"
+      }
     },
     h2: {
       fontSize: 42,

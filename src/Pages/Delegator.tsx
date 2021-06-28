@@ -1,7 +1,8 @@
 import * as React from 'react';
 import marked from 'marked';
 import { Line } from '@nivo/line';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -37,6 +38,22 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     marginTop: 20,
     marginBottom: 20,
+  },
+  rewards: {
+    [theme.breakpoints.down("sm")]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    },
+    [theme.breakpoints.up("sm")]: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridAutoRows: 110
+    },
+    '& > div' : {
+      marginTop: 10,
+      marginBottom: 10,
+    }
   },
 }));
 
@@ -81,11 +98,11 @@ function MyResponsiveLine ({ data }): JSX.Element {
   return (
       <Line
       {...commonProperties}
-      theme= {plotTheme}
-      curve= "monotoneX"
-      enableArea= {true}
-      areaOpacity= '0.15'
-      isInteractive= {true}
+      theme={plotTheme}
+      curve="monotoneX"
+      enableArea={true}
+      areaOpacity={0.15}
+      isInteractive={true}
       data={[
           {
               id: 'rewards',
@@ -138,12 +155,63 @@ function Bubble({ title, children }: { title: string, children: NonNullable<Reac
   return (
     <>
       <Cartouche>
-        <Typography gutterBottom='false' align="center" variant="body2">{title}</Typography>
+        <Typography gutterBottom={false} align="center" variant="body2">{title}</Typography>
         {children}
       </Cartouche>
     </>
   );
 }
+
+function DelegatorGrid({ address, rewards, poolDetails, latestEpoch, stakes }): JSX.Element {
+  const classes = useStyles();
+  const { t } = useTranslation();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  return (
+    <div className={classes.rewards}>
+      <Bubble title={t('delegator:current')}>
+        <Typography variant="h4" align="center">
+        {latestEpoch.epoch}
+        </Typography>
+      </Bubble>
+      <Bubble title={t('delegator:saturation')}>
+        {poolDetails &&
+        <Saturation liveSaturation={poolDetails['live_saturation']} />}
+      </Bubble>
+      <Bubble title={t('delegator:number')}>
+        <Typography variant="h4" align="center">
+        {formatAmount(stakes?.length)}
+        </Typography>
+      </Bubble>
+      <Bubble title={t('delegator:stake')}>
+        <Typography variant="h4" align="center">
+        {stakes && formatAmount(totalStake(stakes, address))}
+        </Typography>
+      </Bubble>
+      {matches &&
+        <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
+          <MyResponsiveLine data={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
+        </div>}
+      <Bubble title={t('delegator:rewards')}>
+        <Typography variant="h4" align="center">
+        {formatAmount(totalRewards(rewards))}
+        </Typography>
+      </Bubble>
+      <Bubble title={t('delegator:last')}>
+        <Typography variant="h4" align="center">
+        {formatAmount(rewards.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
+        </Typography>
+      </Bubble>
+      <Bubble title={t('delegator:history')}>
+        <Button style={{margin: 0, padding: 8}} className={classes.button} variant="outlined" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
+          <GetAppIcon />
+        </Button>
+      </Bubble>
+    </div>
+  );
+}
+
+const pool = "STKH1";
 
 function DelegatorRewards({ address, rewards }): JSX.Element {
   const classes = useStyles();
@@ -157,8 +225,8 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
       try {
         const latest = await (await fetch(`cardano/data/epochs/latest.json`)).json();
         setLatestEpoch(latest);
-        setPoolDetails(await (await fetch(`cardano/data/pools/STKH1.json`)).json());
-        setStakes(await (await fetch(`cardano/data/epochs/${latest.epoch}/stakes/STKH1.json`)).json());
+        setPoolDetails(await (await fetch(`cardano/data/pools/${pool}.json`)).json());
+        setStakes(await (await fetch(`cardano/data/epochs/${latest.epoch}/stakes/${pool}.json`)).json());
       } catch {
         setLatestEpoch({});
       }
@@ -170,60 +238,20 @@ function DelegatorRewards({ address, rewards }): JSX.Element {
   return (
     <>
       <div>
-      <div className={classes.delegator}>
-      <Typography component="span" variant="h3">
-        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
-      </Typography>
-      </div>
-      <div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gridAutoRows: 110}}>
-          <Bubble title={t('delegator:current')}>
-            <Typography variant="h4" align="center">
-            {latestEpoch.epoch}
-            </Typography>
-          </Bubble>
-          <Bubble title={t('delegator:saturation')}>
-           {poolDetails &&
-           <Saturation liveSaturation={poolDetails['live_saturation']} />}
-          </Bubble>
-          <Bubble title={t('delegator:number')}>
-            <Typography variant="h4" align="center">
-            {formatAmount(stakes?.length)}
-            </Typography>
-          </Bubble>
-          <Bubble title={t('delegator:stake')}>
-            <Typography variant="h4" align="center">
-            {stakes && formatAmount(totalStake(stakes, address))}
-            </Typography>
-          </Bubble>
-          <div style={{gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 2, gridRowEnd: 5}}>
-            <MyResponsiveLine data={rewards.map(o => {return {x: o.epoch, y: o.amount}})} />
-          </div>
-          <Bubble title={t('delegator:rewards')}>
-            <Typography variant="h4" align="center">
-            {formatAmount(totalRewards(rewards, address))}
-            </Typography>
-          </Bubble>
-          <Bubble title={t('delegator:last')}>
-            <Typography variant="h4" align="center">
-            {formatAmount(rewards.find(o => {if (o.epoch == latestEpoch.epoch - 2) return o;})?.amount)}
-            </Typography>
-          </Bubble>
-          <Bubble title={t('delegator:history')}>
-            <Button style={{margin: 0, padding: 8}} className={classes.button} variant="outlined" disabled={!address} href={`cardano/data/accounts/${address}/rewards.csv`}>
-              <GetAppIcon />
-            </Button>
-          </Bubble>
+        <div className={classes.delegator}>
+          <Typography component="span" variant="h3">
+            <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:welcome`))}}></span>
+          </Typography>
         </div>
-      </div>
-      <div className={classes.image} align='center'>
-      <Typography variant="body2">
-        <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
-      </Typography>
-      <div>
+        <DelegatorGrid address={address} rewards={rewards} poolDetails={poolDetails} latestEpoch={latestEpoch} stakes={stakes} />
+        <div className={classes.image}>
+          <Typography variant="body2">
+            <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:update`))}}></span>
+          </Typography>
+          <div>
             <img alt="blockFrostLogo" src={blockfrost2} width={250} height="auto"/>
-      </div>
-      </div>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -266,7 +294,7 @@ function UnknownDelegator({ onEnter }): JSX.Element {
   const { t } = useTranslation();
   const classes = useStyles();
   return (
-    <div className={classes.selector} align="center">
+    <div className={classes.selector}>
       <Typography variant="h4">
         <span dangerouslySetInnerHTML={{__html:marked(t(`delegator:sorry`))}}></span>
       </Typography>

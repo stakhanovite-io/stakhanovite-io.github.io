@@ -44,7 +44,17 @@ const useStyles = makeStyles(theme => ({
   },
   offers: {
     display: 'flex',
-    flexDirection: 'row',
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: 'row',
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      '& > div' : {
+        marginTop: 10,
+        marginBottom: 10,
+      }
+    },
     justifyContent: 'space-between',
     textAlign: 'center',
     marginTop: 40,
