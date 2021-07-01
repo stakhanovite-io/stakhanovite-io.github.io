@@ -1,6 +1,7 @@
-name: github pages
+name: Deploy website
 
 on:
+  workflow_dispatch:
   push:
     branches:
     - source
