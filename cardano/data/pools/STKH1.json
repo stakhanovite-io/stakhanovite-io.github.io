@@ -1,9 +1,9 @@
 {
   "vrf_key": "b4506cbdf5faeeb7bc771d0c17eea2e7e94749ec5a63e78a42d9ed8aad6baae5",
-  "blocks_minted": 3009,
+  "blocks_minted": 3010,
   "live_stake": "58843210568532",
-  "live_size": 0.002533517005512989,
-  "live_saturation": 0.8856572160396875,
+  "live_size": 0.0025336056417447086,
+  "live_saturation": 0.8855988767320269,
   "live_delegators": 283,
   "active_stake": "60563849117371",
   "active_size": 0.002610918162905795,
