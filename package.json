@@ -11,7 +11,7 @@
   "dependencies": {
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
-    "@nivo/core": "0.70.0",
+    "@nivo/core": "0.73.0",
     "@nivo/line": "0.70.0",
     "i18next": "20.3.5",
     "i18next-browser-languagedetector": "6.1.2",
