@@ -53,7 +53,7 @@ async function pricesForEpoch(epoch: number): Promise<any> {
     })).json();
     const priceEUR = (await gecko).market_data.current_price.eur;
     const priceUSD = (await gecko).market_data.current_price.usd;
-    const priceAUSD = (await gecko).market_data.current_price.ausd;
+    const priceAUSD = (await gecko).market_data.current_price.aud;
     const priceYEN = (await gecko).market_data.current_price.jpy;
     const prices = {
       date: strDate,
