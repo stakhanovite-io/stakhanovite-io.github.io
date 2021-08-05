@@ -53,11 +53,13 @@ async function pricesForEpoch(epoch: number): Promise<any> {
     })).json();
     const priceEUR = (await gecko).market_data.current_price.eur;
     const priceUSD = (await gecko).market_data.current_price.usd;
+    const priceAUSD = (await gecko).market_data.current_price.ausd;
     const priceYEN = (await gecko).market_data.current_price.jpy;
     const prices = {
       date: strDate,
       priceEUR: priceEUR,
       priceUSD: priceUSD,
+      priceAUSD: priceAUSD,
       priceYEN: priceYEN,
     };
     cache[epoch] = prices;
@@ -105,6 +107,7 @@ async function pricesForEpoch(epoch: number): Promise<any> {
           {id: 'date', title: 'DATE'},
           {id: 'priceEUR', title: 'PRICE_EUR'},
           {id: 'priceUSD', title: 'PRICE_USD'},
+          {id: 'priceAUSD', title: 'PRICE_AUSD'},
           {id: 'priceYEN', title: 'PRICE_JPY'},
       ]
     });
