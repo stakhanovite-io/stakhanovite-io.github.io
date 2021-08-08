@@ -2,11 +2,11 @@
   "epoch": 283,
   "start_time": 1628459091,
   "end_time": 1628891091,
-  "first_block_time": 1628459234,
-  "last_block_time": 1628459234,
-  "block_count": 1,
-  "tx_count": 37,
-  "output": "4093965749542",
-  "fees": "10522246",
+  "first_block_time": 1628459168,
+  "last_block_time": 1628464595,
+  "block_count": 258,
+  "tx_count": 2349,
+  "output": "1030359509839719",
+  "fees": "482413820",
   "active_stake": "23277148789435534"
 }
