@@ -285,7 +285,7 @@ Toutes les données fournies le sont à titre d'information uniquement.`,
           history: 'Télécharger l\'historique'
         }
       },
-      jp: {
+      ja: {
         home: {
           stakhanovite: "Stakhanovite",
           stakePools: "ステークプール",
