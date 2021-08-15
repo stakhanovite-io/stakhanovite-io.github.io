@@ -3,10 +3,10 @@
   "start_time": 1628891091,
   "end_time": 1629323091,
   "first_block_time": 1628891161,
-  "last_block_time": 1628992737,
-  "block_count": 5078,
-  "tx_count": 72789,
-  "output": "5150684776980022",
-  "fees": "15496027547",
+  "last_block_time": 1628994611,
+  "block_count": 5166,
+  "tx_count": 74040,
+  "output": "5235287915282378",
+  "fees": "15754130247",
   "active_stake": "23275724668511213"
 }
