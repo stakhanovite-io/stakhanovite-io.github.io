@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "epoch": 277,
+    "amount": "59775218",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 278,
+    "amount": "58101076",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 279,
+    "amount": "67352856",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 280,
+    "amount": "47345929",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 281,
+    "amount": "48609672",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 282,
+    "amount": "54555579",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 283,
+    "amount": "58672036",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 284,
+    "amount": "51394632",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 285,
+    "amount": "62727738",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 286,
+    "amount": "58008216",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  }
+]
