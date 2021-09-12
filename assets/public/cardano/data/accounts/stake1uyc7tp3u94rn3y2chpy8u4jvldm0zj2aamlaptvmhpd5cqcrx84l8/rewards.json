@@ -1,160 +1,5 @@
 [
   {
-    "epoch": 215,
-    "amount": "732747",
-    "pool_id": "pool1qqqqqdk4zhsjuxxd8jyvwncf5eucfskz0xjjj64fdmlgj735lr9"
-  },
-  {
-    "epoch": 216,
-    "amount": "620156",
-    "pool_id": "pool1qqqqqdk4zhsjuxxd8jyvwncf5eucfskz0xjjj64fdmlgj735lr9"
-  },
-  {
-    "epoch": 217,
-    "amount": "1596918",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 218,
-    "amount": "1662910",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 219,
-    "amount": "2620863",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 220,
-    "amount": "1518651",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 221,
-    "amount": "2740759",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 222,
-    "amount": "2072190",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 223,
-    "amount": "2025606",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 224,
-    "amount": "2514359",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 225,
-    "amount": "1477899",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 226,
-    "amount": "1854279",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 227,
-    "amount": "1707428",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 228,
-    "amount": "1621243",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 229,
-    "amount": "1689845",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 230,
-    "amount": "1631629",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 231,
-    "amount": "1807648",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 232,
-    "amount": "1939842",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 233,
-    "amount": "1873226",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 234,
-    "amount": "1696270",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 235,
-    "amount": "2044956",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 236,
-    "amount": "2104147",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 237,
-    "amount": "1666637",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 238,
-    "amount": "2063944",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 239,
-    "amount": "2247007",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 240,
-    "amount": "1623027",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 241,
-    "amount": "2101697",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 242,
-    "amount": "1869934",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 243,
-    "amount": "1825481",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 244,
-    "amount": "2080509",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
-    "epoch": 245,
-    "amount": "1790073",
-    "pool_id": "pool1qqqyv9pn9typyqwcxqk5ewpxy5p27g5j2ms58hpp2c2kuzs5z77"
-  },
-  {
     "epoch": 252,
     "amount": "1737310",
     "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
@@ -332,6 +177,11 @@
   {
     "epoch": 287,
     "amount": "1537828",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
+  },
+  {
+    "epoch": 288,
+    "amount": "1247204",
     "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
   }
 ]
