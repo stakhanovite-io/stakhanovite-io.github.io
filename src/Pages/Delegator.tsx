@@ -135,8 +135,8 @@ function Cartouche({ children }: { children: NonNullable<React.ReactNode> }): JS
   );
 }
 
-function totalRewards(accountDetails): number {
-  return accountDetails.filter(o => o["pool_id"] == "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj").reduce((acc, o) => acc + parseInt(o.amount), 0);
+function totalRewards(rewards): number {
+  return rewards.filter(o => o["pool_id"] == "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj").reduce((acc, o) => acc + o.amount, 0);
 }
 
 function totalStake(stakes, address): number {
@@ -180,7 +180,8 @@ function DelegatorGrid({ address, rewards, poolDetails, latestEpoch, stakes }): 
       </Bubble>
       <Bubble title={t('delegator:number')}>
         <Typography variant="h4" align="center">
-        {formatAmount(stakes?.length)}
+        {poolDetails &&
+        formatAmount(poolDetails['live_delegators'])}
         </Typography>
       </Bubble>
       <Bubble title={t('delegator:stake')}>
@@ -322,7 +323,9 @@ export function Delegator() {
       }
     }
 
-    fetchRewards();
+    if (address) {
+      fetchRewards();
+    }
   }, [address]);
 
   return (

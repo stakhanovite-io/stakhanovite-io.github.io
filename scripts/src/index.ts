@@ -13,7 +13,7 @@ if (!blockfrostProjectId) {
   console.error('Missing BLOCKFROST_PROJECT_ID');
   process.exit(1);
 }
-const defaultEpoch = process.env.DEFAULT_EPOCH;
+
 const dataFolder = `${__dirname}/../../assets/public/cardano/data`;
 
 export async function call(input: string, init: RequestInit = {}): Promise<any> {
@@ -25,9 +25,9 @@ export async function call(input: string, init: RequestInit = {}): Promise<any> 
 }
 
 async function callPaged(url: string, count: number = 100, page: number = 1, acc = []): Promise<any> {
-  const res = await call(`${url}?page=${page}`);
+  const res = await call(`${url}?page=${page}&count=${count}`);
   const allRes = [...acc, ...res];
-  if (res.length == count) {
+  if (res.length >= count) {
     return callPaged(url, count, page+1, allRes);
   } else {
     return Promise.resolve(allRes);
@@ -123,10 +123,10 @@ async function pricesForEpoch(epoch: number): Promise<any> {
 
   console.log("Stakes");
 
-  const stake = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
+  const stakes = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
 
   const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
-  await writeBlob(folder, ticker, stake);
+  await writeBlob(folder, ticker, stakes);
   }().catch(e => {
 	  console.error("Failure" ,e)
 }));
