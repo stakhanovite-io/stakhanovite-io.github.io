@@ -41,29 +41,47 @@ async function writeBlob(path: string, name: string, json: any): Promise<void> {
 
 const cache = {};
 
-async function pricesForEpoch(epoch: number): Promise<any> {
+async function pricesForEpoch(epoch: number, i: number): Promise<any> {
   if (epoch in cache) {
     return cache[epoch];
   } else {
     const epochDetails = await call(`epochs/${epoch}`);
     const date = new Date(1000*epochDetails.start_time);
     const strDate = `${date.getUTCDate()}-${date.getUTCMonth()+1}-${date.getUTCFullYear()}`;
-    const gecko = (await fetch(`https://api.coingecko.com/api/v3/coins/cardano/history?date=${strDate}&localization=false`, {
-      method: 'GET'
-    })).json();
-    const priceEUR = (await gecko).market_data.current_price.eur;
-    const priceUSD = (await gecko).market_data.current_price.usd;
-    const priceAUSD = (await gecko).market_data.current_price.aud;
-    const priceYEN = (await gecko).market_data.current_price.jpy;
-    const prices = {
-      date: strDate,
-      priceEUR: priceEUR,
-      priceUSD: priceUSD,
-      priceAUSD: priceAUSD,
-      priceYEN: priceYEN,
-    };
-    cache[epoch] = prices;
-    return prices;
+    
+    const resp = await new Promise<any>(async (resolve) => {
+      setTimeout(async () => {
+        try {
+          console.log(`Fetching price for ${strDate}`);
+          const resp = await (await fetch(`https://api.coingecko.com/api/v3/coins/cardano/history?date=${strDate}&localization=false`, {
+            method: 'GET'
+          })).text();
+          resolve(resp);
+        } catch(e) {
+          console.error("Failed to fetch price", e);
+          resolve({});
+        }
+      }, 1000*i);
+    });
+    try {
+      const gecko = await JSON.parse(resp);
+      const priceEUR = gecko.market_data.current_price.eur;
+      const priceUSD = gecko.market_data.current_price.usd;
+      const priceAUSD = gecko.market_data.current_price.aud;
+      const priceYEN = gecko.market_data.current_price.jpy;
+      const prices = {
+        date: strDate,
+        priceEUR: priceEUR,
+        priceUSD: priceUSD,
+        priceAUSD: priceAUSD,
+        priceYEN: priceYEN,
+      };
+      cache[epoch] = prices;
+      return prices;
+    } catch (e) {
+      console.error(resp)
+      return 0
+    }
   }
 }
 
@@ -86,6 +104,15 @@ async function pricesForEpoch(epoch: number): Promise<any> {
 
   const poolsFolder = `${dataFolder}/pools`;
   await writeBlob(poolsFolder, ticker, poolDetails);
+
+  // Epochs stakes
+
+  console.log("Stakes");
+
+  const stakes = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
+
+  const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
+  await writeBlob(folder, ticker, stakes);
 
   // Delegators rewards
 
@@ -111,22 +138,16 @@ async function pricesForEpoch(epoch: number): Promise<any> {
           {id: 'priceYEN', title: 'PRICE_JPY'},
       ]
     });
-    const rewardsWithPrices = Promise.all(rewards.map(async o => {
+    const rewardsWithPrices = Promise.all(rewards.map(async (o, i) => {
       o.amount = o.amount / 1000000;
-      const epochPrices = await pricesForEpoch(o.epoch+2);
+
+      const epochPrices = await pricesForEpoch(o.epoch+2, i);
       return {...o, ...epochPrices};
     }));
     await csvWriter.writeRecords(await rewardsWithPrices);
   }
 
-  // Epochs stakes
-
-  console.log("Stakes");
-
-  const stakes = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
-
-  const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
-  await writeBlob(folder, ticker, stakes);
   }().catch(e => {
-	  console.error("Failure" ,e)
+	  console.error("Failure" ,e);
+    process.exit(1);
 }));
