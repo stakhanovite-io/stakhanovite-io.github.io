@@ -18,5 +18,10 @@
     "epoch": 300,
     "amount": "838695",
     "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n"
+  },
+  {
+    "epoch": 301,
+    "amount": "1475961",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
   }
 ]
