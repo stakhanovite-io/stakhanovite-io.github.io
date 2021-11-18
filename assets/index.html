@@ -23,11 +23,16 @@
     />
     <meta name="Description" content="A Cardano Stake Pool for the community, by the community">
     <title>Stakhanovite</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBH0YPNV49"></script>
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-T23GWWNQWC', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
-  <script src="../src/index.tsx"></script>
+  <script type="module" src="../src/index.tsx"></script>
 </html>
