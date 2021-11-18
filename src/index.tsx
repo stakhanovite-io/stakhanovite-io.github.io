@@ -1,10 +1,9 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createBrowserHistory } from "history";
-import { Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer, ToolbarMenu } from './Components';
 import "./i18n";
 import { Delegator } from './Pages/Delegator';
@@ -14,7 +13,7 @@ import { Home } from './Pages/Home';
 
 const breakpoints = createBreakpoints({});
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: 'dark',
     primary: {
@@ -88,9 +87,6 @@ const theme = createMuiTheme({
   },
 });
 
-
-const history = createBrowserHistory();
-
 export const items = {
   '/': {title: 'Home', element: Home},
   '/faq': {title: 'FAQ', element: Faq},
@@ -101,16 +97,18 @@ function Main(): JSX.Element {
   return (
     <>
       <CssBaseline />
-      <Router history={history}>
+      <BrowserRouter>
         <ToolbarMenu items={items} />
         <main style={{marginTop: 20}}>
+          <Routes>
           {Object.keys(items).map((key) => {
             const item = items[key];
-            return <Route key={key} exact path={key} component={item.element} />;
+            return <Route key={key} path={key} element={item.element()} />;
           })}
+          </Routes>
           <Footer />
         </main>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
