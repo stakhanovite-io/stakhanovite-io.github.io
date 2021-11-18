@@ -79,7 +79,7 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
       cache[epoch] = prices;
       return prices;
     } catch (e) {
-      console.error("Rate limited while fetching price", resp)
+      console.error("Rate limited while fetching price");
       return {};
     }
   }
@@ -146,6 +146,7 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
         return {...o, ...epochPrices};
       } catch (e) {
         console.error("Error while fetching price", e);
+        return o;
       }
     }));
     await csvWriter.writeRecords(await rewardsWithPrices);
