@@ -79,8 +79,8 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
       cache[epoch] = prices;
       return prices;
     } catch (e) {
-      console.error(resp)
-      return 0
+      console.error("Rate limited while fetching price", resp)
+      return {};
     }
   }
 }
@@ -141,13 +141,17 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
     const rewardsWithPrices = Promise.all(rewards.map(async (o, i) => {
       o.amount = o.amount / 1000000;
 
-      const epochPrices = await pricesForEpoch(o.epoch+2, i);
-      return {...o, ...epochPrices};
+      try {
+        const epochPrices = await pricesForEpoch(o.epoch+2, i);
+        return {...o, ...epochPrices};
+      } catch (e) {
+        console.error("Error while fetching price", e);
+      }
     }));
     await csvWriter.writeRecords(await rewardsWithPrices);
   }
 
   }().catch(e => {
-	  console.error("Failure" ,e);
+	  console.error("Failure", e);
     process.exit(1);
 }));
