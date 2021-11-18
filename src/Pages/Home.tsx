@@ -1,5 +1,5 @@
 import * as React from 'react';
-import marked from 'marked';
+import { marked } from 'marked';
 import { useTranslation } from 'react-i18next';
 import { useClipboard } from 'use-clipboard-copy';
 import { makeStyles } from '@material-ui/core/styles';

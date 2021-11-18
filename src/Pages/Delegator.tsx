@@ -1,5 +1,5 @@
 import * as React from 'react';
-import marked from 'marked';
+import { marked } from 'marked';
 import { Line } from '@nivo/line';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
