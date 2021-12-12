@@ -70,5 +70,329 @@
   {
     "stake_address": "stake1uygqkzh7tk4mw3c4msmvqkps53slf2ng56rz2shhp7wwhjs0kyfcn",
     "amount": "3629331967"
+  },
+  {
+    "stake_address": "stake1uyfph78nq8zjdfauqhuvc9prev8fj7de22lg7dhf24yt28qk6ljjn",
+    "amount": "740104511"
+  },
+  {
+    "stake_address": "stake1uy2yzk0pxqdet99g07lltlelztcrmssvp7yvrml04yk3u5szfjzhg",
+    "amount": "0"
+  },
+  {
+    "stake_address": "stake1uytppmxsu5qdkn0tck7n3rvy4tx2khpehqs8jcdq4ks2fsc2n0ryw",
+    "amount": "362962"
+  },
+  {
+    "stake_address": "stake1uyve784rgrsn6vm98cm43skkzzq73k3arr3nxw9usnec9nsanh0pt",
+    "amount": "13201012"
+  },
+  {
+    "stake_address": "stake1uyvm89d0qp2p36e7wfe0g0xesk2mk8ct9v8rf5r7lznnm7q0aygrv",
+    "amount": "30316388"
+  },
+  {
+    "stake_address": "stake1uydtj45vq3apsvsgvpqe7sxj8qdd8flcvugkzrdwgfgtcaqrpxs8d",
+    "amount": "700240132"
+  },
+  {
+    "stake_address": "stake1uywq7vg4902mdkd5glsekahyln9ntlfm50w2jwv9fegvg7cmncvju",
+    "amount": "2018792680"
+  },
+  {
+    "stake_address": "stake1uyw4jkgq40es3wp8fym4p744q54aut6895373y5e6cjy36gmky9y0",
+    "amount": "172804669318"
+  },
+  {
+    "stake_address": "stake1uy0479y7w7kdtqlcv5ys46eqtruv6220hjq70a8dt8t5kwqvkffdz",
+    "amount": "11823059981"
+  },
+  {
+    "stake_address": "stake1uy0k42w9ts66e5ehmh2xndlf3kl2fa9yc8g5rt3t47r6whqm60jr7",
+    "amount": "458844176"
+  },
+  {
+    "stake_address": "stake1uysr4zzwtjx6wdquhscn7z5t83uy0revasu0nqyur6aeldqs92d3a",
+    "amount": "10876335"
+  },
+  {
+    "stake_address": "stake1uy3p4yzmvclmqmp30hx6uvgg5czlhv845nfuxl2rqsr60eccyww5v",
+    "amount": "3705"
+  },
+  {
+    "stake_address": "stake1uy35lzrwj672ce3l3qmxrkhmhsky4t3avtljnwn20qpsqrqnucrtk",
+    "amount": "1064061936"
+  },
+  {
+    "stake_address": "stake1uyjfv5a95pkm3grk2c24jqelkclr48e9p90hq2mlal8wqec7z3g5u",
+    "amount": "1072087044"
+  },
+  {
+    "stake_address": "stake1uynr5eetdu2r3pv9tekfpv0r3h3dfu3djls939whged5yzcfkdcup",
+    "amount": "6725447000"
+  },
+  {
+    "stake_address": "stake1uyn0jnggcg6arzuv3wfzrk3neftjdxq8nnaltsuevnff05gv6skpv",
+    "amount": "2064096704"
+  },
+  {
+    "stake_address": "stake1uyn3mmvyk6nt627khm4hujl7pvrtkvex9pdf7a6hdtp078qmhnpyc",
+    "amount": "992541827"
+  },
+  {
+    "stake_address": "stake1uynnea48x6tz047wdvlzvhezj9wlv4wp58sxpfwmfxcvf9qt5pp9m",
+    "amount": "2271670480"
+  },
+  {
+    "stake_address": "stake1uy5raxxz49kze0nkklfgx5vahavsllj29v3t90ymqgn8uaswz8gaw",
+    "amount": "13970636193"
+  },
+  {
+    "stake_address": "stake1uy4s3cx5833khehal43m7j33m5m27hx72cytjmm0gkn6v6cpmhvq5",
+    "amount": "20795457851"
+  },
+  {
+    "stake_address": "stake1uy4hg740ve5qgzz73lkd8y5qj9m5j3mm6fgt5tglprn60ps8ycn5a",
+    "amount": "2254227"
+  },
+  {
+    "stake_address": "stake1uy4ulya28cvwncgwwv7q5flv6x2584kh0c5u69x2mv64sygmwwa3f",
+    "amount": "4536"
+  },
+  {
+    "stake_address": "stake1uyk0ccz5wgg2gstr0elavsavnzg9zctstu7wnd847uqcjuszmwed0",
+    "amount": "292915"
+  },
+  {
+    "stake_address": "stake1uyhqmgyxsasn56wvzg2c2fdajg86lkghptm6a5q4ue39djqs0cs5k",
+    "amount": "4179430789"
+  },
+  {
+    "stake_address": "stake1uyhy76qdgujtwp3yv44k47zk332ce8ztnuxat2w8up2gxdsu8uzz7",
+    "amount": "21297810741"
+  },
+  {
+    "stake_address": "stake1uyhjvtve70vjywkumwq0gklrysqqlc2tzpag4m9ztf7tv3c2l0wrh",
+    "amount": "4296728418"
+  },
+  {
+    "stake_address": "stake1uyhew7xw2jnlsdf4tyg6j6m5ja05nuhhwglr6tc8w5lc3lgspvycw",
+    "amount": "1772405"
+  },
+  {
+    "stake_address": "stake1uycr0dfd28c33rgsrg2jsejfdcacq4gjc9jzxhvjuruqdvctggnfs",
+    "amount": "25942"
+  },
+  {
+    "stake_address": "stake1uyc8gz3xe5a62vghltf39g3vnc557tlue5h5u9hpcxxrdvc8e2f6g",
+    "amount": "11303099"
+  },
+  {
+    "stake_address": "stake1uyc4glg0a44gcjns84tk8ccykhy25efhcj0v3d2kzax8vwc6rxe4r",
+    "amount": "646358051"
+  },
+  {
+    "stake_address": "stake1uyccg0gfw8ghq4xuctldkzg5plaj896uky3sdhhdx2cap5carn3nl",
+    "amount": "29562002"
+  },
+  {
+    "stake_address": "stake1uyclurflen0xahadjktl0j527haqv0xk0t9r2mzxm0czahssh7zqy",
+    "amount": "23855962"
+  },
+  {
+    "stake_address": "stake1uyeqp7f6vdcguh9flmg2r57348klxujwr3j7clwy2d4vj0gnq6n49",
+    "amount": "64996707017"
+  },
+  {
+    "stake_address": "stake1uyefu4e827dfgff8z3fqsa4vz3y3jqycpxz37uufqjnzfhgygfw74",
+    "amount": "11353269"
+  },
+  {
+    "stake_address": "stake1uyevja3l63tfj5fqzuxp43pv6m7clh7ljfr8yq8cns5dsmsxzn4x6",
+    "amount": "4415012"
+  },
+  {
+    "stake_address": "stake1uye66dfa3pg4axzr0fwhn95xhhqaxddpxycaau8amunrsyc4uuq0a",
+    "amount": "5624363943"
+  },
+  {
+    "stake_address": "stake1uy6ns7k3tqplz4sf3ea8ugq86xcfp4g97uyynzcggmkhj3snfkf30",
+    "amount": "983188099"
+  },
+  {
+    "stake_address": "stake1uy6k0sqpfn43tsny8yzwed4l6z4ek032e4hazteu5dt3xkgz20w4y",
+    "amount": "10320723746"
+  },
+  {
+    "stake_address": "stake1uyufxkwr052flrjvh8n0hgh2dfwtam7rrmeddynatyz3x7gv8ucam",
+    "amount": "1448206875"
+  },
+  {
+    "stake_address": "stake1uyatsq6j3cn43zx4nd0aflu52d3fzh58unw06n8pg055prgn4hqpw",
+    "amount": "154453265065"
+  },
+  {
+    "stake_address": "stake1uy7gc3d27pkum0fuc6jr7sajfg83esa45ypuv0z5wt3uywsh3f73z",
+    "amount": "66631264086"
+  },
+  {
+    "stake_address": "stake1uy7gatt8xyqszrfj7jmxs79m04jddrqr8nkarg97fzl9mfsutq2la",
+    "amount": "752932068"
+  },
+  {
+    "stake_address": "stake1uy7dw5wj3k5gleevdel4nt7euxjv92z90t25adf95ggfsecwsp9g0",
+    "amount": "101823415"
+  },
+  {
+    "stake_address": "stake1uy76mfw689xepq04qv5k3xny80ckr253t3sjjrzsrawv85cs5vjt8",
+    "amount": "2883285"
+  },
+  {
+    "stake_address": "stake1uy7l8ctcdu9jlfk85w9urgh9t3z5znmawrf3gr6t5276wesgzeu4u",
+    "amount": "4414326"
+  },
+  {
+    "stake_address": "stake1uylqfhwe6z3m8qlltm3wsycxpveh453z3w63h2mdcmvy87szt69m6",
+    "amount": "0"
+  },
+  {
+    "stake_address": "stake1uylyn3kst73k2egf2uc98zmvvsdk4e9qss08c6tl84te88sjrckgv",
+    "amount": "37609072745"
+  },
+  {
+    "stake_address": "stake1uylxc3njfmak3pzutvcyrzjq5ecgw02g03kn3cjlv33p0hgwtxtys",
+    "amount": "3468707"
+  },
+  {
+    "stake_address": "stake1uyl5xwsuuty4hrzpqd4y8lk8trj5c3qcznw0faykqeu6e2cme0nk6",
+    "amount": "394108"
+  },
+  {
+    "stake_address": "stake1uyl43q8de6gaw7tepyqfjwzf4jkmef4gfq9gxgffd34xlucre6k0k",
+    "amount": "10266615989"
+  },
+  {
+    "stake_address": "stake1uylkzuctdpmknvpjeygqvx9xjul3j0mh70fwj6gp9jl9ngc2z0tee",
+    "amount": "13239836053"
+  },
+  {
+    "stake_address": "stake1u9q57u4flgysg8fe0jsrs8r7562xek2x5n64z4tcqw6zhjqpj2t2q",
+    "amount": "668317291"
+  },
+  {
+    "stake_address": "stake1u9qkgpfhunth6my0c6rrzkemcgy9r6l2e8avvq7qcevrgksd2sr4n",
+    "amount": "2314189367"
+  },
+  {
+    "stake_address": "stake1u9px4chmeah7rnpfsl7uaj28m94umn020hghpgujut7px6s0fs077",
+    "amount": "72509639805"
+  },
+  {
+    "stake_address": "stake1u9pv53vcrus9c4qunlsge8vu9kpkp5nfp5sg7eamn84pr8sfal5un",
+    "amount": "2013504889"
+  },
+  {
+    "stake_address": "stake1u9pveufd60xgqlrs309pzmk25caydd6dngt6a9h9c4u4fmqkt2h8n",
+    "amount": "386121785"
+  },
+  {
+    "stake_address": "stake1u9p5vys8u7gnhshgxlzsw67hhupndq6sdrzmd2mpea9urkgcruaj8",
+    "amount": "2404371121"
+  },
+  {
+    "stake_address": "stake1u9pul5ym6yx9ldea6wfhe0l455xc92crxy6j05astd2zn8cdssjlx",
+    "amount": "434277044"
+  },
+  {
+    "stake_address": "stake1u9zglk696yrvaast25snez9av9usslsmy5ahjn7shmumkmsp4u2e2",
+    "amount": "691025140"
+  },
+  {
+    "stake_address": "stake1u9zwwcepn8pyaq7nuv59npn5sus0re2k5xjsdzlrut477fqazc0wc",
+    "amount": "8849955609"
+  },
+  {
+    "stake_address": "stake1u9z4q9n38j4665u3szjgl4vs0zzs0767xzd6akw6m064apqnf9u2e",
+    "amount": "510786592"
+  },
+  {
+    "stake_address": "stake1u9zhhuxk23y9gfxz3ehk3rrzyteul8g2e4gym75guvly9usuewj80",
+    "amount": "1350817979"
+  },
+  {
+    "stake_address": "stake1u9r9lvsq5zep55sqd9r920n5u6nzcd0u907ltmlqmmct7hg5ua02c",
+    "amount": "646407"
+  },
+  {
+    "stake_address": "stake1u9ravzg3eq7alstz64tx65wdzzjxpawn40fwkk2djlm3tls3hcx4q",
+    "amount": "139847119"
+  },
+  {
+    "stake_address": "stake1u9y04ph2rkra09ms6rhdg9jxkpvqlyrrpmrfxtq3v5zqllgcwtj94",
+    "amount": "5958063"
+  },
+  {
+    "stake_address": "stake1u9ylpyz7l9ft390kyj8jmhttgl6kpd2pt7yx7d789uvmaaq87st23",
+    "amount": "12012854153"
+  },
+  {
+    "stake_address": "stake1u99v0qteztp4spcyk8n7duca9lr7hj9n8xc90682fuvkv0gz0pqcl",
+    "amount": "2580"
+  },
+  {
+    "stake_address": "stake1u99jx6a5t95vk0ppz3fwcqxq9ea0ajfzrf3csmp9emfgg5g4rwm6f",
+    "amount": "15462301"
+  },
+  {
+    "stake_address": "stake1u99me4mzwd0lx64glz3wm3z48sfcwplz47pxqmlnfgv08uczf3k74",
+    "amount": "37880116"
+  },
+  {
+    "stake_address": "stake1u98v9el446x0vqej7ej44tqua6jr9nhgxsu2vg9fm5dmduc0k096t",
+    "amount": "15531063"
+  },
+  {
+    "stake_address": "stake1u9gt6f3s69j4d5qer332uwn5dhyulxtml2jlps2e95lulkgj307k4",
+    "amount": "82655421962"
+  },
+  {
+    "stake_address": "stake1u9f8vhjcgres7y9z860apjc4ygrnlqpptrhmrqy4zklkvwszjlnvv",
+    "amount": "623441490"
+  },
+  {
+    "stake_address": "stake1u9ftgtwf9rgcnfc68mflfq9gdc6z7v54sah700qcucnlcgc2nyffu",
+    "amount": "468947"
+  },
+  {
+    "stake_address": "stake1u9fexy4qp8svnczsj6zung5n3khc32kzchku8nn3qe0r62gggeyal",
+    "amount": "700872760"
+  },
+  {
+    "stake_address": "stake1u9vehcdy23vqqmrzaae8ye7xjh7fsw4qp0ly6dkhmw7sneceqxdwl",
+    "amount": "3363220"
+  },
+  {
+    "stake_address": "stake1u9dfqxkwh8m7qte4mestgx32v2xskaxzvr953kf9u8z9y0qcnz0nk",
+    "amount": "10254549532"
+  },
+  {
+    "stake_address": "stake1u9dhg2lk6rcyleyg9jzhu43pte3evt27fjg0msrw2wvudvqm3zj77",
+    "amount": "947342491"
+  },
+  {
+    "stake_address": "stake1u9duawj64emzuk8p3ntfjqjqxjp73a28urjdzma029zg0pcu3hvnq",
+    "amount": "105458535785"
+  },
+  {
+    "stake_address": "stake1u9wqk47z5j0xxzvvfk4smtpdrj8xnetv9ajahs93afr2m4qgvewed",
+    "amount": "4065546862"
+  },
+  {
+    "stake_address": "stake1u9wkmjq4hvy84uwnl4deyg8f90ppjlv56kprrdruvw0cansu04r3j",
+    "amount": "206898643"
+  },
+  {
+    "stake_address": "stake1u9wc4cz2z2j68lpzdzruusgzvzklcmp9a9pvgf9rmqa5xcsyyja5l",
+    "amount": "807553914"
   }
 ]
