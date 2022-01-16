@@ -1,0 +1,72 @@
+[
+  {
+    "epoch": 300,
+    "amount": "30263",
+    "pool_id": "pool1tdsrw0n33gmy0mzh7cgtn9p0jy5xwjxaa2s26gn2ewf8kg4nrzx"
+  },
+  {
+    "epoch": 301,
+    "amount": "30616",
+    "pool_id": "pool1tdsrw0n33gmy0mzh7cgtn9p0jy5xwjxaa2s26gn2ewf8kg4nrzx"
+  },
+  {
+    "epoch": 302,
+    "amount": "23295",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 303,
+    "amount": "26243",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 304,
+    "amount": "25268",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 305,
+    "amount": "17405",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 306,
+    "amount": "23157",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 307,
+    "amount": "27188",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 308,
+    "amount": "28457",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 309,
+    "amount": "27111",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 310,
+    "amount": "24441",
+    "pool_id": "pool1c7jrfce3zxkk9s9enzpvwj8fuayvx3pdzc2k2es6mrw6gsfcjep"
+  },
+  {
+    "epoch": 311,
+    "amount": "17965",
+    "pool_id": "pool1ekcsyzwexl7p2kwxxh34hy28l6772vrmff7jwmuxsa6u6fzty9z"
+  },
+  {
+    "epoch": 312,
+    "amount": "25537",
+    "pool_id": "pool1ekcsyzwexl7p2kwxxh34hy28l6772vrmff7jwmuxsa6u6fzty9z"
+  },
+  {
+    "epoch": 313,
+    "amount": "22452",
+    "pool_id": "pool1ekcsyzwexl7p2kwxxh34hy28l6772vrmff7jwmuxsa6u6fzty9z"
+  }
+]
