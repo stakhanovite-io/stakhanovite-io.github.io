@@ -3,14 +3,14 @@
   "hex": "b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768",
   "vrf_key": "b4506cbdf5faeeb7bc771d0c17eea2e7e94749ec5a63e78a42d9ed8aad6baae5",
   "blocks_minted": 4588,
-  "blocks_epoch": 3,
-  "live_stake": "2331751963826",
-  "live_size": 0.00009894047439709231,
-  "live_saturation": 0.034747315046820465,
-  "live_delegators": 272,
-  "active_stake": "2680955479051",
-  "active_size": 0.00011368248717843265,
-  "declared_pledge": "100000000000",
+  "blocks_epoch": 0,
+  "live_stake": "2342240619744",
+  "live_size": 0.00009929856943379604,
+  "live_saturation": 0.03488974967582945,
+  "live_delegators": 270,
+  "active_stake": "6214613464",
+  "active_size": 0.000004769708143163358,
+  "declared_pledge": "50000000000",
   "live_pledge": "119256927424",
   "margin_cost": 0,
   "fixed_cost": "340000000",
@@ -30,7 +30,8 @@
     "62f8257434e73810149effc6f96d8e853e91c597bb86c40e2a6003f13fd81180",
     "28bd5e8c342ab89d6642e446cb299058ea36256af1718e4af9326898ce4192d7",
     "578ae7f66d859fa5af2c35a894bb40f5233d4e67321f8701079c6570c773a57d",
-    "2e46ada28e6fddf12cd66d71353d942be9887e523933d1d1981d94e2c9f51ba0"
+    "2e46ada28e6fddf12cd66d71353d942be9887e523933d1d1981d94e2c9f51ba0",
+    "d60d292e174add4fdfb02432448dde94879e2531adeb24de9d5a44e106ac21fd"
   ],
   "retirement": []
 }
