@@ -333,5 +333,10 @@
     "epoch": 319,
     "amount": "174602",
     "pool_id": "pool16agnvfan65ypnswgg6rml52lqtcqe5guxltexkn82sqgj2crqtx"
+  },
+  {
+    "epoch": 320,
+    "amount": "179204",
+    "pool_id": "pool16agnvfan65ypnswgg6rml52lqtcqe5guxltexkn82sqgj2crqtx"
   }
 ]
