@@ -21,7 +21,7 @@ jobs:
       - name: Run update
         run: yarn && yarn build && yarn start
         working-directory: ./scripts
-        timeout-minutes: 3
+        timeout-minutes: 30
         env:
           POOL_ID: "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj"
           BLOCKFROST_PROJECT_ID: ${{ secrets.BLOCKFROST_PROJECT_ID }}
