@@ -1,6 +1,12 @@
 {
-  "statusCode": 500,
-  "code": "ENOENT",
-  "error": "Internal Server Error",
-  "message": "connect ENOENT /run/postgresql/.s.PGSQL.5432"
+  "epoch": 343,
+  "start_time": 1654379091,
+  "end_time": 1654811091,
+  "first_block_time": 1654379116,
+  "last_block_time": 1654380696,
+  "block_count": 68,
+  "tx_count": 1619,
+  "output": "258979546246478",
+  "fees": "530738354",
+  "active_stake": "1391625082394719"
 }
