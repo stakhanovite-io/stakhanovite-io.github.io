@@ -1,0 +1,37 @@
+{
+  "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj",
+  "hex": "b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768",
+  "vrf_key": "b4506cbdf5faeeb7bc771d0c17eea2e7e94749ec5a63e78a42d9ed8aad6baae5",
+  "blocks_minted": 4638,
+  "blocks_epoch": 2,
+  "live_stake": "2013712871046",
+  "live_size": 0.0000817773157821073,
+  "live_saturation": 0.02967110756957557,
+  "live_delegators": 248,
+  "active_stake": "2016449761661",
+  "active_size": 0.00008176677517011403,
+  "declared_pledge": "50000000000",
+  "live_pledge": "53260439368",
+  "margin_cost": 0,
+  "fixed_cost": "340000000",
+  "reward_account": "stake1u97v0sjx96u5lydjfe2g5qdwkj6plm87h80q5vc0ma6wjpq22mh4c",
+  "owners": [
+    "stake1ux69nctlngdhx99a6w8hrtexu89p9prqk8vmseg9qmmquyqhuns53"
+  ],
+  "registration": [
+    "c3af622e2817bc27436b952b4109b24bfc73e1acc57a4ec6691be5a7d8c0a5b0",
+    "e4ec04972f4a3b19676f1e7d3a999ca36cd7fe42bc020c2de0fbba589a6e3fad",
+    "eacc1c5ba0cb50e57189ce8cbd69d0facb1234352110eba4fff8c546d1f81bfb",
+    "d91421e07090dfacdb8e00860dedcf352ce98e140962f902ed6752e77463dfb5",
+    "f842a99a60e1741bc04554d1a632776c85fc6ce3be1858f32d7bb8bd45f04396",
+    "77275ff1df5dbdc47c8d92bd5c772230cdfe570c45a841f97e0ff4a88326cc01",
+    "9e728040370bf35109a8501739a45d7c05bfc80f4c4b5d31732b498f5cd6ccfd",
+    "f8756b99863bb5ed24612daa0f732b045c2f24be6a561d95a9c86a9c70a496bc",
+    "62f8257434e73810149effc6f96d8e853e91c597bb86c40e2a6003f13fd81180",
+    "28bd5e8c342ab89d6642e446cb299058ea36256af1718e4af9326898ce4192d7",
+    "578ae7f66d859fa5af2c35a894bb40f5233d4e67321f8701079c6570c773a57d",
+    "2e46ada28e6fddf12cd66d71353d942be9887e523933d1d1981d94e2c9f51ba0",
+    "d60d292e174add4fdfb02432448dde94879e2531adeb24de9d5a44e106ac21fd"
+  ],
+  "retirement": []
+}
