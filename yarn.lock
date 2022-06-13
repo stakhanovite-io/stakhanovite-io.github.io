@@ -3440,10 +3440,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-marked@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.4.tgz#d7cb16adaa474291307c521824c5716d32b95c36"
-  integrity sha512-d8v7SensuOj+gxi0TGbqb2WtS60ycZfZuqtmAB9yz0JLotKerTob/47Qk9oLCDmn5G1dcdn3d5ydR+ih9dvS0A==
+marked@4.0.17:
+  version "4.0.17"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.17.tgz#1186193d85bb7882159cdcfc57d1dfccaffb3fe9"
+  integrity sha512-Wfk0ATOK5iPxM4ptrORkFemqroz0ZDxp5MWfYA7H/F+wO17NRWV5Ypxi6p3g2Xmw2bKeiYOl6oVnLHKxBA0VhA==
 
 md5.js@^1.3.4:
   version "1.3.5"
