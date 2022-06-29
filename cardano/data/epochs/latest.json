@@ -1,12 +1,12 @@
 {
-  "epoch": 347,
-  "start_time": 1656107091,
-  "end_time": 1656539091,
-  "first_block_time": 1656107100,
-  "last_block_time": 1656517457,
-  "block_count": 18407,
-  "tx_count": 327728,
-  "output": "78617068536222157",
-  "fees": "115527555191",
-  "active_stake": "24669825450454874"
+  "epoch": 348,
+  "start_time": 1656539091,
+  "end_time": 1656971091,
+  "first_block_time": 1656539132,
+  "last_block_time": 1656540700,
+  "block_count": 62,
+  "tx_count": 1389,
+  "output": "292419934663870",
+  "fees": "477176732",
+  "active_stake": "1155194526604299"
 }
