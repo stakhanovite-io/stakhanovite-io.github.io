@@ -382,5 +382,17 @@
   {
     "stake_address": "stake1u9se7pw24ymhh5vf9tqn5tgxafpg8vn3jmvcn6eg6vdjk7c5cngym",
     "amount": "0"
+  },
+  {
+    "stake_address": "stake1u9jsaud54n5xys75pfjprsdj96v3xrccs63zqvt3rqat80swyd527",
+    "amount": "6327910"
+  },
+  {
+    "stake_address": "stake1u9ju6v7zar9jmn0gykgqpss4sa5jw43u73hqnl072rwy46sd5yp26",
+    "amount": "13589527"
+  },
+  {
+    "stake_address": "stake1u9jla9747wrcmrctquqeqne2tss85xkxap6hsv27ky0krps9wajfv",
+    "amount": "16136823"
   }
 ]
