@@ -1,0 +1,44 @@
+[
+  {
+    "epoch": 377,
+    "amount": "8184308",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 378,
+    "amount": "17148021",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 379,
+    "amount": "21196372",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 380,
+    "amount": "13728680",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 381,
+    "amount": "16645218",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 382,
+    "amount": "17887451",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  },
+  {
+    "epoch": 383,
+    "amount": "26015741",
+    "pool_id": "pool1qzlwlyu92fsx94qu6u5nw3sy334f5yat3dv3jgx0grrsv0kp422",
+    "type": "member"
+  }
+]
