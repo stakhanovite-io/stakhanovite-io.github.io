@@ -1,0 +1,776 @@
+[
+  {
+    "epoch": 255,
+    "amount": "1315361",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 256,
+    "amount": "6785524",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 257,
+    "amount": "6990896",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 258,
+    "amount": "14132780",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 259,
+    "amount": "13656421",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 260,
+    "amount": "11831281",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 261,
+    "amount": "10981694",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 262,
+    "amount": "14295952",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 263,
+    "amount": "15357988",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 264,
+    "amount": "11568345",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 265,
+    "amount": "16567405",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 266,
+    "amount": "11539872",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 267,
+    "amount": "12648838",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 268,
+    "amount": "14790314",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 269,
+    "amount": "15737294",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 270,
+    "amount": "18542232",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 271,
+    "amount": "16886559",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 272,
+    "amount": "14668024",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 273,
+    "amount": "13627178",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 274,
+    "amount": "15820228",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 275,
+    "amount": "10365862",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 276,
+    "amount": "15410209",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 277,
+    "amount": "18106203",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 278,
+    "amount": "22490822",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 279,
+    "amount": "19302315",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 280,
+    "amount": "18557994",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 281,
+    "amount": "16106556",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 282,
+    "amount": "16664752",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 283,
+    "amount": "12500560",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 284,
+    "amount": "14945068",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 285,
+    "amount": "15988069",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 286,
+    "amount": "18938357",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 287,
+    "amount": "22912169",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 288,
+    "amount": "17631865",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 289,
+    "amount": "13482885",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 290,
+    "amount": "12890066",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 291,
+    "amount": "15855011",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 292,
+    "amount": "13444373",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 293,
+    "amount": "17079227",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 294,
+    "amount": "14634588",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 295,
+    "amount": "21132465",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 296,
+    "amount": "12811427",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 297,
+    "amount": "19933488",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 298,
+    "amount": "14620070",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 299,
+    "amount": "12353147",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 300,
+    "amount": "15956770",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 301,
+    "amount": "17062304",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 302,
+    "amount": "20534909",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 303,
+    "amount": "11219242",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 304,
+    "amount": "17072691",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 305,
+    "amount": "16767475",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 306,
+    "amount": "15736431",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 307,
+    "amount": "13209341",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 308,
+    "amount": "16376103",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 309,
+    "amount": "14274385",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 310,
+    "amount": "14608582",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 311,
+    "amount": "16334924",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 312,
+    "amount": "14052148",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 313,
+    "amount": "14045583",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 314,
+    "amount": "13701501",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 315,
+    "amount": "12803611",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 316,
+    "amount": "15184758",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 317,
+    "amount": "16179496",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 318,
+    "amount": "11419793",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 319,
+    "amount": "15876365",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 320,
+    "amount": "13630425",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 321,
+    "amount": "10659682",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 322,
+    "amount": "12620867",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 323,
+    "amount": "18213786",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 324,
+    "amount": "14344084",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 325,
+    "amount": "15482610",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 326,
+    "amount": "14273420",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 327,
+    "amount": "12767027",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 328,
+    "amount": "15065388",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 329,
+    "amount": "14764095",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 330,
+    "amount": "13158103",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 331,
+    "amount": "14829153",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 332,
+    "amount": "11466928",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 333,
+    "amount": "17639596",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 334,
+    "amount": "11650049",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 335,
+    "amount": "20518975",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 336,
+    "amount": "16503946",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 337,
+    "amount": "12964421",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 338,
+    "amount": "13768270",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 339,
+    "amount": "9930767",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 340,
+    "amount": "14752837",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 341,
+    "amount": "11252939",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 342,
+    "amount": "13962173",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 343,
+    "amount": "8113507",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 344,
+    "amount": "13037486",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 345,
+    "amount": "11716087",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 346,
+    "amount": "12082137",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 347,
+    "amount": "14741822",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 348,
+    "amount": "12510897",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 349,
+    "amount": "13663798",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 350,
+    "amount": "16655935",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 351,
+    "amount": "12239949",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 352,
+    "amount": "9938943",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 353,
+    "amount": "12075889",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 354,
+    "amount": "12939591",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 355,
+    "amount": "12605229",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 356,
+    "amount": "14327149",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 357,
+    "amount": "14751293",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 358,
+    "amount": "14296475",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 359,
+    "amount": "16075119",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 360,
+    "amount": "15275540",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 361,
+    "amount": "13504844",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 362,
+    "amount": "18564892",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 363,
+    "amount": "14456982",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 364,
+    "amount": "16445323",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 365,
+    "amount": "12262839",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 366,
+    "amount": "13166591",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 367,
+    "amount": "12687763",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 368,
+    "amount": "15855743",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 369,
+    "amount": "10799221",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 370,
+    "amount": "12636310",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 371,
+    "amount": "11667783",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 372,
+    "amount": "18001743",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 373,
+    "amount": "15077678",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 374,
+    "amount": "12429103",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 375,
+    "amount": "9061085",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 376,
+    "amount": "10543799",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 377,
+    "amount": "13446530",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 378,
+    "amount": "6325709",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 379,
+    "amount": "9224790",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 380,
+    "amount": "9142673",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 381,
+    "amount": "13912284",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 382,
+    "amount": "10053665",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  },
+  {
+    "epoch": 383,
+    "amount": "12986175",
+    "pool_id": "pool1y53awxsm6cmksp8qht8qfq5f5c69t6mrgrdcresk5y0ecv2yj93",
+    "type": "member"
+  }
+]
