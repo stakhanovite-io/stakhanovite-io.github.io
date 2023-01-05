@@ -988,5 +988,11 @@
     "amount": "6304179",
     "pool_id": "pool1dhf4dt395f0c0ujnscazvzvw73ynzgwvtf5k4y9c907hwjdyaq4",
     "type": "member"
+  },
+  {
+    "epoch": 384,
+    "amount": "9512431",
+    "pool_id": "pool1dhf4dt395f0c0ujnscazvzvw73ynzgwvtf5k4y9c907hwjdyaq4",
+    "type": "member"
   }
 ]
