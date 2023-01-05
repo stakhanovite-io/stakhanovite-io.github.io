@@ -1000,5 +1000,11 @@
     "amount": "5313970",
     "pool_id": "pool15wj590e6gsmpmttrxjd0emck09a0h9tazd2ww77q6duyvg8lyum",
     "type": "member"
+  },
+  {
+    "epoch": 384,
+    "amount": "4357011",
+    "pool_id": "pool15wj590e6gsmpmttrxjd0emck09a0h9tazd2ww77q6duyvg8lyum",
+    "type": "member"
   }
 ]
