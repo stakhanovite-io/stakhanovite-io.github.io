@@ -1,0 +1,86 @@
+[
+  {
+    "epoch": 251,
+    "amount": "290710",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 252,
+    "amount": "708507",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 254,
+    "amount": "7798234",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 255,
+    "amount": "4805435",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 256,
+    "amount": "1522189",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 257,
+    "amount": "1434536",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 258,
+    "amount": "507121",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 259,
+    "amount": "431788",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 260,
+    "amount": "5236",
+    "pool_id": "pool1429egqgv60r3nxlp6cvs08qcffv7duddjvyjd0pt6wzhj7akda8",
+    "type": "member"
+  },
+  {
+    "epoch": 261,
+    "amount": "247733",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n",
+    "type": "member"
+  },
+  {
+    "epoch": 262,
+    "amount": "1683909",
+    "pool_id": "pool1gtphgrdj8sluxm9e7ca2spcwcq2p0dxj9zf5v0yv3gsagzq704n",
+    "type": "member"
+  },
+  {
+    "epoch": 268,
+    "amount": "102494",
+    "pool_id": "pool1zh556ku2h8lhul42q3u6rwmjpx7u5heflaa0rnuc6mqhvj8xm42",
+    "type": "member"
+  },
+  {
+    "epoch": 287,
+    "amount": "19441855",
+    "pool_id": "pool1zh556ku2h8lhul42q3u6rwmjpx7u5heflaa0rnuc6mqhvj8xm42",
+    "type": "member"
+  },
+  {
+    "epoch": 337,
+    "amount": "13471825",
+    "pool_id": "pool1zh556ku2h8lhul42q3u6rwmjpx7u5heflaa0rnuc6mqhvj8xm42",
+    "type": "member"
+  }
+]
