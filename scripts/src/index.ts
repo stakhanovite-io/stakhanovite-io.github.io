@@ -5,18 +5,18 @@ import fs from 'fs';
 const baseUrl = 'https://cardano-mainnet.blockfrost.io/api/v0/';
 const poolId = process.env.POOL_ID;
 if (!poolId) {
-  console.error('Missing POOL_ID');
-  process.exit(1);
+  exit('Missing POOL_ID');
 }
 const blockfrostProjectId = process.env.BLOCKFROST_PROJECT_ID;
 if (!blockfrostProjectId) {
-  console.error('Missing BLOCKFROST_PROJECT_ID');
-  process.exit(1);
+  exit('Missing BLOCKFROST_PROJECT_ID');
 }
 
 const dataFolder = `${__dirname}/../../assets/public/cardano/data`;
+const epochsFolder = `${dataFolder}/epochs`;
+const poolsFolder = `${dataFolder}/pools`;
 
-export async function call(input: string, init: RequestInit = {}): Promise<any> {
+export async function fetchWithHeaders(input: string, init: RequestInit = {}): Promise<any> {
   return (await fetch(`${baseUrl}/${input}`, {
       method: 'GET',
       headers: {'Project_id': blockfrostProjectId},
@@ -24,8 +24,8 @@ export async function call(input: string, init: RequestInit = {}): Promise<any> 
   })).json();
 }
 
-async function callPaged(url: string, count: number = 100, page: number = 1, acc = []): Promise<any> {
-  const res = await call(`${url}?page=${page}&count=${count}`);
+async function callPaged<T>(url: string, count: number = 100, page: number = 1, acc = []): Promise<T[]> {
+  const res = await fetchWithHeaders(`${url}?page=${page}&count=${count}`);
   const allRes = [...acc, ...res];
   if (res.length >= count) {
     return callPaged(url, count, page+1, allRes);
@@ -34,9 +34,23 @@ async function callPaged(url: string, count: number = 100, page: number = 1, acc
   }
 }
 
-async function writeBlob(path: string, name: string, json: any): Promise<void> {
-  await fs.promises.mkdir(path, {recursive: true});
-  fs.promises.writeFile(`${path}/${name}.json`, JSON.stringify(json, null, 2));
+type Delegator = {
+  address: string;
+}
+
+type Reward = {
+  epoch: number;
+  amount: string;
+  pool_id: string;
+  type: string;
+}
+
+async function writeBlob(path: string, json: any): Promise<void> {
+  fs.promises.writeFile(path, JSON.stringify(json, null, 2));
+}
+
+async function readBlob<T>(file: string): Promise<T> {
+  return fs.promises.readFile(file, {encoding: 'utf-8'}).then(JSON.parse);
 }
 
 const cache = {};
@@ -45,8 +59,8 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
   if (epoch in cache) {
     return cache[epoch];
   } else {
-    const epochDetails = await call(`epochs/${epoch}`);
-    const date = new Date(1000*epochDetails.start_time);
+    const epochDetails = await fetchWithHeaders(`epochs/${epoch}`);
+    const date = new Date(1000*epochDetails.end_time);
     const strDate = `${date.getUTCDate()}-${date.getUTCMonth()+1}-${date.getUTCFullYear()}`;
     
     const resp = await new Promise<any>(async (resolve) => {
@@ -85,25 +99,37 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
   }
 }
 
+function exit(s: string) {
+  console.error(s);
+  process.exit(1);
+}
+
 (async function() {
   // Epoch details
 
-  console.log("Epoch");
+  await fs.promises.mkdir(dataFolder, {recursive: true});
+  await fs.promises.mkdir(epochsFolder, {recursive: true});
+  await fs.promises.mkdir(poolsFolder, {recursive: true});
 
-  const latest = await call(`epochs/latest`);
+  const latest = await fetchWithHeaders(`epochs/latest`);
   const { epoch } = latest;
 
-  await writeBlob(`${dataFolder}/epochs`, 'latest', latest);
+  console.log(`Epoch ${epoch}`);
+
+  await writeBlob(`${epochsFolder}/latest.json`, latest);
 
   // Pool details
 
   console.log("Pool");
 
-  const poolDetails = await call(`pools/${poolId}`);
-  const { ticker } = await call(`pools/${poolId}/metadata`);
+  const poolDetails = await fetchWithHeaders(`pools/${poolId}`);
+  const { ticker } = await fetchWithHeaders(`pools/${poolId}/metadata`);
 
-  const poolsFolder = `${dataFolder}/pools`;
-  await writeBlob(poolsFolder, ticker, poolDetails);
+  if (!ticker) {
+    return exit("Failed to access ticker");
+  }
+
+  await writeBlob(`${poolsFolder}/${ticker}.json`, poolDetails);
 
   // Epochs stakes
 
@@ -111,20 +137,34 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
 
   const stakes = await callPaged(`epochs/${epoch}/stakes/${poolId}`);
 
-  const folder = `${dataFolder}/epochs/${epoch}/stakes/`;
-  await writeBlob(folder, ticker, stakes);
+  const epochStakesFolder = `${epochsFolder}/${epoch}/stakes/`;
+  await fs.promises.mkdir(epochStakesFolder, {recursive: true});
+  await writeBlob(`${epochStakesFolder}/${ticker}.json`, stakes);
 
   // Delegators rewards
 
-  const delegators = await callPaged(`pools/${poolId}/delegators`);
+  const delegators = await callPaged<Delegator>(`pools/${poolId}/delegators`);
 
   console.log(`Rewards (#${delegators.length})`);
 
   const accountsFolder =`${dataFolder}/accounts/`;
   for (const delegator of delegators) {
     const accountFolder = `${accountsFolder}/${delegator.address}`;
-    const rewards = await callPaged(`accounts/${delegator.address}/rewards`);
-    await writeBlob(accountFolder, 'rewards', rewards);
+    await fs.promises.mkdir(accountFolder, {recursive: true});
+
+    const rewardsJSON = `${accountFolder}/rewards.json`;
+
+    const existingRewards = await readBlob<Reward[]>(rewardsJSON);
+    const newestExistingRewardEpoch = existingRewards.map(v => v.epoch)[existingRewards.length-1];
+
+    // Persist all rewards as JSON
+
+    const rewards = await callPaged<Reward>(`accounts/${delegator.address}/rewards`);
+    await writeBlob(rewardsJSON, rewards);
+
+    const newRewards = rewards.filter(r => r.epoch > newestExistingRewardEpoch).sort();
+
+    // Persist all rewards + prices as CSV
 
     const csvWriter = createObjectCsvWriter({
       path: `${accountFolder}/rewards.csv`,
@@ -136,23 +176,23 @@ async function pricesForEpoch(epoch: number, i: number): Promise<any> {
           {id: 'priceUSD', title: 'PRICE_USD'},
           {id: 'priceAUSD', title: 'PRICE_AUSD'},
           {id: 'priceYEN', title: 'PRICE_JPY'},
-      ]
+      ],
+      append: true
     });
-    const rewardsWithPrices = Promise.all(rewards.map(async (o, i) => {
-      o.amount = o.amount / 1000000;
+    const rewardsWithPrices = await Promise.all(newRewards.map(async (o, i) => {
+      o.amount = (Number.parseInt(o.amount) / 1000000).toString();
 
       try {
-        const epochPrices = await pricesForEpoch(o.epoch+2, i);
+        const epochPrices = await pricesForEpoch(o.epoch, i);
         return {...o, ...epochPrices};
       } catch (e) {
         console.error("Error while fetching price", e);
         return o;
       }
     }));
-    await csvWriter.writeRecords(await rewardsWithPrices);
+    await csvWriter.writeRecords(rewardsWithPrices);
   }
 
   }().catch(e => {
-	  console.error("Failure", e);
-    process.exit(1);
+    exit(`Failure: ${e}`);
 }));
