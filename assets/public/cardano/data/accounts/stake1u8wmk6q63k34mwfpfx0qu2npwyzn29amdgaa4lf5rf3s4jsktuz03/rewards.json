@@ -292,5 +292,11 @@
     "amount": "179287",
     "pool_id": "pool1aq2kqdp9xf9w47vttvmqnahwd4scz2qyddsr9l4mfru4qddg3kr",
     "type": "member"
+  },
+  {
+    "epoch": 417,
+    "amount": "7305859",
+    "pool_id": "pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj",
+    "type": "member"
   }
 ]
